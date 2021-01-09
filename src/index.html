@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kaffeerösterei Kiel</title>
+    <title>Kaffeerösterei Rustica Kiel</title>
     <link href="css/main.scss" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
@@ -13,18 +13,28 @@
   <body>  
 
     <header class="header">
-      <article class="header__logobox">
-        <img src="Images/Logo.png" alt="Logo" class="header__logo" />
-      </article>
+      <section class="navigation-bar">  
+
+        <div>
+          <a href="index.html"><img src="Images/Logo.png" alt="Logo" class="navigation-bar-logo" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="Images/Burger Menu.svg" alt="toggle-button" class="toggle-button"></a>
+        </div>
       <!--
-      <nav class="navigation__mobile">
-        <ul>
-          <li><a href="#">das Café</a></li>
-          <li><a href="#">Herkunft</a></li>
-          <li><a href="#">Shop</a></li>
-        </ul>
-      </nav>
+        <nav class="main-nav">
+          <ul class="main-nav-items">
+            <li class="main-nav-item"><a href="#">das Café</a></li>
+            <div>
+              <li class="main-nav-item-animation"><a href="#">Herkunft</a></li>
+            </div>
+            <li class="main-nav-item"><a href="#">Shop</a></li>
+          </ul>
+        </nav>
       -->
+      </section>
+
+
       <section>
       <div class="header__textbox">
         <h1 class="heading-primary">
@@ -41,14 +51,14 @@
     </header>
 
     <main>
-      <section class="main__roesterei">
-        <article>
-        <h2 class="main__roesterei--titel">Rösterei & Café</h2>
-        <p>
-          Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen Rösterei,
-          serviert im gemütlichen Café in der Innenstadt
-        </p>
-        </article>
+      <div class="main__roesterei">
+        
+          <h2 class="main__roesterei--titel">Rösterei & Café</h2>
+          <p>
+            Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen Rösterei,
+            serviert im gemütlichen Café in der Innenstadt
+          </p>
+        
         
         <div class="kontaktdaten-flexbox">
           <div class="kontaktdaten-flexelement">
@@ -64,7 +74,8 @@
         <div class="roesterei-img-flex">
           <img src="Images/FEND-Coffee-shop.png" alt="Innenansicht der Kaffeerösterei" class="roesteri-img">
         </div>
-      </section>
+      
+      </div>
 
       <section class="biofair-box">
         <h3 class="biofair-titel">Bio und Fair</h3>
@@ -100,9 +111,9 @@
                 <span class="beschreibung-main">Costa Rica</span>
                 <span class="beschreibung-sub">6,90€ - 26,90€</span>
               </h4>
-              <img src="Images/Icon Kaffee Kelle.PNG" alt="Icon" class="kaffeesorten-icon" />
-              <img src="Images/Icon Kaffeepresse.png" alt="Icon" class="kaffeesorten-icon"/>
-              <img src="Images/Icon Kaffee Bohne.PNG" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten-icon" />
+              <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article>  
           </section>
 
@@ -115,9 +126,9 @@
                 <span class="beschreibung-main">Costa Rica</span>
                 <span class="beschreibung-sub">6,90€ - 26,90€</span>
               </h4>
-              <img src="Images/Icon Kaffee Kelle.PNG" alt="Icon" class="kaffeesorten-icon" />
-              <img src="Images/Icon Kaffeepresse.png" alt="Icon" class="kaffeesorten-icon"/>
-              <img src="Images/Icon Kaffee Bohne.PNG" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten-icon" />
+              <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article>  
           </section>
 
@@ -130,9 +141,9 @@
                 <span class="beschreibung-main">Costa Rica</span>
                 <span class="beschreibung-sub">6,90€ - 26,90€</span>
               </h4>
-              <img src="Images/Icon Kaffee Kelle.PNG" alt="Icon" class="kaffeesorten-icon" />
-              <img src="Images/Icon Kaffeepresse.png" alt="Icon" class="kaffeesorten-icon"/>
-              <img src="Images/Icon Kaffee Bohne.PNG" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten-icon" />
+              <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article> 
           </section>
 
@@ -145,9 +156,9 @@
                 <span class="beschreibung-main">Costa Rica</span>
                 <span class="beschreibung-sub">6,90€ - 26,90€</span>
               </h4>
-              <img src="Images/Icon Kaffee Kelle.PNG" alt="Icon" class="kaffeesorten-icon" />
-              <img src="Images/Icon Kaffeepresse.png" alt="Icon" class="kaffeesorten-icon"/>
-              <img src="Images/Icon Kaffee Bohne.PNG" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten-icon" />
+              <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article> 
           </section>
         </section>
@@ -178,7 +189,7 @@
         
           <section class="main__produktvorstellung_flexbox">
             <section class="main__produktvorstellung__flexelement">
-              <img src="Images/Icon Kaffeetasse.PNG" alt="Dampfender Kaffeebecher" class="main__produktvorstellung--icon"/>
+              <img src="Images/Icon Kaffee Tasse.svg" alt="Dampfender Kaffeebecher" class="main__produktvorstellung--icon"/>
               <h4 class="main__produktvorstellung__heading">
               <span class="main__produktvorstellung__heading--main">Bester</span>
               <span class="main__produktvorstellung__heading--sub">Geschmack</span>
@@ -186,7 +197,7 @@
             </section>
 
             <section class="main__produktvorstellung__flexelement">
-              <img src="Images/Icon Kaffee Kelle.PNG" alt="Kelle mit Kaffeebohnen" class="main__produktvorstellung--icon" />
+              <img src="Images/Icon Kaffee Schaufel.svg" alt="Kelle mit Kaffeebohnen" class="main__produktvorstellung--icon" />
               <h4 class="main__produktvorstellung__heading">
                 <span class="main__produktvorstellung__heading--main">Fair</span>
                 <span class="main__produktvorstellung__heading--sub">gehandelt</span>
@@ -194,7 +205,7 @@
             </section>
 
             <section class="main__produktvorstellung__flexelement">
-              <img src="Images/Icon Kaffee Pflanze.PNG" alt="Zweig eines Kaffeebaumes" class="main__produktvorstellung--icon" />
+              <img src="Images/Icon Kaffee Pflanze.svg" alt="Zweig eines Kaffeebaumes" class="main__produktvorstellung--icon" />
               <h4 class="main__produktvorstellung__heading">
                 <span class="main__produktvorstellung__heading--main">Bio</span>
                 <span class="main__produktvorstellung__heading--sub">Qualität</span>
@@ -207,97 +218,104 @@
         </section>
       
       </section>
-
-<!--
-  <section class="main__inhalt">
-        
-        <h2 class="main__inhalt__titel">Das steckt drin</h2>
-        
-
-      <section class="main__inhalt__elemente">
-          <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffee Costa Rica"/>
-  
-          <section class="main__inhalt__flexelement">
-              <img src="Images/Icon Kaffeetasse.PNG" alt="Dampfender Kaffeebecher" class="main__inhalt--icon"/>
-              <h4 class="mein__inhalt__heading">
-              <span class="main__inhalt__heading--main">Bester</span>
-              <span class="main__inhalt__heading--sub">Geschmack</span>
-              </h4>
-          </section>
-
-          <section class="main__inhalt__flexelement">
-              <img src="Images/Icon Kaffee Kelle.PNG" alt="Kelle mit Kaffeebohnen" class="main__inhalt--icon" />
-              <h4 class="main__inhalt__heading">
-                <span class="heading-inhalt-main">Fair</span>
-                <span class="heading-inhalt-sub">gehandelt</span>
-                </h4>
-          </section>
-
-          <section class="main__inhalt__flexelement">
-              <img src="Images/Icon Kaffee Pflanze.PNG" alt="Zweig eines Kaffeebaumes" class="main__inhalt--icon" />
-              <h4 class="main__inhalt__heading">
-                <span class="main__inhalt__heading--main">Bio</span>
-                <span class="main__inhalt__heading--sub">Qualität</span>
-                </h4>
-          </section>
-
-          <a href="#" class="inhalt-button">Zum Shop</a>
-      </section>
-    -->
 <!------------------------------------------------------------------------------------------------->
-      <section class="main_anfahrt">
-        <h2 class="main__anfahrt--titel">Komm vorbei</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.855880716909!2d10.119832115980756!3d54.34185538019977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2560c505797eb%3A0xf549da0f074162a9!2sFraunhoferstra%C3%9Fe%2013%2C%2024118%20Kiel!5e0!3m2!1sde!2sde!4v1608813981861!5m2!1sde!2sde" 
-          frameborder="0"
-          style="border: 0"
-          allowfullscreen=""
-          aria-hidden="false"
-          tabindex="0"
-          class="main__anfahrt--map"
-        ></iframe>
-      </section>
-    </main>
+    <section class="main__anfahrt">
+      <h2 class="main__anfahrt--titel">Komm vorbei</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.855880716909!2d10.119832115980756!3d54.34185538019977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2560c505797eb%3A0xf549da0f074162a9!2sFraunhoferstra%C3%9Fe%2013%2C%2024118%20Kiel!5e0!3m2!1sde!2sde!4v1608813981861!5m2!1sde!2sde" 
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+        class="main__anfahrt--map"
+      ></iframe>
+    </section>
+  </main>
   <!----------------------------------------------------------------------------------------------------->
-    <footer class="footer-flex">
+    <!--footer>
+      <div class="footer-flex">
 
-        <section class="footer-flexelement-1">
-        <img src="Images/Logo.png" alt="Logo" class="footer__logo" />
-        <h3 class="footer__heading">
-          <span class="footer__heading--main">Rustica</span>
-          <span class="footer__heading--sub">Café & Rösterei</span>
-        </h3>
-      </section>
+        <div class="footer-flexelement-1">
+          <img src="Images/Logo.png" alt="Logo" class="footer__logo" />
+          <h3 class="footer__heading">
+            <span class="footer__heading--main">Rustica</span>
+            <span class="footer__heading--sub">Café & Rösterei</span>
+          </h3>
+        </div>
 
-      <section class="footer-flexelement">
-        <h3 class="footer__content">
-          <span class="footer__content__text--span">Komm uns besuchen!</span>
-          <span class="footer__content__text--span">Fraunhoferstr. 13, Kiel</span>
-        </h3>
-      </section>
+        <div class="footer-flexelement-2">
+          
+            <h3 class="footer__content">
+              <span class="footer__content__text--span-1">Komm uns besuchen!</span>
+              <span class="footer__content__text--span-1">Fraunhoferstr. 13, Kiel</span>
+            </h3> 
+        </div>
 
-      <section class="footer-flexelement"> 
-        <h3 class="footer__content">
-          <span class="footer__content__text--span">Mo - Fr 8 - 18 Uhr</span>
-          <span class="footer__content__text--span">Sa 11-18 Uhr</span>
-        </h3>
-      </section>
+        <div class="footer-flexelement-2">
+            <h3 class="footer__content">
+              <span class="footer__content__text--span-1">Mo - Fr 8 - 18 Uhr</span>
+              <span class="footer__content__text--span-1">Sa 11-18 Uhr</span>
+            </h3>
+        </div>
 
-      <section class="footer-flexelement">
-        <h3 class="footer__content">
-          <span class="footer__content__text--span"><a href="#">Impressum</a></span>
-          <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
-        </h3>
-      </section>
+        <div class="footer-flexelement-2">
+          <h3 class="footer__content">
+            <span class="footer__content__text--span"><a href="#">Impressum</a></span>
+            <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
+          </h3>
+        </div>
 
-      <section class="footer-flexelement">
-        <ul class="footer__content">
-            <li><a href="#">Café</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Herkunft</a></li>
-        </ul>
-      </section>
-    
+        <div class="footer-flexelement-2">
+          <ul class="footer__content">
+              <li><a href="#">Café</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Herkunft</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
+  -->
+
+  <footer class="footer-flex">
+
+    <div class="footer-flexelement">
+      <img src="Images/Logo.png" alt="Logo" class="footer__logo" />
+      <h3 class="footer__heading">
+        <span class="footer__heading--main">Rustica</span>
+        <span class="footer__heading--sub">Café & Rösterei</span>
+      </h3>
+    </div>
+
+    <div class="footer-flexelement-vorne">
+      <h3 class="footer__content">
+        <span class="footer__content__text--span">Komm uns besuchen!</span>
+        <span class="footer__content__text--span">Fraunhoferstr. 13, Kiel</span>
+      </h3>
+    </div>
+    
+    <div class="footer-flexelement-hinten">
+      <h3 class="footer__content">
+        <span class="footer__content__text--span">Mo - Fr 8 - 18 Uhr</span>
+        <span class="footer__content__text--span">Sa 11-18 Uhr</span>
+      </h3>
+    </div>
+
+    <div class="footer-flexelement footer-flexelement-order">
+      <h3 class="footer__content">
+        <span class="footer__content__text--span"><a href="#">Impressum</a></span>
+        <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
+      </h3>
+    </div>
+
+    <div class="footer-flexelement">
+      <ul class="footer__content">
+          <li><a href="#">Café</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Herkunft</a></li>
+      </ul>
+    </div>
+
+</footer>
   </body>
 </html>
