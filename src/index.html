@@ -21,7 +21,7 @@
         <div>
           <a href="#"><img src="Images/Burger Menu.svg" alt="toggle-button" class="toggle-button"></a>
         </div>
-      <!--
+    
         <nav class="main-nav">
           <ul class="main-nav-items">
             <li class="main-nav-item"><a href="#">das Café</a></li>
@@ -31,7 +31,7 @@
             <li class="main-nav-item"><a href="#">Shop</a></li>
           </ul>
         </nav>
-      -->
+     
       </section>
 
 
@@ -43,7 +43,7 @@
         </h1>
       </div>
 
-      <div class="button__main">
+      <div class="button__main"> <!--nochmal neu platzieren mit Flexbox/ Ganzer Header-->
         <a href="#" class="header__button">Zum Shop</a>
       </div>
     </section>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="roesterei-img-flex">
-          <img src="Images/FEND-Coffee-shop.png" alt="Innenansicht der Kaffeerösterei" class="roesteri-img">
+          <img src="Images/FEND-Coffee-shop.png" alt="Innenansicht der Kaffeerösterei" class="roesterei-img">
         </div>
       
       </div>
@@ -97,15 +97,33 @@
       </section>
     
       <section class="main__kaffeesorten">
-        <article>
+        <div>
         <h2 class="main__kaffeesorten--titel">Entdecke unsere Kaffee Sorten</h2>
-        </article>
-
+        </div>
+<!--
         <section class="main__kaffeesorten--flexbox">
           <section class="main__kaffeesorten--flexelement">
             <div class="costarica-box">
               <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffesorte Costa Rica" class="costarica-img"/>
             </div>
+
+            <article class="beschreibung-elemente">
+              <h4 class="beschreibung-kaffesorten">
+                <span class="beschreibung-main">Costa Rica</span>
+                <span class="beschreibung-sub">6,90€ - 26,90€</span>
+              </h4>
+              <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten-icon" />
+              <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
+              <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
+            </article>
+
+          </section>
+
+          <section class="main__kaffeesorten--flexelement">
+            <div class="costarica-box">
+              <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffesorte Costa Rica" class="costarica-img"/>
+            </div>
+
             <article class="beschreibung-elemente">
               <h4 class="beschreibung-kaffesorten">
                 <span class="beschreibung-main">Costa Rica</span>
@@ -115,27 +133,14 @@
               <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
               <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article>  
+
           </section>
 
           <section class="main__kaffeesorten--flexelement">
             <div class="costarica-box">
               <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffesorte Costa Rica" class="costarica-img"/>
             </div>
-            <article class="beschreibung-elemente">
-              <h4 class="beschreibung-kaffesorten">
-                <span class="beschreibung-main">Costa Rica</span>
-                <span class="beschreibung-sub">6,90€ - 26,90€</span>
-              </h4>
-              <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten-icon" />
-              <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
-              <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
-            </article>  
-          </section>
 
-          <section class="main__kaffeesorten--flexelement">
-            <div class="costarica-box">
-              <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffesorte Costa Rica" class="costarica-img"/>
-            </div>
             <article class="beschreibung-elemente">
               <h4 class="beschreibung-kaffesorten">
                 <span class="beschreibung-main">Costa Rica</span>
@@ -145,12 +150,14 @@
               <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
               <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article> 
+
           </section>
 
           <section class="main__kaffeesorten--flexelement">
             <div class="costarica-box">
               <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffesorte Costa Rica" class="costarica-img"/>
             </div>
+
             <article class="beschreibung-elemente">
               <h4 class="beschreibung-kaffesorten">
                 <span class="beschreibung-main">Costa Rica</span>
@@ -160,10 +167,13 @@
               <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten-icon"/>
               <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten-icon"/>
             </article> 
+
           </section>
+
         </section>
-
+        -->
           <a href="#" class="main__kaffeesorten--button">alle Produkte</a>
+          
       </section>
 
 <!-------------------------------------------------------------------->
@@ -184,39 +194,47 @@
         
           <h2 class="main__produktvorstellung--titel">Das steckt drin</h2>
        
-        <section class="main__produktvorstellung__elemente">
-          <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffee Costa Rica" class="main__produktvorstellung__elemente--img"/>
+        <section class="main__produktvorstellung__flexbox-1">
+          
+          <div class="image">
+            <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffee Costa Rica" class="main__produktvorstellung__elemente--img"/>
+          </div>
+  
         
-          <section class="main__produktvorstellung_flexbox">
-            <section class="main__produktvorstellung__flexelement">
-              <img src="Images/Icon Kaffee Tasse.svg" alt="Dampfender Kaffeebecher" class="main__produktvorstellung--icon"/>
-              <h4 class="main__produktvorstellung__heading">
-              <span class="main__produktvorstellung__heading--main">Bester</span>
-              <span class="main__produktvorstellung__heading--sub">Geschmack</span>
-              </h4>
-            </section>
+            <div class="main__produktvorstellung__flexbox-2">
 
-            <section class="main__produktvorstellung__flexelement">
-              <img src="Images/Icon Kaffee Schaufel.svg" alt="Kelle mit Kaffeebohnen" class="main__produktvorstellung--icon" />
-              <h4 class="main__produktvorstellung__heading">
-                <span class="main__produktvorstellung__heading--main">Fair</span>
-                <span class="main__produktvorstellung__heading--sub">gehandelt</span>
+              <div class="icon-container">
+                <img src="Images/Icon Kaffee Tasse.svg" alt="Dampfender Kaffeebecher" class="main__produktvorstellung--icon"/>
+                <h4 class="main__produktvorstellung__heading">
+                <span class="main__produktvorstellung__heading--main">Bester</span>
+                <span class="main__produktvorstellung__heading--sub">Geschmack</span>
                 </h4>
-            </section>
+              </div>
+            
 
-            <section class="main__produktvorstellung__flexelement">
-              <img src="Images/Icon Kaffee Pflanze.svg" alt="Zweig eines Kaffeebaumes" class="main__produktvorstellung--icon" />
-              <h4 class="main__produktvorstellung__heading">
-                <span class="main__produktvorstellung__heading--main">Bio</span>
-                <span class="main__produktvorstellung__heading--sub">Qualität</span>
-                </h4>
-            </section>
-          </section>
+              <div class="icon-container">
+                <img src="Images/Icon Kaffee Schaufel.svg" alt="Kelle mit Kaffeebohnen" class="main__produktvorstellung--icon" />
+                <h4 class="main__produktvorstellung__heading">
+                  <span class="main__produktvorstellung__heading--main">Fair</span>
+                  <span class="main__produktvorstellung__heading--sub">gehandelt</span>
+                  </h4>
+              </div>
 
-          <a href="#" class="main__produktvorstellung--button">Zum Shop</a>
-        
-        </section>
-      
+              <div class="icon-container">
+                <img src="Images/Icon Kaffee Pflanze.svg" alt="Zweig eines Kaffeebaumes" class="main__produktvorstellung--icon" />
+                <h4 class="main__produktvorstellung__heading">
+                  <span class="main__produktvorstellung__heading--main">Bio</span>
+                  <span class="main__produktvorstellung__heading--sub">Qualität</span>
+                  </h4>
+              </div>
+            </section>
+            
+            <div class="main__produktvorstellung__button">
+              <a href="#" class="main__produktvorstellung--button">Zum Shop</a>
+            </div>
+            
+          </div>
+  
       </section>
 <!------------------------------------------------------------------------------------------------->
     <section class="main__anfahrt">
@@ -233,53 +251,10 @@
     </section>
   </main>
   <!----------------------------------------------------------------------------------------------------->
-    <!--footer>
-      <div class="footer-flex">
+ 
+  <footer class="footer">
 
-        <div class="footer-flexelement-1">
-          <img src="Images/Logo.png" alt="Logo" class="footer__logo" />
-          <h3 class="footer__heading">
-            <span class="footer__heading--main">Rustica</span>
-            <span class="footer__heading--sub">Café & Rösterei</span>
-          </h3>
-        </div>
-
-        <div class="footer-flexelement-2">
-          
-            <h3 class="footer__content">
-              <span class="footer__content__text--span-1">Komm uns besuchen!</span>
-              <span class="footer__content__text--span-1">Fraunhoferstr. 13, Kiel</span>
-            </h3> 
-        </div>
-
-        <div class="footer-flexelement-2">
-            <h3 class="footer__content">
-              <span class="footer__content__text--span-1">Mo - Fr 8 - 18 Uhr</span>
-              <span class="footer__content__text--span-1">Sa 11-18 Uhr</span>
-            </h3>
-        </div>
-
-        <div class="footer-flexelement-2">
-          <h3 class="footer__content">
-            <span class="footer__content__text--span"><a href="#">Impressum</a></span>
-            <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
-          </h3>
-        </div>
-
-        <div class="footer-flexelement-2">
-          <ul class="footer__content">
-              <li><a href="#">Café</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Herkunft</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  -->
-
-  <footer class="footer-flex">
-
-    <div class="footer-flexelement">
+    <div class="footer__flexelement-titel">
       <img src="Images/Logo.png" alt="Logo" class="footer__logo" />
       <h3 class="footer__heading">
         <span class="footer__heading--main">Rustica</span>
@@ -287,34 +262,35 @@
       </h3>
     </div>
 
-    <div class="footer-flexelement-vorne">
+    <div>
       <h3 class="footer__content">
         <span class="footer__content__text--span">Komm uns besuchen!</span>
         <span class="footer__content__text--span">Fraunhoferstr. 13, Kiel</span>
       </h3>
     </div>
     
-    <div class="footer-flexelement-hinten">
+    <div>
       <h3 class="footer__content">
         <span class="footer__content__text--span">Mo - Fr 8 - 18 Uhr</span>
         <span class="footer__content__text--span">Sa 11-18 Uhr</span>
       </h3>
     </div>
 
-    <div class="footer-flexelement footer-flexelement-order">
-      <h3 class="footer__content">
-        <span class="footer__content__text--span"><a href="#">Impressum</a></span>
-        <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
-      </h3>
+  
+      <div class="footer-flexelement-order">
+          <h3 class="footer__content">
+          <span class="footer__content__text--span"><a href="#">Impressum</a></span>
+          <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
+          </h3>
+      </div>
+      <div>
+        <ul class="footer__content">
+            <li><a href="#">Café</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Herkunft</a></li>
+        </ul>
     </div>
-
-    <div class="footer-flexelement">
-      <ul class="footer__content">
-          <li><a href="#">Café</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Herkunft</a></li>
-      </ul>
-    </div>
+  
 
 </footer>
   </body>

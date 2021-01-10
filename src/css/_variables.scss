@@ -26,6 +26,7 @@ $font-size-h1: 96px;
 $font-size-h2: 48px;
 $font-size-h3: 42px;
 $font-size-body-text: 18px;
+$line-height-body-text: 24px;
 
 //Padding
 $padding-global: 0px 25px;
@@ -50,14 +51,14 @@ $icon-shop-height: 45px;
 }
 
 @mixin section-title-h2 () {
-    font-size: 36px;
+  font-size: 36px;
   line-height: 34px;
   font-weight: $font-weight-headings;
   margin-bottom: 35px;
 }
 
 @mixin section-title-h3 ()  {
-    font-size: 32px;
+  font-size: 32px;
   line-height: 34px;
   font-weight: $font-weight-headings;
   margin-bottom: 35px;
