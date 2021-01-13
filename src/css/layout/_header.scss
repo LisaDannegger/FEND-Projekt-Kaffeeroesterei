@@ -1,0 +1,138 @@
+header  {
+    width: 100vw;
+    height: 75vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3)),
+      url(../Images/FEND-Coffee-latte-art-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+  
+  }
+
+.header__content  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header__heading {
+    text-align: center;
+    margin-bottom: 30px;
+  
+    &--primary  {
+      color: var(--color-white);
+      font-size: 3.125rem;
+    }
+  
+    &--primary-main {
+      display: block;
+      @include section-title-h1-m ();
+  
+      @media (min-width: 1200px)  {
+        @include section-title-h1-d ();
+      }
+    }
+  
+    &--primary-sub  {
+      display: block;
+      font-size: 1.125rem;
+      font-weight: $font-weight-body; /*wie dick die Schrift angezeigt wird*/
+      top: 16.75rem;
+  
+      @media (min-width: 1200px)  {
+        font-size: $font-size-body-text;
+        line-height: 22px;
+      }
+    }  
+  }
+  
+  .header__button   {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 3rem;
+    
+  }
+  
+  .header__button--style {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--color-anthrazit);
+    border: none;
+    color: var(--color-white);
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  
+    &:hover {
+      background-color: var(--color-anthrazit);
+      color: var(--color-white);
+      border: none;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+  
+    &:active  {
+      background-color: var(--color-kraftpapier);
+      border-width: 2px;
+      color: var(--color-white);
+      border-color: var(--color-white);
+      border-style: solid; 
+    }
+  
+    &:focus {
+      outline:  2px dashed var(--color-petrol);
+      outline-offset: 10px;
+      border-radius: 5px;
+    } 
+  }
+  
+
+    /*
+  .header__button {
+    border-radius: 5px;
+    border: 2px solid var(--color-anthrazit);
+    background-color: var(--color-anthrazit);
+    padding: 0.9375rem 3.125rem;
+    text-decoration: none;
+    font: {
+      size: 0.875rem;
+      color: var(--color-primary-light);
+    }
+    margin-top: 6.25rem;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+      &:hover {
+        background-color: var(--color-anthrazit);
+        color: var(--color-white);
+        border: none;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      }
+  
+      &:active  {
+        background-color: var(--color-kraftpapier);
+        border-width: 2px;
+        color: var(--color-white);
+        border-color: var(--color-white);
+        border-style: solid; 
+      }
+  
+      &:focus {
+        outline:  2px dashed var(--color-petrol);
+        outline-offset: 10px;
+        border-radius: 5px;
+      } 
+  }
+
+  */
+  

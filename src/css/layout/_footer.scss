@@ -1,0 +1,132 @@
+
+.footer {
+    background-color: var(--color-anthrazit);
+    height: 390px;
+    width: 100%;
+    padding: $padding-mobile;
+    color: var(--color-white);
+
+    @media (min-width: 1200px)  {
+      height: 441px;
+      padding: 0px 100px;
+    }
+  }
+  
+.footer__flexbox1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+
+  @media (min-width: 1200px)  {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+  .footer__logo {
+    height: 2.1875rem;
+    width: 2.1875rem;
+    margin-top: 3.75rem;
+    margin-bottom: 1.5rem;
+  
+    @media (min-width: 1200px)  {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  
+  .footer-titel {
+    /*width: 100%;*/
+    margin-top: 15px;
+  
+    @media (min-width: 1200px)  {
+      @include section-title-h3-d();
+    }
+  }
+  
+  .footer__heading  {
+  
+    &--main {
+      font-size: 24px;
+      font-weight: 900;
+      display: block;
+
+      @media (min-width: 1200px)        {
+        font-size: 42px;
+        padding-bottom: 15px;
+        }
+    }
+  
+    &--sub  {
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+
+      @media (min-width: 1200px)        {
+        font-size: 18px;
+        padding-bottom: 15px;
+        }
+    }
+
+  }
+
+  .footer__flexbox2  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (min-width: 1200px)  {
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: baseline;
+      width: 20%;
+      
+    }
+  }
+
+  .footer__flexitem2 {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    @media (min-width: 1200px)  {
+      margin-left: 15px;
+      margin-right: 15px;
+      align-self: center;
+    }
+    
+  }
+  
+  .footer__content {
+    margin-top: 20px;
+    @include body-text-m ();
+  
+    &__text--span   {
+      display: block;
+    }
+  }
+  
+  .footer__flexitem--order  {
+    order: +1;
+  }
+
+
+  footer ul {
+    list-style-type: none;
+  
+    a:link,
+    a:visited {
+    text-decoration: none;
+    color: var(--color-white);
+    }
+  
+    a:hover {
+    color: var(--color-white);
+    } 
+  }
+  
