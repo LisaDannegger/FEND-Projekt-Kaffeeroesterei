@@ -13,6 +13,28 @@
   <body>  
 
     <header>
+      <div>
+        <a href="index.html"><img src="Images/Logo.png" alt="Logo" class="header__logo" /></a>
+      </div>
+      
+        <div class="navigation">
+          <input type="checkbox" class="navigation__checkbox" id="toggle-button">
+          <label for="navi-toggle" class="navigation__button">
+            <img src="Images/Burger Menu.svg" alt="toggle-button" class="navigation__logo">
+          </label>
+        </div>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="my-subpage/index.html" class="navigation__link">das Café</a></li>
+            <li class="navigation__item"><a href="my-subpage/shop.html" class="navigation__link">Shop</a></li>
+            <li class="navigation__item"><a href="my-subpage/herkunft.html" class="navigation__link">Herkunft</a></li>
+          </ul>
+        </nav>
+
+      <!--
       <section class="header__sitebar">  
 
         <div>
@@ -33,6 +55,7 @@
         </nav>
      
       </section>
+    -->
       
     <section class="header__content">
       <div class="header__heading">
@@ -111,18 +134,24 @@
             <div class="main__kaffeesorten--costarica">
               <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffesorte Costa Rica" class="main__kaffeesorten--costarica-img"/>
             </div>
-            <article class="main__kaffeesorten-beschreibung--item">
+            <div class="main__kaffeesorten-beschreibung--item">
               <h4 class="main__kaffeesorten-beschreibung--items">
                 <span class="main__kaffeesorten-beschreibung--main">Costa Rica</span>
                 <span class="main__kaffeesorten-beschreibung--sub">6,90€ - 26,90€</span>
               </h4>
-              <!--<svg class="kaffeesorten-icon">
-                <use xlink:href="Images/Icon Kaffee Schaufel.svg"></use>
-              </svg>-->
               <img src="Images/Icon Kaffee Schaufel.svg" alt="Icon" class="kaffeesorten--icon" />
               <img src="Images/Icon French Press.svg" alt="Icon" class="kaffeesorten--icon"/>
               <img src="Images/Icon Kaffee Bohnen.svg" alt="Icon" class="kaffeesorten--icon"/>
             </article>
+<!--
+              <div>
+                <svg class="kaffeesorten--svg">
+                  <use xlink:href="Images/Icon Kaffee Schaufel.svg"></use>
+                </svg>
+              </div>
+            -->
+
+            </div>
 
           </section>
 
@@ -307,5 +336,7 @@
   
 
 </footer>
+
+<script src="js/index.js"></script>
   </body>
 </html>

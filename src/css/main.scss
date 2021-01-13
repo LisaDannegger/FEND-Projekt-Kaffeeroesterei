@@ -7,6 +7,7 @@
 
 @import "components/hero";
 @import "components/button";
+@import "components/components";
 
 @import "layout/footer";
 @import "layout/header";
@@ -20,6 +21,8 @@
 @import "layout/anfahrt";
 
 
+
+
 :root {
   --color-white: #fff;
   --color-light-grey: #E9E9E9;
@@ -29,7 +32,11 @@
   --color-petrol: #006D7E;
   --color-rosa: #EDD1C9;
   --color-orange: #D77C12;
+  --color-black: #000;
 }
 
+.logo {
+  fill: var(--color-white);
+}
 
   

@@ -1,0 +1,115 @@
+.header__logo   {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 2rem;
+    left: 2.5rem;
+    z-index: 800;
+}
+
+
+.navigation {
+    
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__logo {
+        width: 2.5; 
+        height: 1.5rem;
+        position: fixed; 
+        top: 2rem;
+        right: 2.5rem;
+        z-index: 2000;
+    }
+/*
+    &__button {
+        background-color: var(--color-white);
+        height: 4rem;
+        width: 4rem;
+        position: fixed;
+        top: 0.75rem;
+        right: 0.75rem;
+        border-radius: 50%;
+        z-index: 2000;
+    }
+*/
+
+    /*&__background {
+        height: 3.75rem;
+        width: 3.75rem; 
+        border-radius: 50%;
+        background-color: var(--color-black);
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+
+        transform: scale(75);
+
+    }*/
+
+    &__nav {
+        display: none;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0; 
+        right: 0;
+        z-index: 1500;
+
+        opacity: 1;
+        //width: 0;   //nur mit Opacity findet der Kurser immer noch die Links
+        
+    }
+
+    &__list {
+        position: absolute; 
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: left;
+       
+    }
+
+    &__item {
+        margin: 25px;
+    }
+
+    &__link {
+
+        &:link, 
+        &:visited   {
+            display: inline-block;
+            font-size: 3.2rem;
+            font-weight: 900;
+            padding: 1rem 2rem; 
+            color: var(--color-white);
+            text-decoration: none;
+            background-image: linear-gradient (120deg, transparent 0%, transparent 50%, var(--color-rosa) 50%);
+            background-size: 220%;
+
+            transition: all .4s;
+        }
+
+        &:hover, 
+        &:active {
+            background-position: 100%;
+            color: var(--color-kraftpapier);
+            translate: translateX(1rem);
+        }
+        
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &nav {
+        opacity: 1; 
+        width: 100%;
+    }
+
+}
