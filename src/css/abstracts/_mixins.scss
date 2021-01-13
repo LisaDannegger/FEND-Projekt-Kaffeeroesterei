@@ -1,0 +1,91 @@
+//Desktop
+@mixin section-title-h1-d () {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-headings;
+}
+
+@mixin section-title-h2-d () {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-headings;
+  margin-top: 12rem;
+  margin-bottom: 3.5rem;
+}
+
+@mixin section-title-h3-d () {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-headings;
+    margin-bottom: 3.5rem;
+  }
+
+  @mixin body-text-d () {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+  }
+
+
+
+//Mobile 
+@mixin section-title-h1-m () {
+    font-size: $font-size-h1-m;
+    font-weight: 900;
+}
+
+  @mixin section-title-h2-m () {
+    font-size: 3.6rem;
+    font-weight: $font-weight-headings;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+  
+@mixin section-title-h3-m () {
+    font-size: 3.2rem;
+    font-weight: $font-weight-headings;
+    margin-bottom: 1.2rem;
+}
+
+@mixin subhead-m () {
+    font-size: $font-size-body-text;
+    line-height: 2.1rem;
+    font-weight: $font-weight-body;
+}
+
+@mixin body-text-m () {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+  }
+
+
+//Logo Rösterei
+@mixin roesterei-logo {
+    height: 2.1875rem;
+    width: 2.1875rem;
+}
+
+
+//MEDIA QUERIE MANAGER  
+//1em = 16px
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == media-sm {
+      @media (min-width: 36em) {@content}; //576
+  }
+
+  @if $breakpoint == media-md {
+    @media (min-width: 48em) {@content};  //768
+  }
+
+  @if $breakpoint == media-lg {
+    @media (min-width: 62em) {@content};  //992
+  }
+
+  @if $breakpoint == media-xl {
+    @media (min-width: 75em) {@content};  //1200
+  }
+
+  @if $breakpoint == media-xxl {
+    @media (min-width: 120em) {@content}; //1920
+  }
+}

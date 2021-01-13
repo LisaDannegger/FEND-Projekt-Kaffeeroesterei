@@ -8,11 +8,64 @@
 
 html {
   font-size: 62.5%; //1rem = 10px
-  
+
+    @include respond(media-sm)  {   //Mobile First, dh. Beginn mit der lowest width
+      font-size: 65%;
+    }
+
+    @include respond(media-md)  {
+      font-size: 67.5%;
+    }
+
+    @include respond(media-lg)  {
+      font-size: 70%;
+    }
+
+    @include respond(media-xl)  {
+      font-size: 72.5%;
+    }
+
+    @include respond(media-xxl)  {
+      font-size: 75%;
+    }
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  background-color: $color-white;
+  background-color: var(--color-white);
+
 }
+
+header  {
+  width: 100vw;
+  height: 75vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3)),
+    url(../Images/FEND-Coffee-latte-art-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/*
+footer  {
+  background-color:var(--color-anthrazit);
+  height: 23.125rem;
+  padding: $padding-mobile;
+  display: flex;
+  justify-content: column;
+  justify-content: space-between;
+
+  @media (min-width: 1200px)  {
+    padding: 0px 20px;
+
+    .footer-flexelement-order {
+      order: +1;
+    }
+  }
+}
+*/

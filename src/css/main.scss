@@ -14,32 +14,18 @@
 
 
 :root {
-  --color-primary-light: #fff;
-  --color-primary-dark: #000000;
+  --color-white: #fff;
+  --color-light-grey: #E9E9E9;
+  --color-medium-grey: #737373;
+  --color-anthrazit: #1a1a1a;
+  --color-kraftpapier: #D7BE9D;
+  --color-petrol: #006D7E;
+  --color-rosa: #EDD1C9;
+  --color-orange: #D77C12;
 }
 
-.header {
-  width: 100vw;
-  height: 75vh;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3)),
-    url(../Images/FEND-Coffee-latte-art-3.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 
-  @media (min-width: 1200px) { 
-    height: 65vh;
-    width: 100vw;
-    background-size: cover;
-  }
-
-}
-
-.navigation-bar {
+.header__sitebar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,20 +33,19 @@
   position: fixed;
   height: 55px;
   z-index: 1;
-  padding: 0px 25px;
+  padding: $padding-mobile;
+
+  &--logo {
+    @include roesterei-logo();
+    margin-top: 10px;
   
-}
-
-.navigation-bar-logo  {
-  @include roesterei-logo();
-  margin-top: 10px;
-
-  @media (min-width: 1200px)  {
-    margin-left: 100px;
+    @media (min-width: 1200px)  {
+      margin-left: 100px;
+    }
   }
 }
 
-.toggle-button  {
+.header__sitebar--toggle-button  {
   width: 23,5px;
   height: 12,5px;
 
@@ -69,78 +54,74 @@
   }
 }
 
-.main-nav {
+.header__main-nav {
   text-align: right;
   height: auto;
-  display: none;
-}
+  display: inline-block;
+  
 
-.main-nav-items {
-  display: flex;
+  &-items {
+    display: flex;
   list-style-type: none;
   vertical-align: center;
+  }
+
+  &-item  {
+    padding: 0px 66px;
+  }
 }
 
-.main-nav-item  {
-  padding: 0px 66px;
-}
 
-.main-nav-item-animation a  {
+.header__main-nav-item-animation a  {
   position: relative;
   
 }
 
 .main-nav-item-animation:hover  {
   color: var(--color-primary-light);
-  border-bottom: 1px solid $color-white;
+  border-bottom: 1px solid var(--color-white);
   padding: 3px 0px;
 }
 
-.header__textbox {
+.header__heading {
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-}
 
-.heading-primary {
-  color: $color-white;
-  font-size: 3.125rem;
-
-  
-}
-
-.heading-primary--main {
-  display: block;
-  font-size: 4rem;
-  font-weight: $font-weight-headings;
-  line-height: $line-height-headings;
-
-  @media (min-width: 1200px)  {
-    font-size: $font-size-h1;
-    line-height: 110px;
+  &--primary  {
+    color: var(--color-white);
+    font-size: 3.125rem;
   }
-}
 
-.heading-primary--sub {
-  display: block;
-  font-size: 1.125rem;
-  font-weight: $font-weight-body; /*wie dick die Schrift angezeigt wird*/
-  top: 16.75rem;
+  &--primary-main {
+    display: block;
+    @include section-title-h1-m ();
 
-  @media (min-width: 1200px)  {
-    font-size: $font-size-body-text;
-    line-height: 22px;
+    @media (min-width: 1200px)  {
+      @include section-title-h1-d ();
+    }
   }
+
+  &--primary-sub  {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: $font-weight-body; /*wie dick die Schrift angezeigt wird*/
+    top: 16.75rem;
+
+    @media (min-width: 1200px)  {
+      font-size: $font-size-body-text;
+      line-height: 22px;
+    }
+  }  
 }
 
 
 .header__button {
   border-radius: 5px;
-  border: 2px solid $color-anthrazit;
-  background-color: $color-anthrazit;
+  border: 2px solid var(--color-anthrazit);
+  background-color: var(--color-anthrazit);
   padding: 0.9375rem 3.125rem;
   text-decoration: none;
   font: {
@@ -154,22 +135,22 @@
   transform: translate(-50%, -50%);
 
     &:hover {
-      background-color: $color-anthrazit;
-      color: $color-white;
+      background-color: var(--color-anthrazit);
+      color: var(--color-white);
       border: none;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     &:active  {
-      background-color: $color-kraftpapier;
+      background-color: var(--color-kraftpapier);
       border-width: 2px;
-      color: $color-white;
-      border-color: $color-white;
+      color: var(--color-white);
+      border-color: var(--color-white);
       border-style: solid; 
     }
 
     &:focus {
-      outline:  2px dashed $color-petrol;
+      outline:  2px dashed var(--color-petrol);
       outline-offset: 10px;
       border-radius: 5px;
     } 
@@ -179,38 +160,38 @@
 /*---------------------------------*/
 
 .main__roesterei {
-  font-size: 14px;
-  line-height: 18px;
-  padding: 0px 25px;
+  @include body-text-m ();
+  padding: $padding-mobile;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap; 
 
   @media (min-width: 1200px)  {
-    font-size: 18px;
-    padding: 0px 100px;
+    @include body-text-d ();
+    padding: $padding-desktop;
     flex-direction: row;
-    
+    flex-wrap: nowrap;
   }
 }
 
 .main__roesterei--titel {
-  @include section-title-h2();
-  margin-top: 60px;
+  @include section-title-h2-m();
 
   @media (min-width: 1200px)  {
-    font-size: 56px;
-    margin-top: 125px;
-  }
-}
-
-.main__roesterei--text {
-  @media (min-width: 1200px)  {
+    @include section-title-h2-d();
     
   }
 }
 
-.kontaktdaten-flexbox {
+.main__roesterei--text {
+  @include body-text-m ();
+
+  @media (min-width: 1200px)  {
+    @include body-text-d ();
+  }
+}
+
+.main__roesterei-kontaktdaten--flexbox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -223,26 +204,27 @@
   }
 }
 
-.kontaktdaten-flexelement-1 {
+.main__roesterei-kontaktdaten-flexitem-1 {
   margin-left: 15px;
 }
 
 
-.roesterei-img-flex {
+.main__roesterei--img-flex {
   display: flex;
   justify-content: flex-end;
 }
 
-.roesterei-img {
+.main__roesterei--img {
   @media (min-width: 1200px)  {
     height: 391px;
     width: 607px;
+    margin-top: 125px;
   }
 }
 
 /*------------------------------------------*/
 
-.biofair-box {
+.main__biofair {
   height: auto;
   font-size: 14px;
   line-height: 18px;
@@ -261,10 +243,9 @@
   }
 }
 
-.biofair-titel {
-  @include section-title-h3();
+.main__biofair--titel {
+  @include section-title-h3-m ();
   margin-top: 40px;
-  margin-bottom: 10px;
 
   @media (min-width: 1200px)  {
     font-size: $font-size-h3;
@@ -272,7 +253,7 @@
   }
 }
 
-.biofair-img-flex {
+.main__biofair--img-flexbox {
  align-self: flex-end;
 
  @media (min-width: 1200px)   {
@@ -281,7 +262,7 @@
  }
 }
 
-.biofair-img {
+.main__biofair--img {
   @media (min-width: 1200px)  {
     height: 391px; /*abändern - responsive skalieren*/
     width: 607px;
@@ -289,12 +270,14 @@
   }
 }
 
-.biofair-text {
+.main__biofair--text {
+  @include body-text-m ();
   margin-bottom: 20px;
+  
 
   @media (min-width: 1200px)  {
-    font-size: $font-size-body-text;
-    line-height: $line-height-body-text;
+    @include body-text-d ();
+    
     
   }
 }
@@ -302,8 +285,8 @@
 /*--------------------------------------------*/
 
 .main__kaffeesorten {
-  background-color: $color-anthrazit;
-  color: $color-white;
+  background-color: var(--color-anthrazit);
+  color: var(--color-white);
   padding: 0px 25px;
   display: flex;
   justify-content: space-between;
@@ -316,18 +299,11 @@
 }
 
 .main__kaffeesorten--titel {
-  font-size: 36px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  line-height: 34px;
-  
+  @include section-title-h2-m();
 
   @media (min-width: 1200px)  {
-    font-size: $font-size-h2;
-    width: 400px;
-    line-height: 56px;
+    @include section-title-h2-d();
     margin-bottom: 80px;
-    margin-top: 125px;
   }
 }
 
@@ -345,17 +321,20 @@
   }
 }
 
-.main__kaffeesorten--flexelemente {
-  width: 299px;
-  margin-bottom: 100px;
+.main__kaffeesorten--flexitems {
+ 
+  @media (min-width: 1200px)  {
+    margin-bottom: 100px;
+  }
+  
 }
 
-.costarica-box {
+.main__kaffeesorten--costarica {
   background-color: #e9e9e9;
   text-align: center;
 }
 
-.costarica-img {
+.main__kaffeesorten--costarica-img {
   width: 155px;
   height: 208px;
 
@@ -365,25 +344,25 @@
   }
 }
 
-.beschreibung-elemente {
+.main__kaffeesorten-beschreibung--items {
   line-height: 20px;
   margin-top: 10px;
   margin-bottom: 40px;
 
 }
 
-.beschreibung-main {
+.main__kaffeesorten-beschreibung--main {
   display: block;
   font-size: 18px;
 }
 
-.beschreibung-sub {
+.main__kaffeesorten-beschreibung--sub {
   display: block;
   color: #737373;
   font-size: 14px;
 }
 
-.kaffeesorten-icon {
+.kaffeesorten--icon {
   width: 15px;
   height: 15px;
 }
@@ -410,6 +389,7 @@ justify-content: center;
   padding: 0.9375rem 40px;
   text-decoration: none;
   font-size: 0.875rem;
+  margin-bottom: 40px;
 
   @media (min-width: 1200px)  {
     margin-bottom: 125px;
@@ -417,22 +397,22 @@ justify-content: center;
   }
 
   &:hover {
-    background-color: $color-anthrazit;
-    color: $color-white;
+    background-color: var(--color-anthrazit);
+    color: var(--color-white);
     border: none;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   &:active  {
-    background-color: $color-kraftpapier;
+    background-color: var(--color-kraftpapier);
     border-width: 2px;
-    color: $color-white;
-    border-color: $color-white;
+    color: var(--color-white);
+    border-color: var(--color-white);
     border-style: solid; 
   }
 
   &:focus {
-    outline:  2px dashed $color-petrol;
+    outline:  2px dashed var(--color-petrol);
     outline-offset: 10px;
     border-radius: 5px;
   } 
@@ -445,12 +425,12 @@ justify-content: center;
   height: 50vh;
   background-image: linear-gradient(
       to bottom,
-      rgba($color-anthrazit, 0.5),
+      rgba( #1a1a1a80, 0.5),
       #1a1a1a80
     ),
     url(../Images/FEND-Coffee-bags-2.png);
   background-size: cover;
-  color: $color-white;
+  color: var(--color-white);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -465,25 +445,22 @@ justify-content: center;
 }
 
 .main__herkunft__titel {
-  @include section-title-h2 ();
+  @include section-title-h3-m();
 
   @media (min-width: 1200px)  {
-    font-size: $font-size-h3;
+    @include section-title-h3-d();
   }
 
 }
 
 .main__herkunft__text {
   width: 240px;
-  font-weight: $font-weight-body;
-  font-size: $font-size-body-text-m;
-  line-height: $line-height-body;
+  @include body-text-m ();
   margin-bottom: 20px;
 
   @media (min-width: 1200px)  {
-    font-size: $font-size-body-text;
-    line-height: 24px;
-    width: 306px;
+    @include body-text-d ();
+    width: 20%;
     margin-bottom: 35px;
   }
 }
@@ -492,7 +469,7 @@ justify-content: center;
   padding: 1.125rem;
 
   @media (min-width: 1200px)  {
-    font-size: $font-size-body-text;
+    @include body-text-d ();
   }
 }
 
@@ -505,16 +482,14 @@ justify-content: center;
 }
 
 .main__produktvorstellung--titel {
-  font-size: 2.25rem;
-  font-weight: $font-weight-headings;
+  @include section-title-h2-m();
   text-align: center;
   margin-bottom: 60px;
-  margin-top: 60px;
+  
 
   @media (min-width: 1200px)  {
-    margin-bottom: 60px;
-    margin-top: 125px;
-    font-size: $font-size-h2;
+    @include section-title-h2-d();
+    margin-bottom: 80px;
   }
 }
 
@@ -627,22 +602,22 @@ justify-content: center;
   margin-bottom: 30px;
 
   &:hover {
-    background-color: $color-anthrazit;
-    color: $color-white;
+    background-color: var(--color-anthrazit);
+    color: var(--color-white);
     border: none;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   &:active  {
-    background-color: $color-kraftpapier;
+    background-color: var(--color-kraftpapier);
     border-width: 2px;
-    color: $color-white;
-    border-color: $color-white;
+    color: var(--color-white);
+    border-color: var(--color-white);
     border-style: solid; 
   }
 
   &:focus {
-    outline:  2px dashed $color-petrol;
+    outline:  2px dashed var(--color-petrol);
     outline-offset: 10px;
     border-radius: 5px;
   } 
@@ -654,9 +629,14 @@ justify-content: center;
   margin-top: 70px;
 
   &--titel  {
-    @include section-title-h2();
-    padding: $padding-global;
-    font-weight: $font-weight-headings;
+    @include section-title-h2-m();
+    padding: $padding-mobile;
+
+    
+    @media (min-width: 1200px)  {
+      @include section-title-h2-d();
+      padding: $padding-desktop;
+    }
   }
 
   &--map  {
@@ -684,20 +664,13 @@ justify-content: center;
 /*------------------------------------------*/
 
 .footer {
-  background-color: black;
-  color: #ffffff;
-  height: 23.125rem;
-  padding: 0rem 1.5625rem;
+  background-color: var(--color-anthrazit);
+  height: 370px;
+  padding: $padding-mobile;
+  color: var(--color-white);
   display: flex;
-  justify-content: column;
-  justify-content: space-between;
+  flex-direction: column;
 
-  @media (min-width: 1200px)  {
-    padding: 0px 20px;
-    .footer-flexelement-order {
-      order: +1;
-    }
-  }
 
 }
 
@@ -706,50 +679,99 @@ justify-content: center;
   width: 2.1875rem;
   margin-top: 3.75rem;
   margin-bottom: 1.5rem;
+
+@media (min-width: 1200px)  {
+  width: 70px;
+  height: 70px;
+}
 }
 
-.footer__heading--main {
-  display: block;
-  font-size: 2rem;
-  font-weight: $font-weight-headings;
+.footer-titel {
+  
+  margin-top: 15px;
+  margin-bottom: 35px;
+
+  @media (min-width: 1200px)  {
+    @include section-title-h3-d();
+  }
 }
 
-.footer__heading--sub {
-  display: block;
-  font-size: 1.125rem;
-  font-weight: $font-weight-body;
+.footer__heading  {
+
+  &--main {
+    font-size: 24px;
+    font-weight: 900;
+    display: block;
+    
+  }
+
+  &--sub  {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+
+.footer__flexbox-content  {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.footer__flexitem {
+  padding-top: 25px;
 }
 
 .footer__content {
   margin-top: 0.9375rem;
-  font-weight: $font-weight-body;
-  font-size: $font-size-body-text-m;
+  @include body-text-m ();
+
+  &__text--span   {
+    display: block;
+  }
 }
 
-.footer__content__text--span {
-  display: block;
-}
 
+
+/*
+.footer {
+  background-color:var(--color-anthrazit);
+  color: var(--color-white);
+  height: 370px;
+  padding: 0rem 1.5625rem;
+  display: flex;
+  justify-content: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: 1200px)  {
+    padding: 0px 20px;
+
+    .footer-flexelement-order {
+      order: +1;
+    }
+  }
+}
+*/
 ul {
   list-style-type: none;
 
   a:link,
   a:visited {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color-white);
   }
 
   a:hover {
-  color: #ffffff;
+  color: var(--color-white);
   } 
 }
 
-@media (min-width: 36rem) {
 
-  .main__anfahrt--titel {
-    padding: 0rem 6.25rem;
-    font-size: 3rem;
-  }
+@media (min-width: 36rem) {
 
   .footer {
     justify-content: space-around;
@@ -776,5 +798,7 @@ ul {
     font-size: 18px;
   }
 }
+
+
 
   

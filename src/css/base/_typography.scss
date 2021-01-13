@@ -1,0 +1,29 @@
+body    {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    background-color: var(--color-white);
+}
+
+//Headings
+//Paragraphs - Textboxen
+//Titel
+
+/*
+footer  {
+  background-color:var(--color-anthrazit);
+  color: var(--color-white);
+
+  .footer__heading  {
+
+      &--main {
+        display: block;
+        @include section-title-h3-m ();
+      }
+    
+      &--sub  {
+        display: block;
+      @include subhead-m ();
+      }
+    }
+}
+*/
