@@ -4,28 +4,60 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap; 
-  
-    @media (min-width: 1200px)  {
-      @include body-text-d ();
-      padding: $padding-desktop;
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
+
+        @include respond(media-sm)  { 
+          
+        }
+
+        @include respond(media-md)  {
+          
+        }
+
+        @include respond(media-lg)  {
+          
+        }
+
+        @include respond(media-xl)  {
+          @include body-text-d ();
+          padding: $padding-desktop;
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+
+        @include respond(media-xxl)  {
+          
+        }
   }
   
   .main__roesterei--titel {
     @include section-title-h2-m();
-  
-    @media (min-width: 1200px)  {
-      @include section-title-h2-d();
-      
-    }
+    margin-bottom: 35px;
+
+        @include respond(media-sm)  { 
+          
+        }
+
+        @include respond(media-md)  {
+          
+        }
+
+        @include respond(media-lg)  {
+          
+        }
+
+        @include respond(media-xl)  {
+          @include section-title-h2-d();
+        }
+
+        @include respond(media-xxl)  {
+          
+        }
   }
   
   .main__roesterei--text {
     @include body-text-m ();
-  
-    @media (min-width: 1200px)  {
+
+    @include respond(media-xl)  {
       @include body-text-d ();
     }
   }
@@ -36,8 +68,8 @@
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 40px;
-  
-    @media (min-width: 1200px)  {
+
+    @include respond(media-xl)  {
       align-items: flex-start;
       width: 85%;
     }
@@ -46,9 +78,8 @@
   .main__roesterei-kontaktdaten-flexitem {
     
 
-    @media (min-width: 1200px)  {
+    @include respond(media-xl)  {
       margin: 0;
-      
     }
   }
   
@@ -59,7 +90,8 @@
   }
   
   .main__roesterei--img {
-    @media (min-width: 1200px)  {
+
+    @include respond(media-xl)  {
       height: 391px;
       width: 607px;
       margin-top: 125px;

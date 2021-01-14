@@ -4,11 +4,13 @@
     &--titel  {
       @include section-title-h2-m();
       padding: $padding-mobile;
-  
       
+      
+
       @media (min-width: 1200px)  {
         @include section-title-h2-d();
         padding: $padding-desktop;
+        padding-bottom: 35px;
       }
     }
   
@@ -33,6 +35,8 @@
       }
     }
   }
+
+  .main__anfahrt--titel 
 
   iframe  {
     display: block;

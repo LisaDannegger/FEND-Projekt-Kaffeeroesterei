@@ -8,7 +8,7 @@
   font-size: $font-size-h2;
   font-weight: $font-weight-headings;
   margin-top: 12rem;
-  margin-bottom: 3.5rem;
+  /*margin-bottom: 3.5rem;*/
 }
 
 @mixin section-title-h3-d () {
@@ -35,7 +35,7 @@
     font-size: 3.6rem;
     font-weight: $font-weight-headings;
     margin-top: 6rem;
-    margin-bottom: 2rem;
+    /*margin-bottom: 2rem;*/
 }
   
 @mixin section-title-h3-m () {
@@ -67,7 +67,7 @@
 //MEDIA QUERIE MANAGER  
 //1em = 16px
 
-@mixin respond($breakpoint) {
+@mixin respond($breakpoint) {   //Default-Font-Size 16px - nimmt nicht root-font-size an
 
   @if $breakpoint == media-sm {
       @media (min-width: 36em) {@content}; //576

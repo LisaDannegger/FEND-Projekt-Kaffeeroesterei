@@ -7,9 +7,6 @@ header  {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
-    
-  
   }
 
 .header__content  {
@@ -24,7 +21,7 @@ header  {
 .header__heading {
     text-align: center;
     margin-top: 190px;
-    margin-bottom: 125px;
+    margin-bottom: 100px;
   
     &--primary  {
       color: var(--color-white);
@@ -49,34 +46,37 @@ header  {
       @media (min-width: 1200px)  {
         font-size: $font-size-body-text;
         line-height: 22px;
+        
       }
     }  
   }
   
-  .header__button   {
-    width: 100%;
+
+  .header__button {
     display: flex;
     justify-content: center; 
-    margin-bottom: 3rem;
-    
+    margin-bottom: 60px;
+  
+    @media (min-width: 1200px)  {
+      align-items: left; 
+    }
   }
   
   .header__button--style {
-    display: inline-block;
     border-radius: 5px;
-    background-color: var(--color-anthrazit);
-    border: none;
+    background-color: var(--color-black);
+    border: 2px solid var(--color-anthrazit);
     color: var(--color-white);
-    padding: 15px 50px;
+    padding: 1.5rem 5rem;
     text-decoration: none;
     font-size: 14px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   
     &:hover {
       background-color: var(--color-anthrazit);
       color: var(--color-white);
       border: none;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     }
   
     &:active  {
@@ -93,46 +93,4 @@ header  {
       border-radius: 5px;
     } 
   }
-  
-
-    /*
-  .header__button {
-    border-radius: 5px;
-    border: 2px solid var(--color-anthrazit);
-    background-color: var(--color-anthrazit);
-    padding: 0.9375rem 3.125rem;
-    text-decoration: none;
-    font: {
-      size: 0.875rem;
-      color: var(--color-primary-light);
-    }
-    margin-top: 6.25rem;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-      &:hover {
-        background-color: var(--color-anthrazit);
-        color: var(--color-white);
-        border: none;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-      }
-  
-      &:active  {
-        background-color: var(--color-kraftpapier);
-        border-width: 2px;
-        color: var(--color-white);
-        border-color: var(--color-white);
-        border-style: solid; 
-      }
-  
-      &:focus {
-        outline:  2px dashed var(--color-petrol);
-        outline-offset: 10px;
-        border-radius: 5px;
-      } 
-  }
-
-  */
   
