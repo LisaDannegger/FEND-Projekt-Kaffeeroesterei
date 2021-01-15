@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.openstreetmap.org/
+HostUrl=https://render.openstreetmap.org/cgi-bin/export?bbox=10.113430023193361,54.33943013047166,10.130484582041392,54.3437791793795&scale=2522&format=png
