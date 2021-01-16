@@ -5,17 +5,30 @@
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    height: 55px;
+    height: 5.5rem;
     z-index: 1;
     padding: $padding-mobile;
+
+    @include respond(media-sm)  {
+      padding: 0 5rem;
+    }
+
+    @include respond(media-md)  {
+      padding: 0 7.5rem;
+    }
+  
+    @include respond(media-xl)  {
+      padding: $padding-desktop;
+    }
+
+    @include respond(media-xxl)  {
+      
+    }
+
   
     &--logo {
       @include roesterei-logo();
       margin-top: 10px;
-    
-      @media (min-width: 1200px)  {
-        margin-left: 100px;
-      }
     }
   }
   
@@ -23,7 +36,7 @@
     width: 23,5px;
     height: 12,5px;
   
-    @media (min-width: 578px)  {
+    @include respond(media-md) {
       visibility: hidden;
     }
   }
@@ -32,20 +45,72 @@
     text-align: right;
     height: auto;
     display: inline-block;
-    
+    visibility: hidden;
+
+
+    @include respond(media-sm) {
+     visibility: hidden;
+    }
+
+    @include respond(media-md) {
+      visibility: hidden;
+    }
+
+    @include respond(media-lg) {
+      visibility: visible;
+    }
+
   
     &-items {
       display: flex;
-    list-style-type: none;
-    vertical-align: center;
+      list-style-type: none;
+      vertical-align: center;
     }
   
     &-item  {
-      padding: 0px 66px;
+      padding: 0 7rem;
+      font-size: 18px;
+
+      @include respond(media-md)  {
+        padding: 0 5rem;
+        font-size: 14px;
+      }
+  
+      @include respond(media-xxl) {
+        font-size: 19px;
+      }
     }
   }
-  
-  
+
+  .underline  {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .underline:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: var(--color-white);
+    height: 4px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  .underline:hover:after,
+  .underline:focus:after,
+  .underline:active:after {
+    right: 0;
+  }
+   
+
+//Animation underline  
+ /* 
   .header__main-nav-item-animation a  {
     position: relative;
     
@@ -56,3 +121,4 @@
     border-bottom: 1px solid var(--color-white);
     padding: 3px 0px;
   }
+  */

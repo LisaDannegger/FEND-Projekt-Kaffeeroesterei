@@ -5,22 +5,18 @@
 @import "base/animations";
 @import "base/typography";
 
-@import "components/hero";
-@import "components/button";
-@import "components/components";
+@import "components/button-dunkel";
+@import "components/roesterei";
+@import "components/biofair";
+@import "components/kaffeesorten";
+@import "components/herkunft";
+@import "components/produktvorstellung";
+@import "components/anfahrt";
 
-@import "layout/footer";
 @import "layout/header";
 @import "layout/navbar";
 @import "layout/navigation";
-@import "layout/roesterei";
-@import "layout/biofair";
-@import "layout/kaffeesorten";
-@import "layout/herkunft";
-@import "layout/produktvorstellung";
-@import "layout/anfahrt";
-
-
+@import "layout/footer";
 
 
 :root {

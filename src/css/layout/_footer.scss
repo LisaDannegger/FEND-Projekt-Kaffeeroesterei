@@ -1,87 +1,187 @@
 
 .footer {
     background-color: var(--color-anthrazit);
-    height: 390px;
-    width: 375px;
+    height: 39rem;
+    width: 100vw;
     padding: $padding-mobile;
     color: var(--color-white);
 
-    @include respond(media-xl)  {
-      width: 100vw;
-      height: 443px;
-      padding: $padding-desktop;
+    @include respond(media-sm)  {
+      height: 42rem;
+      padding: 0rem 5rem;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
     }
+
+    @include respond(media-md)  {
+    }
+
+    @include respond(media-lg)  {
+      height: 38rem;
+    }
+
+    @include respond(media-xl)  {
+      padding: $padding-desktop;
+    }
+
+    @include respond(media-xxl) {
+      padding: 0rem 12.5rem;
+    }
+
   }
   
 .footer__flexbox {
 
-  @include respond(media-xl)  {
+  @include respond(media-sm)  {
     display: flex;
     flex-direction: column;
-    width: 25%;
+  }
+
+  @include respond(media-md)  {
+  }
+
+  @include respond(media-lg)  {
+    width: 20%;
     align-items: baseline;
+  }
+
+  @include respond(media-xl)  {
+    width: 25%;
+  }
+
+  @include respond(media-xxl) {
   }
 }
 
 .footer__logo--container  {
 
-  @include respond(media-xl)  {
-    
-  }
 }
-//Container ums Logo, der dann 100% width hat
+
   .footer__logo {
     height: 3.5rem;
     width: 3.5rem;
     margin-top: 6rem;
     margin-bottom: 1.5rem;
 
+    @include respond(media-sm)  {
+      margin-top: 7rem;
+      height: 4.5rem;
+      width: 4.5rem;  
+    }
+
+    @include respond(media-md)  {
+      margin-top: 7rem;
+      height: 5.5rem;
+      width: 5.5rem;  
+    }
+
+    @include respond(media-lg)  {
+      margin-top: 7rem;
+      height: 6rem;
+      width: 6rem;  
+    }
+
     @include respond(media-xl)  {
-      margin-top: 125px;
+      margin-top: 12.5rem;
       height: 7rem;
       width: 7rem;  
+    }
+
+    @include respond(media-xxl) {
+      height: 8rem;
+      width: 8rem; 
     }
   }
   
   .footer__heading  {
   
     &--main {
-      font-size: 24px;
+      font-size: 2.4rem;
       font-weight: 900;
 
+      @include respond(media-sm)  {
+        font-size: 3.4rem;
+      }
+
+      @include respond(media-md)  {  
+        font-size: 3.6rem;
+      }
+
+      @include respond(media-lg)  {
+        font-size: 3.8rem;
+      }
+
       @include respond(media-xl)  {
-        font-size: 42px;
-        
+        font-size: 4.2rem;
+      }
+
+      @include respond(media-xxl) {
+        font-size: 4.5rem;
       }
     }
   
     &--sub  {
       display: block;
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: 400;
     }
 
-  }
+    @include respond(media-sm)  {
+     
+    }
 
-  .footer__heading--main  {
+    @include respond(media-md)  {  
+      
+    }
+
+    @include respond(media-lg)  {
+   
+    }
 
     @include respond(media-xl)  {
-      font-weight: 42px;
+      
     }
+
+    @include respond(media-xxl) {
+     
+    }
+
   }
+
 
   .footer__flexbox2 {
     width: 100%;
+    height: auto;
 
-    @include respond(media-xl)  {
+    @include respond(media-sm)  {
       display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include respond(media-sm)  {
+      justify-content: space-between;
+    }
+
+    @include respond(media-md)  {
+
+    }
+
+    @include respond(media-lg)  {
+      width: 25%;
       flex-direction: column;
+    }
+    
+    @include respond(media-xl)  {
       justify-content: center;
       align-items: baseline;
-      width: 25%;
+    }
+
+    @include respond(media-xxl) {
+
     }
 
   }
@@ -90,17 +190,40 @@
         width: 155px;
         padding-right: 15px;
 
+        @include respond(media-sm)  {
+          width: 200px;
+        }
+
+        @include respond(media-md)  {
+
+        }
+
+        @include respond(media-lg)  {
+
+        }
         
         @include respond(media-xl)  {
-          width: 200px;
-    }
+        /*  width: 200px;*/
+        }
+
+        @include respond(media-xxl) {
+
+        }
+
       }
 
       .footer__flexitem2 {
         display: inline-block;
         width: 155px;
         padding-right: 15px;
+
+        @include respond(media-sm)  {
+        }
+
+        @include respond(media-lg)  {
+        }
       }
+
 
       .footer__flexitem3 {
         display: inline-block;
@@ -112,6 +235,11 @@
   .footer__content {
     margin-top: 35px;
     @include body-text-m ();
+
+    @include respond(media-sm)  {
+      margin-top: 0px;
+    }
+    
   
     &__text--span   {
       display: block;
@@ -146,5 +274,6 @@
   .footer__flexitem--order  {
     order: +1;
   }
+
 
   

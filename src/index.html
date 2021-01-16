@@ -11,16 +11,14 @@
   </head>
 
   <body>  
-
-    <header>
+<!--
       <div>
         <a href="index.html"><img src="Images/Logo.png" alt="Logo" class="header__logo" /></a>
       </div>
       
         <div class="navigation">
-          <input type="checkbox" class="navigation__checkbox" id="toggle-button">
-          <label for="navi-toggle" class="navigation__button">
-            <img src="Images/Burger Menu.svg" alt="toggle-button" class="navigation__logo">
+          <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+          <label for="navi-toggle" class="navigation__button"><img src="Images/Burger Menu.svg" alt="toggle-button" class="navigation__logo">
           </label>
         </div>
 
@@ -34,7 +32,11 @@
           </ul>
         </nav>
 
-      <!--
+      
+
+        <img src="Images/Burger Menu.svg" alt="toggle-button" class="navigation__logo">
+      -->
+
       <section class="header__sitebar">  
 
         <div>
@@ -46,17 +48,17 @@
     
         <nav class="header__main-nav">
           <ul class="header__main-nav-items">
-            <li class="header__main-nav-item"><a href="index.html">das Café</a></li>
+            <li class="header__main-nav-item"><a href="index.html" class="underline">das Café</a></li>
             <div>
-              <li class="header__main-nav-item-animation"><a href="my-subpage/herkunft.html">Herkunft</a></li>
+              <li class="header__main-nav-item"><a href="my-subpage/herkunft.html" class="underline">Herkunft</a></li>
             </div>
-            <li class="header__main-nav-item"><a href="my-subpage/shop.html">Shop</a></li>
+            <li class="header__main-nav-item"><a href="my-subpage/shop.html" class="underline">Shop</a></li>
           </ul>
         </nav>
      
       </section>
-    -->
-      
+   
+    <header>
     <section class="header__content">
       <div class="header__heading">
         <h1 class="header__heading--primary">
@@ -125,7 +127,10 @@
 
       <section class="main__kaffeesorten">
         <div>
-        <h2 class="main__kaffeesorten--titel">Entdecke unsere Kaffee Sorten</h2>
+        <h2 class="main__kaffeesorten--titel">
+          <span class="umbruch">Entdecke unsere</span>
+          <span class="umbruch">Kaffee Sorten</span>
+        </h2>
         </div>
 
         <section class="main__kaffeesorten--flexbox">
@@ -227,7 +232,9 @@
           Konsonantien leben die Blindtexte. Und das alles in bester Bio
           Qualität.
         </p>
-        <link a href="#" class="main__herkunft__link">mehr</a>
+        <div class="main__herkunft--link">
+        <link a href="#">mehr</a>
+      </div>
       </section>
 
 <!---------------------------------------------->
@@ -337,7 +344,7 @@
     
 
       <div class="footer__flexitem3 footer__flexitem--order">
-        <h3 class="footer__links">
+        <h3 class="footer__content">
           <span><a href="#" class="footer__link">Impressum</a></span>
           <span><a href="#" class="footer__link">Datenschutz</a></span>
         </h3>
@@ -382,10 +389,11 @@
     </div>
   
       <div class="footer__flexitem2 footer__flexitem--order">
-          <h3 class="footer__content">
-          <span class="footer__content__text--span"><a href="#">Impressum</a></span>
-          <span class="footer__content__text--span"><a href="#">Datenschutz</a></span>
-          </h3>
+          <ul class="footer__content">
+            <li><a href="index.html">Café</a></li>
+            <li><a href="my-subpage/shop.html">Shop</a></li>
+            <li><a href="my-subpage/herkunft.html">Herkunft</a></li>
+        </ul>
       </div>
 
       <div class="footer__flexitem2">

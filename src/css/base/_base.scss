@@ -7,13 +7,13 @@
 }
 
 html {
-  font-size: 62.5%; //1rem = 10px
+  font-size: 62.5%; //1rem = 10px; 10/16=62.5
 
     @include respond(media-sm)  {   //Mobile First, dh. Beginn mit der lowest width
       font-size: 65%;
     }
 
-    @include respond(media-md)  {
+    @include respond(media-md)  { 
       font-size: 67.5%;
     }
 
@@ -21,8 +21,8 @@ html {
       font-size: 70%;
     }
 
-    @include respond(media-xl)  {
-      font-size: 72.5%;
+    @include respond(media-xl)  { 
+      //font-size: 72.5%;
     }
 
     @include respond(media-xxl)  {
@@ -33,26 +33,40 @@ html {
 body {
   box-sizing: border-box;
   background-color: var(--color-white);
-
 }
-
-
 
 /*
-footer  {
-  background-color:var(--color-anthrazit);
-  height: 23.125rem;
-  padding: $padding-mobile;
-  display: flex;
-  justify-content: column;
-  justify-content: space-between;
-
-  @media (min-width: 1200px)  {
-    padding: 0px 20px;
-
-    .footer-flexelement-order {
-      order: +1;
-    }
-  }
+img {
+  margin: 0;
+  padding: 0; 
+  width: inherit; 
+  height: inherit; 
 }
 */
+
+p {
+  line-height: 130%;
+}
+
+
+a {
+  text-decoration: none;
+  color: $color__link;
+}
+
+  a:link  {
+    color: $color__link;
+  }
+
+  a:visited   {
+    color: $color__link--visited;
+  }
+
+  a:hover   {
+    color: $color__link--hover;
+  }
+
+  a:active   {
+    color: $color__link--active;
+  }
+

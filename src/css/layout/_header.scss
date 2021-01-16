@@ -1,13 +1,14 @@
 header  {
-    width: 100vw;
-    height: 75vh;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3)),
-      url(../Images/FEND-Coffee-latte-art-3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+  width: 100vw;
+  height: auto;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3)),
+    url(../Images/FEND-Coffee-latte-art-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 .header__content  {
   height: 75vh;
@@ -19,20 +20,57 @@ header  {
 
 .header__heading {
     text-align: center;
-    margin-top: 190px;
-    margin-bottom: 100px;
+    margin-top: 19rem;
+    margin-bottom: 10rem;
   
     &--primary  {
       color: var(--color-white);
       font-size: 3.125rem;
+
+      @include respond(media-sm)  {
+
+      }
+
+      @include respond(media-md)  {
+
+      }
+
+      @include respond(media-lg)  {
+
+      }
+
+      @include respond(media-xl)  {
+
+      }
+
+      @include respond(media-xxl) {
+
+      }
+      
     }
   
     &--primary-main {
       display: block;
       @include section-title-h1-m ();
   
-      @media (min-width: 1200px)  {
+      @include respond(media-sm)  {
+
+      }
+
+      @include respond(media-md)  {
+
+      }
+
+      @include respond(media-lg)  {
+
+      }
+
+      @include respond(media-xl)  {
         @include section-title-h1-d ();
+      }
+
+      @include respond(media-xxl) {
+
       }
     }
   
@@ -41,11 +79,26 @@ header  {
       font-size: 1.125rem;
       font-weight: $font-weight-body; /*wie dick die Schrift angezeigt wird*/
       top: 16.75rem;
+
+      @include respond(media-sm)  {
+
+      }
+
+      @include respond(media-md)  {
+
+      }
+
+      @include respond(media-lg)  {
+
+      }
   
-      @media (min-width: 1200px)  {
+      @include respond(media-xl)  {
         font-size: $font-size-body-text;
-        line-height: 22px;
-        
+        line-height: 2.2rem;
+      }
+
+      @include respond(media-xxl) {
+
       }
     }  
   }
@@ -54,41 +107,46 @@ header  {
   .header__button {
     display: flex;
     justify-content: center; 
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
   
-    @media (min-width: 1200px)  {
+    @include respond(media-xl)  {
       align-items: left; 
     }
   }
   
-  .header__button--style {
-    border-radius: 5px;
+
+
+.header__button--style {
+    border-radius: 0.5rem;
     background-color: var(--color-black);
-    border: 2px solid var(--color-anthrazit);
+    border: 0.2rem solid var(--color-anthrazit);
     color: var(--color-white);
     padding: 1.5rem 5rem;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.4rem;
   
     &:hover {
       background-color: var(--color-anthrazit);
       color: var(--color-white);
       border: none;
-      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
     }
   
     &:active  {
       background-color: var(--color-kraftpapier);
-      border-width: 2px;
+      border-width: 0.2rem;
       color: var(--color-white);
       border-color: var(--color-white);
       border-style: solid; 
     }
   
     &:focus {
-      outline:  2px dashed var(--color-petrol);
-      outline-offset: 10px;
-      border-radius: 5px;
+      outline:  0.2rem dashed var(--color-petrol);
+      outline-offset: 1rem;
+      border-radius: 0.5rem;
     } 
   }
+
+
+
   

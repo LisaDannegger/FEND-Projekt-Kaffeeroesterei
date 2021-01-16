@@ -19,7 +19,7 @@
 
   @mixin body-text-d () {
     font-size: 1.8rem;
-    line-height: 2.4rem;
+    line-height: 24px;
     font-weight: 400;
   }
 
@@ -46,13 +46,13 @@
 
 @mixin subhead-m () {
     font-size: $font-size-body-text;
-    line-height: 2.1rem;
+    line-height: 21px;
     font-weight: $font-weight-body;
 }
 
 @mixin body-text-m () {
     font-size: 1.4rem;
-    line-height: 1.8rem;
+    line-height: 18px;
     font-weight: 400;
   }
 
@@ -88,4 +88,34 @@
   @if $breakpoint == media-xxl {
     @media (min-width: 120em) {@content}; //1920
   }
+}
+
+$breakpoint-small-device: 576px;
+$breakpoint-medium-device: 768px;
+$breakpoint-large-device: 992px;
+$breakpoint-extralarge-device: 1200px;
+$breakpoint-verylarge-device: 1920px;
+
+
+@mixin for-size($size)  {
+  @if $size == media-sm  {
+    @media (min-width: $breakpoint-small-device)  { @content; }
+  }
+
+  @else if $size == media-md  {
+    @media (min-width: $breakpoint-medium-device) { @content; }
+  }
+
+  @else if $size == media-lg  {
+    @media (min-width: $breakpoint-large-device) { @content; }
+  }
+
+  @else if $size == media-xl  {
+    @media (min-width: $breakpoint-extralarge-device) { @content; }
+  }
+
+  @else if $size == media-xxl  {
+    @media (min-width: $breakpoint-verylarge-device) { @content; }
+  }
+
 }

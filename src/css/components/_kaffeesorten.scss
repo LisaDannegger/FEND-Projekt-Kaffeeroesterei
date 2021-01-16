@@ -7,32 +7,66 @@
     justify-content: space-between;
     flex-wrap: wrap;
   
-    @media (min-width: 1200px)  {
-      padding: 0px 100px;
-      height: 1076px;
+    @include respond(media-sm)  {
+      padding: 0px 50px;
     }
+
+    @include respond(media-md)  {
+      padding: 0px 75px;
+    }
+
+    @include respond(media-lg)  {
+      padding: 0px 100px;
+    }
+
+    @include respond(media-xl)  {
+      padding: 0px 100px;
+    }
+
+    @include respond(media-xxl) {
+      padding: 0px 125px;
+    }
+
   }
   
   .main__kaffeesorten--titel {
     @include section-title-h2-m();
+
+
+    @include respond(media-sm)  {
+    }
   
-    @media (min-width: 1200px)  {
+    @include respond(media-xl) {
       @include section-title-h2-d();
       margin-bottom: 80px;
-      width: 75%;
-      
     }
   }
+
+  .umbruch  {
+    display: block;
+  }
+
   
   .main__kaffeesorten--flexbox {
-    width: 375px;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
   
-    @media (min-width: 1200px)  {
-      width: 100vw;
+    @include respond(media-sm)  {
+      justify-content: space-between;
+    }
+
+    @include respond(media-md)  {
+      justify-content: space-around;
+    }
+
+    @include respond(media-lg)  {
+      
+    }
+
+    @include respond(media-xl)  {
       justify-content: space-between; 
       flex-wrap: nowrap;
     }
@@ -41,8 +75,21 @@
   .main__kaffeesorten--flexitems {
     margin-top: 40px;
    
-    @media (min-width: 1200px)  {
-      margin-bottom: 0px;
+    @include respond(media-sm)  {
+      padding: 0px 25px;
+    }
+
+    @include respond(media-md)  {
+
+    }
+
+    @include respond(media-lg)  {
+      padding: 0px 0px;
+    }
+
+    @include respond(media-xl)  {
+      margin-bottom: 35px;
+      padding: 0px 0px;
     }
     
   }
@@ -50,15 +97,53 @@
   .main__kaffeesorten--costarica {
     background-color: #e9e9e9;
     text-align: center;
+
+    @include respond(media-sm)  {
+      width: 185px;
+    }
+
+    @include respond(media-md)  {
+      width: 100%;
+    }
+
+    @include respond(media-lg)  {
+      width: 95%;
+    }
+
+    @include respond(media-xl)  {
+      width: 100%;
+    }
+
+    @include respond(media-xxl) {
+      width: 100%;
+    }
   }
   
   .main__kaffeesorten--costarica-img {
     width: 155px;
     height: 208px;
-  
-    @media (min-width: 1200px)  {
+
+    @include respond(media-sm)  {
+    }
+
+    @include respond(media-md)  {
+      width: 200px;
+      height: 300px;
+    }
+
+    @include respond(media-lg)  {
       width: 299px;
       height: 399px;
+    }
+
+    @include respond(media-xl)  {
+      width: 299px;
+      height: 399px;
+    }
+
+    @include respond(media-xxl)  {
+      width: 350px;
+      height: 420px;
     }
   }
   
@@ -93,9 +178,11 @@
   width: 100vw;
   justify-content: center;
   
-    @media (min-width: 1200px)  {
-  
-    }
+  @include respond(media-sm)  {
+  }
+
+  @include respond(media-xl)  {
+  }
     
   }
   
@@ -113,7 +200,10 @@
     margin-top: 40px;
     color: var(--color-white);
   
-    @media (min-width: 1200px)  {
+    @include respond(media-sm)  {
+    }
+  
+    @include respond(media-xl)  {
       margin-bottom: 125px;
       
     }

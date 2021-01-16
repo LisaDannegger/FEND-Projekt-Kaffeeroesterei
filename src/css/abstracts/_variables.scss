@@ -18,6 +18,7 @@ $font-weight-body: 400;
 
 $line-height-body-text: 2.4rem;
 
+//Subhead
 
 //Padding
 $padding-mobile: 0 2.5rem;
@@ -25,8 +26,29 @@ $padding-desktop : 0 10rem;
 
 
 //Icons
-$icon-shop-width: 45px;
-$icon-shop-height: 45px;
+$icon-shop-width: 4.5rem;
+$icon-shop-height: 4.5rem;
+
+
+//Link-Styles: link, hover, visited, active
+
+$color__link: var(--color-white);
+$color__link--visited: var(--color-white) ;
+$color__link--hover: var(--color-kraftpapier);
+$color__link--active: var(--color-anthrazit);
+
+
+/* --color-white: #fff;
+  --color-light-grey: #E9E9E9;
+  --color-medium-grey: #737373;
+  --color-anthrazit: #1a1a1a;
+  --color-kraftpapier: #D7BE9D;
+  --color-petrol: #006D7E;
+  --color-rosa: #EDD1C9;
+  --color-orange: #D77C12;
+  --color-black: #000;
+  */
+
 
 
 

@@ -1,0 +1,102 @@
+.main__herkunft {
+    height: 50vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba( #1a1a1a80, 0.5),
+        #1a1a1a80
+      ),
+      url(../Images/FEND-Coffee-bags-2.png);
+    background-size: cover;
+    color: var(--color-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(media-md)  {
+    }
+  
+    @include respond(media-xl)  {
+      background-position: 50%;
+      background-repeat: no repeat;
+    }
+  }
+  
+  .main__herkunft__titel {
+    @include section-title-h3-m(); //32
+
+    @include respond(media-sm)  {
+      font-size: 3.3rem;
+    }
+  
+    @include respond(media-md)  {
+      font-size: 3.5rem;
+    }
+
+    @include respond(media-lg)  {
+      font-size: 4rem;
+    }
+
+    @include respond(media-xl)  {
+      @include section-title-h3-d(); //42
+      margin-bottom: 2.5rem;
+    }
+
+    @include respond(media-xxl)  {
+      font-size: 4.5rem;
+    }
+  
+  }
+  
+  .main__herkunft__text {
+    width: 24rem;
+    @include body-text-m ();
+    margin-bottom: 2rem;
+
+    @include respond(media-md)  {   //768
+      width: 27rem;
+      font-size: 1.6rem;
+      line-height: 20px;
+    }
+
+    @include respond(media-lg)  {   //992
+      font-size: 1.7rem;
+      line-height: 23px;
+    }
+  
+    @include respond(media-xl)  {   //1440
+      @include body-text-d ();
+      width: 30rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @include respond(media-xxl) {   //1920
+      width: 40rem;
+      font-size: 2.4rem;
+      line-height: 30px;
+      margin-bottom: 3.8rem;
+    }
+  }
+  
+  .main__herkunft--link {
+    font-size: $font-size-body-text-m;
+
+    @include respond(media-md)  {
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+
+    @include respond(media-lg)  {
+      font-size: 1.7rem;
+    }
+  
+    @include respond(media-xl)  {
+      font-size: $font-size-body-text;
+    }
+
+    @include respond(media-xxl) {
+      font-size: 2.4rem;
+    }
+
+  }
