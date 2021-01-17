@@ -1,3 +1,5 @@
+
+/*
 .header__logo   {
     width: 35px;
     height: 35px;
@@ -129,3 +131,175 @@
     }
 
 }
+
+*/
+
+.main-navigation {
+    height: 55px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+  .nav-toggle-button {    //Button ist nicht verlinkt im HTML - das Problem? 
+    width: 3rem;
+    background: transparent;
+    border: none;
+    position: absolute; 
+    right: 2.5rem;
+    cursor: pointer;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .header__sitebar--toggle-button  {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  
+  .nav-toggle-button:focus {
+    outline: none;
+  }
+
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.4rem;
+    background: white;
+    display: block;
+    margin: 0.6rem 0;
+  }
+ 
+  .main-navigation__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    
+  }
+  
+  .main-navigation__brand img {
+    height: 2.5rem;
+  }
+  
+
+  .main-navigation-box {
+    display: none;
+  }
+  
+  .main-navigation__items {
+    margin: 0; 
+    padding:0;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+  
+  .main-navigation__item {
+    margin: 0 1rem;
+  }
+  
+  .main-navigation__item a,
+  .mobile-navigation__item a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 400;
+    padding: 0.2rem 0;
+  }
+  
+  .main-navigation__item a:hover,
+  .main-navigation__item a:active {
+    color: white;
+    border-bottom: 5px solid white;
+  }
+
+@include respond(media-sm) {
+
+  .header__sitebar--toggle-button {
+    display: none;
+  }
+
+  .main-navigation-box {
+    /*display: inline-block;
+    text-align: right;
+    width: calc(100% - 44px);
+    vertical-align: middle;*/
+    display: flex;
+  }
+}
+
+.mobile-navigation {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  height: 100vh;
+}
+
+.mobile-navigation__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  /*margin: 10% auto;*/
+  padding: 0;
+  text-align: center;
+  
+}
+
+.mobile-navigation__item {
+  margin: 2.5rem 0;
+  align-self: flex-start;
+  margin-left: 6rem;
+}
+
+.mobile-navigation__item a {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.button {
+  background: white;
+  color: black;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: white;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
+} 
+
+.open {
+  display: block !important;
+}
+
+
+
+  

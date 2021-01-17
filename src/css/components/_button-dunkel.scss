@@ -46,32 +46,39 @@
   */
 
   .header__button--style {
-    border-radius: 0.5rem;
-    background-color: var(--color-black);
-    border: 0.2rem solid var(--color-anthrazit);
-    color: var(--color-white);
-    padding: 1.5rem 5rem;
-    text-decoration: none;
-    font-size: 1.4rem;
-  
-    &:hover {
-      background-color: var(--color-anthrazit);
-      color: var(--color-white);
-      border: none;
-      box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
-    }
-  
-    &:active  {
-      background-color: var(--color-kraftpapier);
-      border-width: 0.2rem;
-      color: var(--color-white);
-      border-color: var(--color-white);
-      border-style: solid; 
-    }
-  
-    &:focus {
-      outline:  0.2rem dashed var(--color-petrol);
-      outline-offset: 1rem;
+    display: inline-block;
       border-radius: 0.5rem;
-    } 
-  }
+      background-color: var(--color-black);
+      border: 0.2rem solid var(--color-anthrazit);
+      color: var(--color-white);
+      padding: 1.5rem 5rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+  
+      /* "to left" / "to right" - affects initial color */
+      background: linear-gradient(to left, var(--color-anthrazit) 50%, var(--color-black) 50%) right;
+      background-size: 200%;
+      transition: .5s ease-out;
+    
+      &:hover {
+        background-color: var(--color-anthrazit);
+        color: var(--color-white);
+        border: none;
+        box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+        background-position: left;
+      }
+    
+      &:active  {
+        background-color: var(--color-kraftpapier);
+        border-width: 0.2rem;
+        color: var(--color-white);
+        border-color: var(--color-white);
+        border-style: solid; 
+      }
+    
+      &:focus {
+        outline:  0.2rem dashed var(--color-petrol);
+        outline-offset: 1rem;
+        border-radius: 0.5rem;
+      } 
+    }
