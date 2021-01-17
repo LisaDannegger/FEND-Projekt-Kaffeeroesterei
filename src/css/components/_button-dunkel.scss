@@ -45,8 +45,17 @@
   
   */
 
+  .header__button {
+    display: flex;
+     justify-content: center; 
+     margin-bottom: 6rem;
+ 
+     @include respond(media-xl)  {
+       align-items: left; 
+     }
+   }
+
   .header__button--style {
-    display: inline-block;
       border-radius: 0.5rem;
       background-color: var(--color-black);
       border: 0.2rem solid var(--color-anthrazit);

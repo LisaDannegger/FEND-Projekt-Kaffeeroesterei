@@ -100,7 +100,7 @@
   
     &--main {
       font-size: 2.4rem;
-      font-weight: 900;
+      font-weight: $font-weight-headings;
 
       @include respond(media-sm)  {
         font-size: 3.4rem;
@@ -125,28 +125,8 @@
   
     &--sub  {
       display: block;
-      font-size: 1.8rem;
-      font-weight: 400;
-    }
-
-    @include respond(media-sm)  {
-     
-    }
-
-    @include respond(media-md)  {  
-      
-    }
-
-    @include respond(media-lg)  {
-   
-    }
-
-    @include respond(media-xl)  {
-      
-    }
-
-    @include respond(media-xxl) {
-     
+      @include subhead ();
+      line-height: 2.1; 
     }
 
   }
@@ -188,7 +168,7 @@
       .footer__flexitem1 {
         display: inline-block;
         width: 155px;
-        padding-right: 15px;
+        padding-right: 1.5rem;
 
         @include respond(media-sm)  {
           width: 200px;
@@ -215,7 +195,7 @@
       .footer__flexitem2 {
         display: inline-block;
         width: 155px;
-        padding-right: 15px;
+        padding-right: 1.5rem;
 
         @include respond(media-sm)  {
         }
@@ -228,16 +208,17 @@
       .footer__flexitem3 {
         display: inline-block;
         width: 155px;
-        padding-right: 15px;
+        padding-right: 1.5rem;
       }
 
 
   .footer__content {
-    margin-top: 35px;
+    margin-top: 3.5rem;
     @include body-text-m ();
+    line-height: 1.3;
 
     @include respond(media-sm)  {
-      margin-top: 0px;
+      margin-top: 0;
     }
     
   
@@ -253,8 +234,8 @@
 .footer__link {
   text-decoration: none;
   color: var(--color-white);
-  font-size: 14px;
-  font-weight: 400;
+  @include body-text-m();
+  line-height: 1.8;
 }
 
   footer ul {

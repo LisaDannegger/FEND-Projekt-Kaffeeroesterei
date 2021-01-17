@@ -8,7 +8,7 @@
   font-size: $font-size-h2;
   font-weight: $font-weight-headings;
   margin-top: 12rem;
-  /*margin-bottom: 3.5rem;*/
+  margin-bottom: 3.5rem;
 }
 
 @mixin section-title-h3-d () {
@@ -17,10 +17,9 @@
     margin-bottom: 3.5rem;
   }
 
-  @mixin body-text-d () {
-    font-size: 1.8rem;
-    line-height: 24px;
-    font-weight: 400;
+@mixin body-text-d () {
+    font-size: $font-size-body-text;
+    font-weight: $font-weight-body;
   }
 
 
@@ -28,33 +27,30 @@
 //Mobile 
 @mixin section-title-h1-m () {
     font-size: $font-size-h1-m;
-    font-weight: 900;
+    font-weight: $font-weight-headings;
 }
 
   @mixin section-title-h2-m () {
-    font-size: 3.6rem;
+    font-size: $font-size-h2-m;
     font-weight: $font-weight-headings;
     margin-top: 6rem;
-    /*margin-bottom: 2rem;*/
 }
   
 @mixin section-title-h3-m () {
-    font-size: 3.2rem;
+    font-size: $font-size-h3-m;
     font-weight: $font-weight-headings;
     margin-bottom: 1.2rem;
 }
 
-@mixin subhead-m () {
-    font-size: $font-size-body-text;
-    line-height: 21px;
+@mixin body-text-m () {
+    font-size: $font-size-body-text-m;
+    font-weight: $font-weight-body;
+  }
+
+@mixin subhead () {
+    font-size: $font-size-sh;
     font-weight: $font-weight-body;
 }
-
-@mixin body-text-m () {
-    font-size: 1.4rem;
-    line-height: 18px;
-    font-weight: 400;
-  }
 
 
 //Logo Rösterei

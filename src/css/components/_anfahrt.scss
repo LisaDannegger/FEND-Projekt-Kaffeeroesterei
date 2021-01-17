@@ -1,12 +1,12 @@
 .main__anfahrt  {
-    margin-top: 70px;
+    margin-top: 7rem;
   
     &--titel  {
       @include section-title-h2-m();
       padding: $padding-mobile;
-      margin-bottom: 35px;
+      margin-bottom: 3.5rem;
 
-      @media (min-width: 1200px)  {
+      @include respond(media-xl)  {
         @include section-title-h2-d();
         padding: $padding-desktop;
       }

@@ -9,12 +9,13 @@
 html {
   font-size: 62.5%; //1rem = 10px; 10/16=62.5
 
+  /*
     @include respond(media-sm)  {   //Mobile First, dh. Beginn mit der lowest width
       font-size: 65%;
     }
 
     @include respond(media-md)  { 
-      font-size: 67.5%;
+      font-size: 68.75%;            //11px; 11/16=68.75
     }
 
     @include respond(media-lg)  {
@@ -25,9 +26,10 @@ html {
       //font-size: 72.5%;
     }
 
-    @include respond(media-xxl)  {
+    @include respond(media-xxl)  {  // 12px; 12/16=75
       font-size: 75%;
     }
+    */
 }
 
 body {

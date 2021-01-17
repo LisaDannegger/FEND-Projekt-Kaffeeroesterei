@@ -1,7 +1,5 @@
 .main__biofair {
     height: auto;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
     padding: 0rem 2.5rem;
     margin-bottom: 6rem;
     display: flex;
@@ -11,12 +9,17 @@
     @include respond(media-sm)  {
       padding: 0rem 5rem;
     }
+
+    @include respond(media-lg)  {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   
     @include respond(media-xl)  {
       padding: 0rem 10rem;
       justify-content: center;
       flex-wrap: nowrap; 
-      margin-top: 130px;
+      margin-top: 13rem;
     }
     
   }
@@ -26,78 +29,95 @@
     margin-top: 4rem;
     margin-bottom: 1.2rem;
 
-    @include respond(media-sm)  {   //34
-      margin-bottom: 2.5rem;
-      font-size: 3.4rem;
-    }
+        @include respond(media-sm)  {   //34
+          margin-bottom: 2.5rem;
+          font-size: 3.4rem;
+        }
 
-    @include respond(media-md)  {   //36
-      font-size: 3.6rem;
-    }
+        @include respond(media-md)  {   //36
+          font-size: 3.6rem;
+        }
 
-    @include respond(media-lg)  {
-      font-size: 3.8rem;
-    }
-  
-    @include respond(media-xl)  { //42
-      font-size: $font-size-h3;
-      margin-bottom: 2.5rem;
-    }
+        @include respond(media-lg)  {
+          font-size: 3.8rem;
+          margin-top: 12.5rem;
+          margin-left: 8rem;
+        }
+      
+        @include respond(media-xl)  { //42
+          font-size: $font-size-h3;
+          margin-bottom: 2.5rem;
+        }
 
-    @include respond(media-xxl) {
-      font-size: 4.5rem;
-    }
+        @include respond(media-xxl) {
+          font-size: 4.5rem;
+        }
   }
   
   .main__biofair--img-flexbox {
    align-self: flex-end;
 
-   @include respond(media-sm)  {
-    
-  }
-  
-    @include respond(media-xl)  {
-     order: -1;
-     margin-right: 120px;
-   }
+      @include respond(media-sm)  {
+        
+      }
+
+      @include respond(media-lg)  {
+        order: -1;
+        margin-top: 10rem;
+      }
+      
+        @include respond(media-xl)  {
+        margin-top: 12.5rem;
+      }
   }
   
   .main__biofair--img {
 
-    @include respond(media-sm)  {
-      height: 260px;
-      height: auto;
-    }
+        @include respond(media-sm)  {
+          height: 260px;
+          width: auto;
+        }
 
-    @include respond(media-xl)  {
-      height: 391px; /*abändern - responsive skalieren*/
-      width: auto;
-      margin-bottom: 12.5rem;
-    }
+        @include respond(media-md)  {
+
+        }
+
+        @include respond(media-lg)  {
+
+        }
+
+        @include respond(media-xl)  {
+          height: 391px; /*abändern - responsive skalieren*/
+          width: auto;
+          margin-bottom: 12.5rem;
+        }
   }
-  
+
   .main__biofair--text {
     @include body-text-m ();    //14
     margin-bottom: 4rem;
+    line-height: 1.2;
     
     
-    @include respond(media-sm)  {   //15
-      font-size: 1.5rem;
-    }
+        @include respond(media-sm)  {   //15
+          font-size: 1.5rem;
+        }
 
-    @include respond(media-md)  {   //16
-      font-size: 1.6rem;
-    }
+        @include respond(media-md)  {   //16
+          font-size: 1.6rem;
+        }
 
-    @include respond(media-lg)  {   //17
-      font-size: 1.7rem;
-    }
-  
-    @include respond(media-xl)  {   //18
-      @include body-text-d ();
-    }
+        @include respond(media-lg)  {   //17
+          font-size: 1.7rem;
+          margin-left: 8rem;
+        }
+      
+        @include respond(media-xl)  {   //18
+          @include body-text-d ();
+          width: 100%
+        }
 
-    @include respond(media-xxl) {   //19
-      font-size: 1.9rem;
-    }
+        @include respond(media-xxl) {   //19
+          font-size: 1.9rem;
+        }
   }

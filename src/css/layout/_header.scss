@@ -12,6 +12,7 @@ header  {
 
 .header__content  {
   height: 75vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,27 +26,6 @@ header  {
   
     &--primary  {
       color: var(--color-white);
-      font-size: 3.125rem;
-
-      @include respond(media-sm)  {
-
-      }
-
-      @include respond(media-md)  {
-
-      }
-
-      @include respond(media-lg)  {
-
-      }
-
-      @include respond(media-xl)  {
-
-      }
-
-      @include respond(media-xxl) {
-
-      }
       
     }
   
@@ -76,9 +56,8 @@ header  {
   
     &--primary-sub  {
       display: block;
-      font-size: 1.125rem;
-      font-weight: $font-weight-body; /*wie dick die Schrift angezeigt wird*/
-      top: 16.75rem;
+      @include subhead ();
+      line-height: 2.2;
 
       @include respond(media-sm)  {
 
@@ -93,8 +72,6 @@ header  {
       }
   
       @include respond(media-xl)  {
-        font-size: $font-size-body-text;
-        line-height: 2.2rem;
       }
 
       @include respond(media-xxl) {
@@ -103,16 +80,7 @@ header  {
     }  
   }
   
-
-  .header__button {
-   display: flex;
-    justify-content: center; 
-    margin-bottom: 6rem;
-
-    @include respond(media-xl)  {
-      align-items: left; 
-    }
-  }
+  
   
 
 

@@ -1,5 +1,4 @@
 .main__roesterei {
-    @include body-text-m ();
     padding: $padding-mobile;
     display: flex;
     flex-direction: column;
@@ -14,19 +13,45 @@
         }
 
         @include respond(media-lg)  {
-          
+          flex-direction: row;
+          flex-wrap: nowrap;
         }
 
         @include respond(media-xl)  {
           @include body-text-d ();
           padding: $padding-desktop;
-          flex-direction: row;
-          flex-wrap: nowrap;
         }
 
         @include respond(media-xxl)  {
           
         }
+  } 
+
+  .main__roesterei--textelemente  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include respond(media-sm)  { 
+          
+    }
+
+    @include respond(media-md) {
+
+    }
+
+    @include respond(media-lg) {
+      width: 55%;
+      padding-right: 2.5rem;
+    }
+
+    @include respond(media-xl) {
+
+    }
+
+    @include respond(media-xxl)  {
+
+    }
   }
   
   .main__roesterei--titel {
@@ -42,11 +67,12 @@
         }
 
         @include respond(media-lg)  {
-          
+          margin-top: 100px;
         }
 
-        @include respond(media-xl)  {
-          @include section-title-h2-d();
+        @include respond(media-xl)  {   //1200
+          font-size: 48px;
+          margin-top: 125px;
         }
 
         @include respond(media-xxl)  {
@@ -56,18 +82,20 @@
   
   .main__roesterei--text {
     @include body-text-m ();
+    line-height: 1.2;
 
     @include respond(media-sm)  {
       width: 95%;
-      font-size: 15px;
+      font-size: 1.5rem;
     }
 
     @include respond(media-md)  {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
 
-    @include respond(media-lg)  {
-      font-size: 18px;
+    @include respond(media-lg)  { //992
+      font-size: $font-size-body-text;
+      width: 100%;      
     }
 
     @include respond(media-xl)  {
@@ -75,7 +103,7 @@
     }
 
     @include respond(media-xxl) {
-      font-size: 21px;
+      font-size: 2.1rem;
     }
   }
   
@@ -83,6 +111,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;;
     margin-top: 2rem;
     margin-bottom: 4rem;
 
@@ -91,16 +120,18 @@
     }
 
     @include respond(media-md)  {
-
     }
 
     @include respond(media-lg)  {
-
+      width: 90%;
     }
 
     @include respond(media-xl)  {
       align-items: flex-start;
-      width: 85%;
+      width:85%;
+      height: 25%;
+      flex-grow: 1;
+      margin-top: 3.5rem;
     }
 
     @include respond(media-xxl) {
@@ -119,7 +150,7 @@
     }
 
     @include respond(media-lg)  {
-
+      
     }
 
     @include respond(media-xl)  {
@@ -135,6 +166,10 @@
   .main__roesterei--img-flex {
     display: flex;
     justify-content: flex-end;
+
+    @include respond(media-lg)  {
+      margin-top: 10rem;
+    }
   }
   
 
@@ -145,9 +180,18 @@
       height: auto;
     }
 
+    @include respond(media-md)  {
+      width: 350px;
+    }
+
+    @include respond(media-lg)  {
+      width: 400px;  
+    }
+
     @include respond(media-xl)  {
       width: 607px;
-      height: auto;
-      margin-top: 12.5rem;
+    }
+
+    @include respond(media-xxl)  {
     }
   }
