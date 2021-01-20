@@ -140,6 +140,7 @@
   }
   
   .main__roesterei-kontaktdaten-flexitem {
+    font-size: 1.4rem;
     
     @include respond(media-sm)  {
 
@@ -174,6 +175,8 @@
   
 
   .main__roesterei--img {
+    width: 241px;
+    height: auto;
 
     @include respond(media-sm)  {
       width: 260px;

@@ -12,11 +12,18 @@
 @import "components/herkunft";
 @import "components/produktvorstellung";
 @import "components/anfahrt";
+@import "components/gebaeck";
+@import "components/grid";
 
 @import "layout/header";
 @import "layout/navbar";
 @import "layout/navigation";
 @import "layout/footer";
+@import "layout/header-cafe";
+
+@import "pages/cafe";
+@import "pages/herkunft";
+@import "pages/shop";
 
 
 :root {

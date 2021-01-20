@@ -1,17 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>das Café</title>
-    <link rel="stylesheet" href="../css/main.scss" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaffeerösterei Rustica Kiel - Rösterei und Cafe</title>
+    <link href="../css/main.scss" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+          rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <main>
-      <div class="hero">HERO</div>
-      <a href="/">Home</a>
-    </main>
-    <script src="../js/index.js"></script>
+
+    <include src="navigation.html"></include>
+
+<!----------------------------------------------------------------->  
+
+<header>
+  <section class="header__cafe">
+
+    <div class="header__button header__button--cafe">
+      <a href="shop.html" class="header__button--style">zum Shop</a>
+    </div>
+
+  </section>
+</header>
+
+<main>
+  <section class="main__roesterei">
+    
+    <div class="main__roesterei--textelemente">
+      <h2 class="main__roesterei--titel">Rösterei & Café</h2>
+      
+      <p class="main__roesterei--text">
+        Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen Rösterei,
+        serviert im gemütlichen Café in der Innenstadt
+      </p>
+    
+      <div class="main__roesterei-kontaktdaten--flexbox">
+        <div class="main__roesterei-kontaktdaten-flexitem">
+          <p>Komm uns besuchen!<br>
+            Fraunhoferstr. 13, Kiel</p>
+        </div>
+        <div class="main__roesterei-kontaktdaten-flexitem">
+          <p>Mo - Fr 8 - 18 Uhr<br>
+          Sa 11-18 Uhr</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main__roesterei--img-flex">
+      <img src="../Images/FEND-Coffee-machine-2.png" alt="Innenansicht der Kaffeerösterei" class="main__roesterei--img">
+    </div>
+  
+  </section>
+
+  <section class="main__gebaeck">
+    <div class="main__gebaeck--textelemente">
+      <h3 class="main__gebaeck--titel">Frisches Gebäck
+        <span class="umbruch">von nebenan</span></h3>
+      <p class="main__gebaeck--text">
+        Als es die ersten Hügel des Kursivgebirges erklommen hatte, 
+        warf es einen letzten Blick zurück auf die Skyline seiner 
+        Heimatstadt Buchstabhausen, die Headline von Alphabetdorf. 
+        Wehmütig lief ihm eine rhetorische Frage über die Wange, 
+        dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. 
+        Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie 
+        zigmal umgeschrieben worden und alles, was von ihrem Ursprung 
+        noch übrig wäre, sei das Wort "und" und das Blindtextchen solle 
+        umkehren und wieder in sein eigenes, sicheres Land zurückkehren.
+      </p>
+    </div>
+  </section>
+
+<!------------------------------------------------------------------->  
+<section class="grid-container">
+  <div class="wrapper">
+    <div class="box a">.a</div>
+    <div class="box a">.b</div>
+    <div class="box a">.c</div>
+    <div class="box a">.d</div>
+    <div class="box a">.e</div>
+    <div class="box a">.f</div>
+    <div class="box a">.g</div>
+    <div class="box a">.h</div>
+  </div>
+</section>
+<!---------------------------------------------------------------->
+<include src="map.html"></include>
+
+<!--------------------------------------------------------------------------------->
+
+<include src="footer.html"></include>
+
+<script src="../js/index.js"></script>
+
+      
   </body>
-</html>
+  </html>
