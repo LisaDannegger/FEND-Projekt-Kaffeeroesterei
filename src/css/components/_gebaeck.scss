@@ -20,17 +20,16 @@
       padding: 0rem 10rem;
       justify-content: center;
       flex-wrap: nowrap; 
-      margin-top: 13rem;
     }
     
   }
 
   .main__gebaeck--textelemente  {
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin: auto;
-  }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+        }   
   
   .main__gebaeck--titel {
     @include section-title-h3-m ();   //32
@@ -49,13 +48,14 @@ margin: auto;
         @include respond(media-lg)  {
           align-self: flex-start;
           font-size: 3.8rem;
-          margin-top: 12.5rem;
+          margin-top: 6rem;
+          
         }
       
         @include respond(media-xl)  { //42
           font-size: $font-size-h3;
           margin-bottom: 2.5rem;
-          margin-top: 12.5rem;
+          margin-top: 8.5rem;
         }
 
         @include respond(media-xxl) {

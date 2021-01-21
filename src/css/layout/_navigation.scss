@@ -1,7 +1,7 @@
 .main-navigation {
   height: 5.5rem;
   width: 100%;
-  padding: 0.5rem 2.5rem;
+  padding: 0 2.5rem;
   position: fixed;
   z-index: 1;
   display: flex;
@@ -32,8 +32,6 @@
   cursor: pointer;
   padding-bottom: 0;
   vertical-align: middle;
-
-  
 }
 
 .header__sitebar--toggle-button  {
@@ -57,14 +55,12 @@
   text-decoration: none;
   font-weight: bold;
   margin-top: 1rem;
- 
   width: 100%;
 }
 
 .main-navigation__brand img {
   height: 3.5rem;
   width: 3.5rem;
- margin-top: 1rem;
 }
 
 
@@ -83,7 +79,6 @@
 .main-navigation__item {
   margin: 0 1rem;
   padding-left: 7rem;
-
 }
 
 .main-navigation__item a,
