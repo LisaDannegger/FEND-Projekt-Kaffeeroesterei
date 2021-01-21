@@ -1,27 +1,8 @@
 .main__produktvorstellung {
-    width: 100%;
-    height: auto;
-    padding: $padding-desktop;
-
-    @include respond(media-sm)  {
-
-    }
-
-    @include respond(media-md)  {
-
-    }
-
-    @include respond(media-lg)  {
-      padding: 0 7.5rem;
-    }
-
-    @include respond(media-xl)  {
-      padding: $padding-desktop;
-    }
-
-    @include respond(media-xxl) {
-      padding: 0 12.5rem;
-    }
+  height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .main__produktvorstellung--titel {
@@ -36,17 +17,8 @@
     }
   }
   
-  .image  {
-    width: 100%;
-    margin-bottom: 4rem;
-  
-    @include respond(media-xl)  {
-      width: 45%;
-      text-align: right; 
-    }
-  }
-  
-  .main__produktvorstellung__elemente--img  {
+  .main__produktvorstellung--img-flexbox  {
+    
     width: 193px;
     
 
@@ -68,11 +40,26 @@
     @include respond(media-xl) {
       width: 402px;
       height: 100%;
+      margin-left: 15rem;
     }
 
     @include respond(media-xxl)  {
+      width: 402px;
+      height: 100%;
+      margin-left: 40rem;
     }
 
+  }
+
+  .main__produktvorstellung--img  {
+    width: 100%;
+    margin-bottom: 4rem;
+  
+    @include respond(media-xl)  {
+      width: 100%;
+     
+      margin-bottom: 0;
+    }
   }
   
   .main__produktvorstellung__flexbox-1 {
@@ -93,21 +80,29 @@
   
   .main__produktvorstellung__flexbox-2  {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 2.5rem;
+    
 
     @include respond(media-sm)  { //
+      padding: 0 5rem;
     }
 
     @include respond(media-md)  {
+
     }
 
     @include respond(media-lg)  {
+      width: 33%;
+      padding: 0 7.5rem;
     }
     
     @include respond(media-xl)  {
       flex-direction: column;
       justify-content: flex-start;
-      width: 45%;
+      width: 50%;
     }
 
     @include respond(media-xxl)  { //
@@ -116,10 +111,12 @@
   }
 
 
-  .icon-container {
+  .main__produktvorstellung--icon-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 33%;
+    
 
     @include respond(media-sm)  { //
       width: 16rem;
@@ -134,16 +131,15 @@
   
     @include respond(media-xl) {
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 5rem 0;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 2.5rem 0;
     text-align: left;
    }
 
    @include respond(media-xxl)  { //
    }
 
-   
   }
   
   .main__produktvorstellung--icon {
@@ -155,7 +151,6 @@
 
     @include respond(media-md)  {
       
-
     }
 
     @include respond(media-lg)  {
@@ -172,6 +167,23 @@
   .main__produktvorstellung__heading {
     @include body-text-m ();
     padding: 2rem 2rem;
+
+    
+    @include respond(media-sm) {
+    font-size: 1.5rem;
+    }
+
+    @include respond(media-md) {
+    font-size: 1.6rem;
+    }
+
+    @include respond(media-lg) {
+      font-size: 1.7rem;
+    }
+  
+   @include respond(media-xl) {
+    font-size: 1.8rem;
+    }
   
     &__heading--main  {
       display: block;
@@ -181,25 +193,36 @@
       display: block;
     }
   
-    @media (min-width: 1200px)  {
-      @include body-text-d ();
-      padding: 0 3rem;
-    }
-  
   }
   
-  .main__produktvorstellung__button {
+  .main__produktvorstellung--button-container {
     display: flex;
     justify-content: center; 
+    margin-top: 4rem;
 
     @include respond(media-sm)  {
     }
+
+    @include respond(media-md)  {
+
+    }
+
+    @include respond(media-lg)  {
+
+    }
   
     @include respond(media-xl)  {
-      align-items: left; 
+      justify-content: flex-start; 
+      margin-top: 5rem;
+    }
+
+    @include respond(media-xxl) {
+
     }
   }
   
+
+  /*
   .main__produktvorstellung--button {
     display: inline-block;
     border-radius: 5px;
@@ -211,6 +234,11 @@
     font-size: 14px;
     margin-top: 40px;
     margin-bottom: 30px;
+
+    @include respond(media-xl)  {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   
     &:hover {
       background-color: var(--color-anthrazit);
@@ -233,4 +261,5 @@
       border-radius: 5px;
     } 
   }
+  */
   

@@ -65,30 +65,32 @@
               <img src="Images/Burger Menu.svg" alt="toggle-button" class="header__sitebar--toggle-button">
           </button>
 
-          <a href="index.html" class="main-navigation__brand">
+          <div class="main__navigation-brand">
+              <a href="index.html" class="main-navigation__brand">
               <img src="Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
-          </a>
+            </a>
+          </div>
       </div>
       
       <nav class="main-navigation-box">
           <ul class="main-navigation__items">
               <li class="main-navigation__item">
-                  <a href="my-subpage/cafe.html">das Café</a>
+                  <a href="my-subpage/cafe.html" class="underline">das Café</a>
               </li>
               <li class="main-navigation__item">
-                  <a href="my-subpage/shop.html">Shop</a>
+                  <a href="my-subpage/shop.html" class="underline">Shop</a>
               </li>
               <li class="main-navigation__item">
-                  <a href="my-subpage/herkunft.html">Herkunft</a>
+                  <a href="my-subpage/herkunft.html" class="underline">Herkunft</a>
               </li>
           </ul>
       </nav>
  
-<!--
+<!----------------------
       <nav class="mobile-navigation open">
           <ul class="mobile-navigation__items">
               <li class="mobile-navigation__item">
-                  <a href="index.html">das Café</a>
+                  <a href="my-subpage/cafe.html">das Café</a>
               </li>
               <li class="mobile-navigation__item">
                   <a href="my-subpage/shop.html">Herkunft</a>
@@ -98,7 +100,7 @@
               </li>
           </ul>
       </nav>
-    -->
+----------------------------->
     </div>
 
     <header>
@@ -139,29 +141,31 @@
           </div>
         </div>
 
-        <div class="main__roesterei--img-flex">
+        <div class="main__roesterei--img-flexbox">
           <img src="Images/FEND-Coffee-shop.png" alt="Innenansicht der Kaffeerösterei" class="main__roesterei--img">
         </div>
       
       </section>
-
+<!------------------------------------------------------------------------->
       <section class="main__biofair">
         <div class="main__biofair--textelemente">
           <h3 class="main__biofair--titel">Bio und Fair</h3>
           <p class="main__biofair--text">
             Weit hinten, hinter den Wortbergen, fern der Länder Vokallien und
-            Konsonantien leben die Blindtexte.<br>
+            Konsonantien leben die Blindtexte.
             Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
-            Konsonantien leben die Blindtexte.<br>
+            Konsonantien leben die Blindtexte.
             Und das alles in bester Bio-Qualität
           </p>
         </div>
 
         <div class="main__biofair--img-flexbox">
-          <img
-          src="Images/FEND-coffee-plant.png"
-          alt="Bild eines Zweiges einer Kaffeepflanze"
-          class="main__biofair--img"/>
+          <div class="main__biofair--img">
+            <img
+            src="Images/FEND-coffee-plant.png"
+            alt="Bild eines Zweiges einer Kaffeepflanze"
+            class="main__biofair--img"/>
+          </div>
         </div>
         
       </section>
@@ -287,48 +291,51 @@
        
         <section class="main__produktvorstellung__flexbox-1">
           
-          <div class="image">
-            <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffee Costa Rica" class="main__produktvorstellung__elemente--img"/>
+          <div class="main__produktvorstellung--img-flexbox">
+            <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffee Costa Rica" class="main__produktvorstellung--img"/>
           </div>
   
         
             <div class="main__produktvorstellung__flexbox-2">
 
-              <div class="icon-container">
+              <div class="main__produktvorstellung--icon-container">
                 <img src="Images/Icon Kaffee Tasse.svg" alt="Dampfender Kaffeebecher" class="main__produktvorstellung--icon"/>
                 <h4 class="main__produktvorstellung__heading">
-                <span class="main__produktvorstellung__heading--main">Bester</span>
+                <span class="main__produktvorstellung__heading--main umbruch">Bester</span>
                 <span class="main__produktvorstellung__heading--sub">Geschmack</span>
                 </h4>
               </div>
             
 
-              <div class="icon-container">
+              <div class="main__produktvorstellung--icon-container">
                 <img src="Images/Icon Kaffee Schaufel.svg" alt="Kelle mit Kaffeebohnen" class="main__produktvorstellung--icon" />
                 <h4 class="main__produktvorstellung__heading">
-                  <span class="main__produktvorstellung__heading--main">Fair</span>
+                  <span class="main__produktvorstellung__heading--main umbruch">Fair</span>
                   <span class="main__produktvorstellung__heading--sub">gehandelt</span>
                   </h4>
               </div>
 
-              <div class="icon-container">
+              <div class="main__produktvorstellung--icon-container">
                 <img src="Images/Icon Kaffee Pflanze.svg" alt="Zweig eines Kaffeebaumes" class="main__produktvorstellung--icon" />
                 <h4 class="main__produktvorstellung__heading">
-                  <span class="main__produktvorstellung__heading--main">Bio</span>
+                  <span class="main__produktvorstellung__heading--main umbruch">Bio</span>
                   <span class="main__produktvorstellung__heading--sub">Qualität</span>
                   </h4>
               </div>
-            </section>
+            
+            <!--<div class="main__produktvorstellung--button-container">
+              <a href="my-subpage/shop.html" class="main__produktvorstellung--button">Zum Shop</a>
+            </div>-->
 
-            <div class="main__produktvorstellung__button">
-              <a href="#" class="main__produktvorstellung--button">Zum Shop</a>
+            <div class="main__produktvorstellung--button-container">
+              <a href="my-subpage/shop.html" class="header__button--style">zum Shop</a>
             </div>
+
           </div>
   
       </section>
 <!------------------------------------------------------------------------------------------------->
     <section class="main__anfahrt">
-      <h2 class="main__anfahrt--titel">Komm vorbei</h2>
       <!--
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.855880716909!2d10.119832115980756!3d54.34185538019977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2560c505797eb%3A0xf549da0f074162a9!2sFraunhoferstra%C3%9Fe%2013%2C%2024118%20Kiel!5e0!3m2!1sde!2sde!4v1608813981861!5m2!1sde!2sde" 
@@ -341,15 +348,7 @@
       ></iframe>
       -->
 
-      <iframe 
-        frameborder="0" 
-        scrolling="no" 
-        marginheight="0" 
-        marginwidth="0" 
-        src="https://www.openstreetmap.org/export/embed.html?bbox=10.107507706343313%2C54.33742821373693%2C10.13510227268853%2C54.345458881563076&amp;layer=mapnik" 
-        style="border: none" 
-        class="main__anfahrt--map"
-      ></iframe>
+      <include src="map.html"></include>
     </section>
   </main>
   <!----------------------------------------------------------------------------------------------------->

@@ -9,10 +9,10 @@
         }
 
         @include respond(media-md)  {
-          
         }
 
         @include respond(media-lg)  {
+          padding: 0rem 7.5rem;
           flex-direction: row;
           flex-wrap: nowrap;
         }
@@ -23,7 +23,7 @@
         }
 
         @include respond(media-xxl)  {
-          
+          padding: 0rem 12.5rem;
         }
   } 
 
@@ -41,8 +41,8 @@
     }
 
     @include respond(media-lg) {
-      width: 55%;
-      padding-right: 2.5rem;
+      width: 60%;
+      padding-right: 3rem;
     }
 
     @include respond(media-xl) {
@@ -94,6 +94,7 @@
     }
 
     @include respond(media-lg)  { //992
+      font-size: 1.7rem;
       font-size: $font-size-body-text;
       width: 100%;      
     }
@@ -114,9 +115,10 @@
     flex-wrap: wrap;;
     margin-top: 2rem;
     margin-bottom: 4rem;
+    width: 85%;
 
     @include respond(media-sm)  {
-      width: 95%;
+      width: 75%;
     }
 
     @include respond(media-md)  {
@@ -143,39 +145,49 @@
     font-size: 1.4rem;
     
     @include respond(media-sm)  {
-
+      font-size: 1.5rem;
     }
 
     @include respond(media-md)  {
-
+      font-size: 1.6rem;
     }
 
     @include respond(media-lg)  {
-      
+      font-size: 1.7rem;
     }
 
     @include respond(media-xl)  {
+      font-size: 1.8rem;
       margin: 0;
     }
 
     @include respond(media-xxl) {
-      
+      font-size: 2.1rem;
     }
   }
   
   
-  .main__roesterei--img-flex {
+  .main__roesterei--img-flexbox {
     display: flex;
     justify-content: flex-end;
 
     @include respond(media-lg)  {
       margin-top: 10rem;
     }
+
+    @include respond(media-xl)  {
+      margin-top: 10rem;
+    }
+
+    @include respond(media-xxl)  {
+      margin-top: 10rem;
+      flex-grow: 1;
+    }
   }
   
 
   .main__roesterei--img {
-    width: 241px;
+    width: 75%;
     height: auto;
 
     @include respond(media-sm)  {
@@ -185,14 +197,18 @@
 
     @include respond(media-md)  {
       width: 350px;
+      height: auto;
     }
 
     @include respond(media-lg)  {
       width: 400px;  
+      height: auto;
     }
 
     @include respond(media-xl)  {
-      width: 607px;
+      width: 500px;
+      height: auto;
+
     }
 
     @include respond(media-xxl)  {

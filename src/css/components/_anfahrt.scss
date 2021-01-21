@@ -1,6 +1,5 @@
 .main__anfahrt  {
-    margin-top: 7rem;
-  
+
     &--titel  {
       @include section-title-h2-m();
       padding: $padding-mobile;
@@ -34,8 +33,6 @@
       }
     }
   }
-
-  .main__anfahrt--titel 
 
   iframe  {
     display: block;
