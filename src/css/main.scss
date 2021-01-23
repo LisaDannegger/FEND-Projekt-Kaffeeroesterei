@@ -3,43 +3,32 @@
 
 @import "base/base";
 @import "base/animations";
-@import "base/typography";
 
-@import "components/button-dunkel";
-@import "components/roesterei";
-@import "components/biofair";
-@import "components/kaffeesorten";
-@import "components/herkunft";
-@import "components/produktvorstellung";
-@import "components/anfahrt";
-@import "components/gebaeck";
-@import "components/grid";
+
+@import "components/home/section-roesterei";
+@import "components/home/section-biofair";
+@import "components/home/section-kaffeesorten";
+@import "components/home/section-herkunft";
+@import "components/home/section-produktvorstellung";
+@import "components/home/section-anfahrt";
+
+@import "components/cafe/section-gebaeck";
+
 
 @import "layout/header";
 @import "layout/navbar";
 @import "layout/navigation";
 @import "layout/footer";
-@import "layout/header-cafe";
+@import "layout/grid";
+@import "layout/button-dunkel";
 
+@import "pages/home";
 @import "pages/cafe";
 @import "pages/impressum";
+@import "pages/herkunft";
 
 
 
-:root {
-  --color-white: #fff;
-  --color-light-grey: #E9E9E9;
-  --color-medium-grey: #737373;
-  --color-anthrazit: #1a1a1a;
-  --color-kraftpapier: #D7BE9D;
-  --color-petrol: #006D7E;
-  --color-rosa: #EDD1C9;
-  --color-orange: #D77C12;
-  --color-black: #000;
-}
 
-.logo {
-  fill: var(--color-white);
-}
 
   

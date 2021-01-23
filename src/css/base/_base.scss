@@ -35,19 +35,68 @@ html {
 body {
   box-sizing: border-box;
   background-color: var(--color-white);
+  font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    background-color: var(--color-white);
 }
 
-/*
 img {
   margin: 0;
   padding: 0; 
   width: inherit; 
   height: inherit; 
 }
-*/
+
+
+h1  {
+  @include section-title-h1-m ();
+
+  @include respond(media-xl)  {
+    @include section-title-h1-d();
+  }
+}
+
+h2  {
+  @include section-title-h2-m();
+
+  @include respond(media-xl)  {
+    @include section-title-h2-d();
+  }
+}
+
+h3  {
+  @include section-title-h3-m();
+
+  @include respond(media-xl)  {
+    @include section-title-h3-d();
+  }
+}
 
 p {
-  line-height: 130%;
+  line-height: $line-height-body;
+  font-weight: 400;
+  font-size: $font-size-body-text-m;
+
+  @include respond (media-sm)  {
+    font-size: 1.5rem;
+  }
+
+  @include respond (media-md)  {
+    font-size: 1.6rem;
+  }
+
+  @include respond (media-lg)  {
+    font-size: 1.7rem;
+  }
+
+  @include respond(media-xl)  {
+    font-weight: $line-height-body;
+    font-size: $font-size-body-text;
+  }
+
+  @include respond (media-xxl)  {
+    font-size: 2.1rem;
+  }
 }
 
 /*
@@ -72,3 +121,24 @@ a {
     color: $color__link--active;
   }
 */
+
+.section {
+  padding: $padding-mobile;
+  height: auto;
+
+  @include respond(media-sm)  {
+    padding: $padding-small-device;
+  }
+  
+  @include respond(media-md)  {
+    padding: $padding-large-device;
+  }
+
+  @include respond(media-xl)  {
+    padding: $padding-desktop;
+  }
+
+  @include respond(media-xxl) {
+    padding: $padding-extralarge-device;
+  }
+}

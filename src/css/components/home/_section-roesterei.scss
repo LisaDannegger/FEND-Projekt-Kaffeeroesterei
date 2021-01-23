@@ -41,7 +41,6 @@
     }
 
     @include respond(media-lg) {
-      width: 60%;
       padding-right: 3rem;
     }
 
@@ -170,6 +169,7 @@
   .main__roesterei--img-flexbox {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 
     @include respond(media-lg)  {
       margin-top: 10rem;
@@ -181,36 +181,15 @@
 
     @include respond(media-xxl)  {
       margin-top: 10rem;
-      flex-grow: 1;
+     
     }
   }
   
 
   .main__roesterei--img {
-    width: 75%;
-    height: auto;
-
-    @include respond(media-sm)  {
-      width: 260px;
-      height: auto;
-    }
-
-    @include respond(media-md)  {
-      width: 350px;
-      height: auto;
-    }
 
     @include respond(media-lg)  {
-      width: 400px;  
-      height: auto;
-    }
-
-    @include respond(media-xl)  {
-      width: 500px;
-      height: auto;
-    }
-
-    @include respond(media-xxl)  {
+      width: 100%;
     }
   }
 

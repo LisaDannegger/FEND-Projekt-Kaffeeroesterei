@@ -5,9 +5,21 @@
       padding: $padding-mobile;
       margin-bottom: 3.5rem;
 
+      @include respond(media-sm)  {
+        padding: $padding-small-device;
+      }
+
+      @include respond(media-lg)  {
+        padding: $padding-large-device;
+      }
+
       @include respond(media-xl)  {
         @include section-title-h2-d();
         padding: $padding-desktop;
+      }
+
+      @include respond(media-xxl) {
+        padding: $padding-extralarge-device;
       }
     }
   

@@ -1,31 +1,10 @@
 .main__kaffeesorten {
     background-color: var(--color-anthrazit);
     color: var(--color-white);
-    padding: $padding-mobile;
     height: auto; 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  
-    @include respond(media-sm)  {
-      padding: 0 5rem;
-    }
-
-    @include respond(media-md)  {
-      padding: 0 7.5rem;
-    }
-
-    @include respond(media-lg)  {
-      padding: 0 10rem;
-    }
-
-    @include respond(media-xl)  {
-      padding: 0 10rem;
-    }
-
-    @include respond(media-xxl) {
-      padding: 0 12.5rem;
-    }
 
   }
   
@@ -38,6 +17,7 @@
   
     @include respond(media-xl) {
       @include section-title-h2-d();
+      margin-top: 6rem;
       margin-bottom: 8rem;
     }
   }

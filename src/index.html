@@ -103,23 +103,26 @@
 ----------------------------->
     </div>
 
-    <header>
-    <section class="header__content">
+    <header class="header header--img-home">
+
+    <section class="section header__content">
       <div class="header__heading">
         <h1 class="header__heading--primary">
           <span class="header__heading--primary-main">Rustica</span>
           <span class="header__heading--primary-sub">Bio und Fair seit 1991</span>
         </h1>
       </div>
-      <div class="header__button">
-        <a href="my-subpage/shop.html" class="header__button--style">zum Shop</a>
+    </section>
+      <div class="btn--dark-home">
+        <a href="my-subpage/shop.html" class="btn--dark-style">zum Shop</a>
       </div>
     </div>
     </section>
+
     </header>
 
     <main>
-      <section class="main__roesterei">
+      <section class="section main__roesterei">
         
         <div class="main__roesterei--textelemente">
           <h2 class="main__roesterei--titel">Rösterei & Café</h2>
@@ -142,12 +145,20 @@
         </div>
 
         <div class="main__roesterei--img-flexbox">
-          <img src="Images/FEND-Coffee-shop.png" alt="Innenansicht der Kaffeerösterei" class="main__roesterei--img">
+          
+            <picure class="main__roesterei--img">
+              <source srcset="Images/FEND-Coffee-shopx2.jpg"
+              media="(min-width: 62em)">
+              
+              <img srcset="Images/FEND-Coffee-shopx1.jpg" 
+              alt="Innenansicht der Kaffeerösterei" 
+              class="main__roesterei--img">
+          
         </div>
       
       </section>
 <!------------------------------------------------------------------------->
-      <section class="main__biofair">
+      <section class="section main__biofair">
         <div class="main__biofair--textelemente">
           <h3 class="main__biofair--titel">Bio und Fair</h3>
           <p class="main__biofair--text">
@@ -160,18 +171,23 @@
         </div>
 
         <div class="main__biofair--img-flexbox">
-          <div class="main__biofair--img">
-            <img
-            src="Images/FEND-coffee-plant.png"
-            alt="Bild eines Zweiges einer Kaffeepflanze"
-            class="main__biofair--img"/>
-          </div>
+         
+            <picture class="main__biofair--img">
+              <source srcset="Images/FEND-coffee-plantx2.jpg"
+              media="(min-width: 62em)">
+
+              <img
+              srcset="Images/FEND-coffee-plantx1.jpg"
+              alt="Bild eines Zweiges einer Kaffeepflanze"
+              class="main__biofair--img"/>
+            </picture>
+          
         </div>
         
       </section>
 <!----------------------------------------------------------------------------->
 
-      <section class="main__kaffeesorten">
+      <section class="section main__kaffeesorten">
         <div>
         <h2 class="main__kaffeesorten--titel">
           <span class="umbruch">Entdecke unsere</span>
@@ -207,8 +223,6 @@
                 </svg>
               </div>
             -->
-
-          
 
           <section class="main__kaffeesorten--flexitems">
               <div class="main__kaffeesorten--costarica">
@@ -271,7 +285,7 @@
 
 <!--------------------------------------------------------->
 
-      <section class="main__herkunft">
+      <section class="section main__herkunft">
         <h2 class="main__herkunft__titel">Herkunft</h2>
         <p class="main__herkunft__text">
           Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
@@ -291,10 +305,15 @@
        
         <section class="main__produktvorstellung__flexbox-1">
           
-          <div class="main__produktvorstellung--img-flexbox">
-            <img src="Images/FEND_Coffee_Costa-Rica 2.png" alt="Kaffee Costa Rica" class="main__produktvorstellung--img"/>
+          <div class="main__produktvorstellung--img-flexbox"></div>
+            <picture class="main__produktvorstellung--img">
+              <source srcset="Images/FEND_Coffee_Costa-Rica-2x2.jpg"
+              media="(min-width: 62em)">
+
+              <img srcset="Images/FEND_Coffee_Costa-Rica-2x1.jpg" 
+              alt="Kaffee Costa Rica"/>
+            </picture>
           </div>
-  
         
             <div class="main__produktvorstellung__flexbox-2">
 
@@ -327,8 +346,8 @@
               <a href="my-subpage/shop.html" class="main__produktvorstellung--button">Zum Shop</a>
             </div>-->
 
-            <div class="main__produktvorstellung--button-container">
-              <a href="my-subpage/shop.html" class="header__button--style">zum Shop</a>
+            <div class="btn--dark btn--dark-product">
+              <a href="my-subpage/shop.html" class="btn--dark-style">zum Shop</a>
             </div>
 
           </div>
@@ -336,6 +355,8 @@
       </section>
 <!------------------------------------------------------------------------------------------------->
     <section class="main__anfahrt">
+
+      <h2 class="main__anfahrt--titel">Komm vorbei</h2>
       <!--
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.855880716909!2d10.119832115980756!3d54.34185538019977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2560c505797eb%3A0xf549da0f074162a9!2sFraunhoferstra%C3%9Fe%2013%2C%2024118%20Kiel!5e0!3m2!1sde!2sde!4v1608813981861!5m2!1sde!2sde" 
@@ -349,10 +370,10 @@
       -->
 
       <include src="map.html"></include>
-    </section>
+    </div>
   </main>
   <!----------------------------------------------------------------------------------------------------->
-  <footer class="footer">
+  <footer class="section footer">
     
       <div class="footer__flexbox">
         <div class="footer__logo--container">
