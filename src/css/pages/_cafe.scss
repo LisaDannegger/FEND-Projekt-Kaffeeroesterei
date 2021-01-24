@@ -3,11 +3,12 @@
 .header--img-cafe {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.3)),
-      url(../Images/FEND-Coffee-latte-art-3.png);
+      url(../Images/FEND-Coffee-shopx2.jpg);
 }
 
 
 .main__roesterei--img-2 {
+  align-self: flex-end;
     width: 75%;
     height: auto;
 
@@ -22,6 +23,7 @@
     }
 
     @include respond(media-lg)  {
+      margin-top: 12.5rem;
       width: 400px;  
       height: auto;
     }

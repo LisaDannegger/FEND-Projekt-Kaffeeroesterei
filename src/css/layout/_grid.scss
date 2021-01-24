@@ -1,35 +1,9 @@
 
 /*
-.wrapper    {
-    max-width: 114rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.grid__gallery   {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%; 
-    //grid-template-columns: repeat(auto-fit, minimax(250px, 1fr));
-    grid-gap: 1.5rem;
-    flex-direction: column;
-    justify-items: center;
-    margin-bottom: 1.5rem;
-    padding: 0; 
-}
-
-.grid__gallery--frame   {
-    max-width: 114rem; 
-    height: auto;
-    object-fit: cover; 
-}*/
-
 .grid-container {
     padding: 0 2.5rem;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
 
 .row    {
@@ -51,3 +25,117 @@
     }
 
 }
+
+
+.grid-container {
+    padding: $padding-mobile;
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 6rem;
+
+    @include respond(media-xl)  {
+        padding: $padding-desktop;
+        margin-bottom:0;
+    }
+}
+
+.main__grid--gallery    {
+    margin: auto;
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-gap: 1.5rem 1rem; //row, dann column
+    grid-template-columns: repeat(2, [col-start] 50% [col-end]);
+    grid-template-rows: repeat(4, auto);
+    
+
+    @include respond(media-xl)    {
+        grid-template-columns: repeat(4, [col-start] 25% [col-end]);
+        grid-template-rows: repeat(2, auto);
+        height: 550px;
+    }
+}
+
+.main__grid__gallery--frame-1    {
+}
+
+.main__grid__gallery--frame-2  {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.main__grid__gallery--frame-3    {
+}
+
+.main__grid__gallery--frame-4    {
+}
+
+.main__grid__gallery--frame-5    {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3; 
+    grid-row-end: span 2;
+}
+
+.main__grid__gallery--frame-6    {
+}
+
+.main__grid__gallery--frame-7    {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: span 2;
+}
+
+.main__grid__gallery--frame-8    {
+}
+
+.gallery-img-2    {
+    
+}
+
+*/
+
+.grid__gallery  {
+    padding: 0 2.5rem;
+    
+
+    @include respond(media-xl)  {
+        padding: 0 10rem;
+    }
+}
+
+.main__grid--row    {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    //align-items: center;
+
+    @include respond(media-sm)  {
+
+    }
+
+    @include respond(media-xl)  {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.main__grid--column {
+    flex: 50%; 
+    max-width: 50%;
+
+    
+    @include respond(media-xl)  {
+        flex: 100%;
+        max-width: 100%;
+    }
+}   
+
+.gallery-img    {
+    margin-top: 1.3rem;
+}
+
+
