@@ -1,7 +1,6 @@
 .main__kaffeesorten {
     background-color: var(--color-anthrazit);
     color: var(--color-white);
-    height: auto; 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,11 +21,6 @@
     }
   }
 
-  .umbruch  {
-    display: block;
-  }
-
-  
   .main__kaffeesorten--flexbox {
     width: 100vw;
     display: flex;
@@ -136,7 +130,7 @@
     @include body-text-m ();
   }
   
-  .main__kaffeesorten--icon {
+  .shop-svg {
     width: 1.2rem;
     height: 1.4rem;
   }

@@ -1,9 +1,9 @@
 
 .footer {
     background-color: var(--color-anthrazit);
-    height: 39rem;
-    width: 100vw;
     padding: $padding-mobile;
+    height: 42rem;
+    width: 100vw;
     color: var(--color-white);
 
     @include respond(media-sm)  {
@@ -54,10 +54,6 @@
 
   @include respond(media-xxl) {
   }
-}
-
-.footer__logo--container  {
-
 }
 
   .footer__logo {
@@ -207,7 +203,7 @@
 
       .footer__flexitem3 {
         display: inline-block;
-        width: 155px;
+        width: 15.5rem;
         padding-right: 1.5rem;
       }
 
@@ -219,15 +215,6 @@
 
     @include respond(media-sm)  {
       margin-top: 0;
-    }
-    
-  
-    &__text--span   {
-      display: block;
-
-      @include respond(media-xl)  {
-        display: inline-block;
-      }
     }
   }
  

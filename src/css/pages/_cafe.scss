@@ -6,11 +6,16 @@
       url(../Images/FEND-Coffee-shopx2.jpg);
 }
 
+.main__roesterei--img-flex-2  {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
 .main__roesterei--img-2 {
-  align-self: flex-end;
-    width: 75%;
-    height: auto;
+   width: 75%;
+   align-self: flex-end;
 
     @include respond(media-sm)  {
       width: 260px;
@@ -37,5 +42,6 @@
     @include respond(media-xxl)  {
     }
   }
+
 
   //Fotogalerie in Partial "Grid"

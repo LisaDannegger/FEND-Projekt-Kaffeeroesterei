@@ -96,46 +96,125 @@
     
 }
 
-*/
+
+
 
 .grid__gallery  {
     padding: 0 2.5rem;
-    
 
     @include respond(media-xl)  {
         padding: 0 10rem;
     }
 }
 
-.main__grid--row    {
+.grid__gallery--row    {
     display: flex;
-    flex-wrap: wrap;
-    //justify-content: space-between;
-    //align-items: center;
-
-    @include respond(media-sm)  {
-
-    }
-
-    @include respond(media-xl)  {
-        justify-content: center;
-        align-items: center;
-    }
+    flex-direction: row;
+    //flex-wrap: wrap;
+    justify-content: space-between;
+    //align-items: center;375
 }
 
-.main__grid--column {
-    flex: 50%; 
+.grid__gallery--column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%; 
     max-width: 50%;
+    padding: 0 0.5rem;
 
-    
     @include respond(media-xl)  {
-        flex: 100%;
-        max-width: 100%;
+        flex-direction: row;
     }
 }   
 
-.gallery-img    {
-    margin-top: 1.3rem;
+.grid__gallery-frame    {
+   padding: 0.5rem 0.75rem;
+
+   @include respond(media-xl)   {
+
+   }
 }
+
+.grid__gallery-img    {
+    width: 100%;
+    height: auto;
+
+    @include respond(media-xl)  {
+        width: 25%;
+    }
+}
+
+*/
+
+.grid__gallery  {
+    margin-top: 12.5rem;
+    padding: $padding-mobile;
+    display: flex;
+    max-width: 120rem;
+    margin: auto;
+    
+
+    @include respond(media-md)  {
+        padding: $padding-desktop;
+    }
+
+    @include respond(media-lg)  {
+        height: 53rem;
+    }
+}
+
+.grid__gallery--row {
+    display: flex;
+}
+
+.grid__gallery-frame    {
+    width: 100%;
+    padding: 0.75rem 0.75rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(media-md) {
+        width: 50%;
+     }
+ }
+ 
+ .grid__gallery-img    {
+     
+    @include respond(media-md)  {
+        width: 100%;
+    }
+ }
+
+ .gallery__grid--column-one {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+
+     @include respond(media-md) {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: column;
+     }
+ }
+
+ .gallery__grid--column-two {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+
+    @include respond(media-md)  {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: column;
+    }
+ }
+
 
 
