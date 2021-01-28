@@ -87,6 +87,7 @@
         @include respond(media-xl)  {   //18
           @include body-text-d ();
           width: 611px;
+          margin-bottom: 6rem;
         }
 
         @include respond(media-xxl) {   //19

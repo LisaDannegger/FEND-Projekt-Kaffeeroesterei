@@ -19,12 +19,11 @@
   
     @include respond(media-xl)  {
       background-position: 50%;
-      background-repeat: no repeat;
+      background-repeat: no-repeat;
     }
   }
   
   .main__herkunft__titel {
-    @include section-title-h3-m(); //32
 
     @include respond(media-sm)  {
       font-size: 3.3rem;
