@@ -1,3 +1,4 @@
+
 .main-navigation {
   height: 5.5rem;
   width: 100%;
@@ -36,7 +37,7 @@
 
 .header__sitebar--toggle-button  {
   width: 2.35rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .nav-toggle-button:focus {
@@ -124,9 +125,13 @@
 
 //--------------------------------------------------
 
-@include respond(media-xl) {
+@include respond(media-md) {
 
-  .header__sitebar--toggle-button {
+  //.header__sitebar--toggle-button {
+  //  display: none;
+  //}
+
+  .mobile-navigation  {
     display: none;
   }
 
@@ -135,28 +140,61 @@
   }
 }
 
+
 .mobile-navigation {
-position: fixed;
-z-index: 101;
-top: 0;
-left: 0;
-background: black;
-width: 100%;
-height: 100vh;
+  position: fixed;
+  z-index: 101;
+  width: 100%;
 }
 
-.mobile-navigation__items {
+#background-black {
+  background-color: var(--color-anthrazit);
+  opacity: 0;
+  //transition: opacity 1s;
+  width: 0%;
+  height: 100vh;
+  position: absolute; 
+  top: 0;
+  right: -100%;
+}
+
+#nav-open {
+  position: absolute; 
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 3000;
+  opacity: 0;
+}
+
+#nav-closed {
+  position: absolute; 
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+.mobile-navigation input  {
+  display: none;
+}
+
+.mobile-navigation__items { // <nav>
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-content: center;
-width: 100%;
-height: 100%;
-list-style: none;
-/*margin: 10% auto;*/
+width: 50%;
+height: 100vh;
 padding: 0;
-text-align: center;
+text-align: left;
+opacity: 0;
+overflow: hidden;
+}
 
+.mobile-navigation__list {
+  z-index: 3000;
+  overflow: hidden;
 }
 
 .mobile-navigation__item {
@@ -164,12 +202,61 @@ margin: 2.5rem 0;
 align-self: flex-start;
 margin-left: 6rem;
 font-size: 1.8rem;
+list-style: none;
 }
 
 .mobile-navigation__item a {
 font-size: 3.2rem;
 font-weight: 900;
+cursor: pointer;
 }
+
+.navi-toggle-button {
+  position: absolute; 
+  right: 1rem;
+  top: 2rem;
+}
+
+
+//Verhaltensregeln
+
+#navi-toggle:checked ~ .mobile-navigation__items { //wenn Burger geklickt, zeige Navigation
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+#navi-toggle:checked ~ label #background-black {    //wenn Burger geklickt, zeige schwarzen Hintergrund
+  opacity: 1;
+  transition: all 0.1s ease-in-out;
+  right: 0%;
+  width: 100%;
+}
+
+#navi-toggle:checked ~ .responsive-label #nav-open  {   //wenn Burger geklickt, verstecke Burger, öffne Kreuz
+  opacity: 0; 
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+#navi-toggle:checked ~ label #nav-closed  {  //wenn Burger geklickt, verstecke Burger
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  //z-index: -1;
+}
+
+#navi-toggle:checked ~ label #nav-open  {
+  opacity: 1;
+}
+
+
+
+
+
+
+//wenn kein schwarzer HG, dann erscheinen alle Nav-Items normal und bleiben stehen. Mit HG: 1 sek angezeigt, dann weg
+
+
+
 
 .button {
 background: white;
@@ -209,17 +296,13 @@ display: block !important;
 
 
 
-
-
-
-/*
 .header__logo   {
-    width: 35px;
-    height: 35px;
+    width: 3.5rem;
+    height: 3.5rem;
     position: fixed;
     top: 2rem;
     left: 2.5rem;
-    z-index: 800;
+   
 
     @include respond(media-sm)  {
         left: 5rem;
@@ -238,15 +321,17 @@ display: block !important;
     }
 }
 
-
+/*
 .navigation {
-    
 
     &__checkbox {
-        display: none;
+        //display: none;
+        opacity: 0;
         position: fixed; 
         top: 3rem;
         right: 3rem;
+        background-color: #0e4f1f;
+        z-index: 3000;
     }
 
     &__logo {
@@ -259,7 +344,6 @@ display: block !important;
     }
 
     &__button {
-        
         background-color: var(--color-white);
         height: 5rem;
         width: 5rem; 
@@ -268,12 +352,13 @@ display: block !important;
         right: 2rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba(var(--color-anthrazit), .1);
+        //box-shadow: 0 1rem 3rem rgba(var(--color-anthrazit), 0.1);
+        //background-iamge: Burger-Menu?
     }
 
 
     &__background {
-        display: none;
+        //display: none;
        height: 4rem;
        width: 4rem; 
        border-radius: 50%;
@@ -281,69 +366,73 @@ display: block !important;
        top: 2.5rem;
        right: 2.5rem;
        background-color: var(--color-anthrazit);
-        z-index: 1000;
+       z-index: 1000;
+       transform: scale(100);
 
-        //transform: scale(100);
     }
 
     &__nav {
-       height: 100vh; 
-       width: 100%;
        position: fixed;
-       top: 0; 
-       right: 0; 
+       //top: 0; 
+       //right: 0; 
        z-index: 1500;
-
-       opacity: 0;
-       width: 0;
     }
 
     &__list {
-       position: absolute; 
-       top: 50%; 
-       left: 50%; 
-       transform: translate(-50%, -50%);
-       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 6rem;
+      list-style: none;
+      height: 100vh;
+       //position: absolute; 
+       //top: 50%; 
+       //left: 50%; 
+       //transform: translate(-50%, -50%);
+       //text-align: left;
+       
     }
 
     &__item {
-       margin: 1rem;
+       margin: 2.5rem 0;
     }
-
-    
 
     &__link {
 
         &:link, 
         &:visited   {
             display: inline-block;
-        font-size: 3rem;
-        font-weight: 400;
-        padding: 1rem 2rem;
-        color: var(--color-white);
-        text-transform: uppercase;
-        text-decoration: none;
-        background-image: linear-gradient(110deg, transparent 0%, transparent 50%, var(--color-white) 50% );
-        background-size: 220%;
-        transition: all .4s;
+            font-size: 3rem;
+            font-weight: 900;
+            //padding: 2rem 0;
+            color: var(--color-white);
+            text-decoration: none;
+            //background-image: linear-gradient(110deg, transparent 0%, transparent 50%, var(--color-white) 50% );
+            //background-size: 220%;
+            //transition: all .4s;
         }
 
         &:hover, 
         &:active {
             background-position: 100%;
             color: var(--color-kraftpapier);
-            transform: translatex(1rem);
+            border-bottom: 1px solid var(--color-white);
+            //transform: translatex(1rem); leichte Bewegung des Items bei Klick
         }
         
     }
 
     //Checkbox-Hack
 
-    &__checkbox:checked ~ &__background    {
+    #navi-toggle:checked ~ &__background    {
         transform: scale(100);
     }
 
-}
+    #navi-toggle:checked ~ &__nav    {
+      opacity: 1;
+      width: 100%;
+  }
 
+}
 
 */

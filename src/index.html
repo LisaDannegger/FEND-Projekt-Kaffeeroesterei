@@ -11,60 +11,10 @@
   </head>
 
   <body>  
-<!--
-      <div>
-        <a href="index.html"><img src="Images/Logo.png" alt="Logo" class="header__logo" /></a>
-      </div>
-      
-        <div class="navigation">
-          <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-          <label for="navi-toggle" class="navigation__button"><img src="Images/Burger Menu.svg" alt="toggle-button" class="navigation__logo">
-          </label>
-        </div>
 
-        <div class="navigation__background">&nbsp;</div>
-
-        <nav class="navigation__nav">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a href="my-subpage/index.html" class="navigation__link">das Café</a></li>
-            <li class="navigation__item"><a href="my-subpage/shop.html" class="navigation__link">Shop</a></li>
-            <li class="navigation__item"><a href="my-subpage/herkunft.html" class="navigation__link">Herkunft</a></li>
-          </ul>
-        </nav>
-
-        <img src="Images/Burger Menu.svg" alt="toggle-button" class="navigation__logo">
-      -->
-<!---
-      <section class="header__sitebar">  
-
-        <div>
-          <a href="index.html"><img src="Images/Logo.png" alt="Logo" class="header__sitebar--logo" /></a>
-        </div>
-        <div>
-          <a href="#"><img src="Images/Burger Menu.svg" alt="toggle-button" class="header__sitebar--toggle-button"></a>
-        </div>
-    
-        <nav class="header__main-nav">
-          <ul class="header__main-nav-items">
-            <li class="header__main-nav-item"><a href="index.html" class="underline">das Café</a></li>
-            <div>
-              <li class="header__main-nav-item"><a href="my-subpage/herkunft.html" class="underline">Herkunft</a></li>
-            </div>
-            <li class="header__main-nav-item"><a href="my-subpage/shop.html" class="underline">Shop</a></li>
-          </ul>
-        </nav>
-     
-      </section>
-       </header>
-    -->
-
-    
+<!--Desktop Navigation-->
     <div class="main-navigation">
       <div>
-          <button class="nav-toggle-button">
-              <img src="Images/Burger Menu.svg" alt="toggle-button" class="header__sitebar--toggle-button">
-          </button>
-
           <div class="main__navigation-brand">
               <a href="index.html" class="main-navigation__brand">
               <img src="Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
@@ -85,23 +35,47 @@
               </li>
           </ul>
       </nav>
- 
-<!----------------------
-      <nav class="mobile-navigation open">
-          <ul class="mobile-navigation__items">
-              <li class="mobile-navigation__item">
-                  <a href="my-subpage/cafe.html">das Café</a>
-              </li>
-              <li class="mobile-navigation__item">
-                  <a href="my-subpage/shop.html">Herkunft</a>
-              </li>
-              <li class="mobile-navigation__item mobile-nav__item--cta">
-                  <a href="my-subpage/herkunft.html">Shop</a>
-              </li>
-          </ul>
-      </nav>
------------------------------>
     </div>
+
+ <!-------------------------------------------->
+
+ <div class="mobile-navigation">
+
+          <input type="radio" name="radio" id="navi-toggle">
+          <input type="radio" name="radio" id="navi-toggle-close">
+          <input type="radio" name="radio" id="background-black">
+
+          <label for="navi-toggle">
+          <span id="nav-closed" class="responsive-label">
+            <img src="Images/Burger Menu.svg" alt="toggle-button-menu" class="navi-toggle-button">
+          </span>
+          </label>
+          
+          <label for="navi-toggle-close">
+          <span id="nav-open" class="responsive-label">
+            <img src="Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
+          </span> 
+          </label>
+
+          <label for="background-black">
+            <div id="background-black"></div>
+          </label>
+
+          <nav class="mobile-navigation__items">
+            <ul class="mobile-navigation__list">
+                <li class="mobile-navigation__item">
+                    <a href="my-subpage/cafe.html">das Café</a>
+                </li>
+                <li class="mobile-navigation__item">
+                    <a href="my-subpage/herkunft.html">Herkunft</a>
+                </li>
+                <li class="mobile-navigation__item mobile-nav__item--cta">
+                    <a href="my-subpage/shop.html">Shop</a>
+                </li>
+            </ul>
+          </nav>
+  </div>
+
 
     <header class="header header--img-home">
 
