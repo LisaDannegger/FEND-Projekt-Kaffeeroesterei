@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaffeerösterei Rustica Kiel</title>
+    <link href="../css/main.scss" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+          rel="stylesheet">
+  </head>
+  <body> 
+
+    <header class="header">
+        <div class="main-navigation">
+          <div>
+              <div class="main__navigation-brand">
+                  <a href="../index.html" class="main-navigation__brand">
+                  <img src="../Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
+                </a>
+              </div>
+          </div>
+          
+          <nav class="main-navigation-box">
+              <ul class="main-navigation__items">
+                  <li class="main-navigation__item">
+                      <a href="cafe.html" class="underline">das Café</a>
+                  </li>
+                  <li class="main-navigation__item">
+                      <a href="shop.html" class="underline">Shop</a>
+                  </li>
+                  <li class="main-navigation__item">
+                      <a href="herkunft.html" class="underline">Herkunft</a>
+                  </li>
+                  <li class="main-navigation__item">
+                    <a href="kontakt.html" class="underline">Kontakt</a>
+                </li>
+              </ul>
+          </nav>
+        </div>
+  
+        <div class="mobile-navigation">
+  
+          <input type="radio" name="radio" id="navi-toggle">
+          <input type="radio" name="radio" id="navi-toggle-close">
+          <input type="radio" name="radio" id="background-black">
+  
+          <label for="navi-toggle">
+          <span id="nav-closed" class="responsive-label">
+            <img src="../Images/Burger Menu.svg" alt="toggle-button-menu" class="navi-toggle-button">
+          </span>
+          </label>
+          
+          <label for="navi-toggle-close">
+          <span id="nav-open" class="responsive-label">
+            <img src="../Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
+          </span> 
+          </label>
+  
+          <label for="background-black">
+            <div id="background-black"></div>
+          </label>
+  
+          <nav class="mobile-navigation__items">
+            <ul class="mobile-navigation__list">
+                <li class="mobile-navigation__item">
+                    <a href="cafe.html" class="underline">das Café</a>
+                </li>
+                <li class="mobile-navigation__item">
+                    <a href="herkunft.html" class="underline">Herkunft</a>
+                </li>
+                <li class="mobile-navigation__item mobile-nav__item--cta">
+                    <a href="shop.html" class="underline">Shop</a>
+                </li>
+                <li class="mobile-navigation__item mobile-nav__item--cta">
+                  <a href="kontakt.html" class="underline">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="section main__container">
+            <div class="main__textelemente">
+              <h2>Du hast Fragen?
+                <span class="umbruch">Schreib uns gern!</span>
+              </h2>
+
+              <form action="#" method="post">
+                <ul>
+                    <li>
+                        <label for="textfeld1" class="textfeld">Name*</label>
+                        <input 
+                        placeholder="Name" 
+                        class="umbruch" 
+                        id="textfeld1" 
+                        type="text"
+                        autocomplete="name" 
+                        required>
+                    </li>
+                    
+                    <li>
+                        <label for="textfeld2" class="email">Email*</label>
+                        <input 
+                        placeholder="Email" 
+                        class="umbruch" 
+                        id="textfeld2" 
+                        type="email" 
+                        autocomplete="email"
+                        required>
+                    </li>
+
+                    <li>
+                        <label for="textfeld3" class="phone">Telefonnummer</label>
+                        <input 
+                        placeholder="Telefonnummer" 
+                        class="umbruch" 
+                        id="textfeld3" 
+                        type="tel"
+                        autocomplete="tel">
+                    </li>
+                </ul>
+
+                <select name="auswahl">
+                    <option selected>Dein Betreff:</option>
+                    <option>Fragen zur Lieferung</option>
+                    <option>Fragen zum Produkt</option>
+                    <option>Vertriebsfragen</option>
+                    <option>einfach nur so!</option>
+                </select><br>
+
+                <label for="message">Deine Nachricht:
+                <textarea 
+                class="message umbruch" 
+                name="user_message" 
+                placeholder="Was hast du auf dem Herzen?" 
+                type="text">Was hast du auf dem Herzen?
+                </textarea>
+                </label>
+
+                <label>
+                    <input type="checkbox" 
+                    name="datenschutz" 
+                    value="datenschutz" 
+                    id="check1" 
+                    required>
+                    Ich akzeptiere die Datenschutzerklärung
+                </label>
+
+                <div>
+                <button type="submit">abschicken</button>
+                </div>
+
+              </form>
+            </div>
+
+        </section>
+      </main>
+    
+    
+    <include src="footer.html"></include>
+    
+
+    <script src="../js/index.js"></script>
+  </body>
+
+</html>
