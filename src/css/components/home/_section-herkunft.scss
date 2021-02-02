@@ -24,6 +24,7 @@
   }
   
   .main__herkunft__titel {
+    margin-top: 0;
 
     @include respond(media-sm)  {
       font-size: 3.3rem;

@@ -1,0 +1,23 @@
+.main__container--anbau {
+    display: flex;
+    flex-direction: column; 
+  
+    @include respond(media-xl)  {
+      display: flex; 
+      flex-direction: row; 
+    }
+  } 
+
+.main__textelemente--anbau  {
+
+    @include respond(media-xl)  {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+    }
+  }
+
+.img--anbau {
+    align-self: flex-end;
+    width: 50%;
+  }

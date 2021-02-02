@@ -1,0 +1,11 @@
+
+.main__container--ursprung  {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+  
+    @include respond(media-xl)  {
+      width: 60%;
+      margin: auto;
+     }
+  }

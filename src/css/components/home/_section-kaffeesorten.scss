@@ -138,8 +138,8 @@
   
   .main__kaffeesorten--button--flex  {
   display: flex;
-  width: 100vw;
   justify-content: center;
+  border: 1px solid var(--color-white);
   
   @include respond(media-sm)  {
   }
@@ -150,32 +150,19 @@
   }
   
   .main__kaffeesorten--button {
-    border-radius: 5px;   
-    background-color: #1a1a1a;
-    border-color: white;
-    border-width: 3px;
-    border-style: solid;
-    border-color: white;
-    padding: 1.5rem 5rem;
-    text-decoration: none;
-    @include body-text-m ();
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-    color: var(--color-white);
-  
-    @include respond(media-sm)  {
-    }
+    margin: 6rem 0;
+ 
   
     @include respond(media-xl)  {
-      margin-bottom: 12.5rem;
-      
+      margin: 12.5rem;
     }
-  
+
+    & a  {
+      border: 1px solid var(--color-white);
+    }
+   /*
     &:hover {
-      background-color: var(--color-anthrazit);
-      color: var(--color-white);
-      border: none;
-      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
     }
   
     &:active  {
@@ -183,14 +170,15 @@
       border-width: 2px;
       color: var(--color-white);
       border-color: var(--color-white);
-      border-style: solid; 
+      border: 1px solid var(--color-white); 
     }
   
+   
     &:focus {
       outline:  2px dashed var(--color-petrol);
       outline-offset: 10px;
       border-radius: 5px;
     } 
-  
+  */
     
   }

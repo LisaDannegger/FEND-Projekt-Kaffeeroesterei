@@ -14,13 +14,17 @@
 
 @import "components/cafe/section-gebaeck";
 
+@import "components/herkunft/section-anbau";
+@import "components/herkunft/section-kaffeebauer";
+@import "components/herkunft/section-ursprung";
+
 
 @import "layout/header";
-@import "layout/navbar";
 @import "layout/navigation";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/button-dunkel";
+@import "layout/movie";
 
 @import "pages/home";
 @import "pages/cafe";

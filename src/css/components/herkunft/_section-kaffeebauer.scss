@@ -1,0 +1,34 @@
+.main__container--kaffeebauer {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include respond(media-xl)  {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+      margin-bottom: 12.5rem;
+    }
+  }
+
+.main__textelemente--kaffeebauer  {
+
+    @include respond(media-xl)  {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 12.5rem;
+      margin-right: 10rem;
+    }
+  }
+
+.main__kaffeebauer--titel {
+
+    @include respond(media-xl)  {
+      margin-top: 12.5rem;
+    }
+  }
+
+.img--kaffeebauer {
+    align-self: flex-start;
+  }

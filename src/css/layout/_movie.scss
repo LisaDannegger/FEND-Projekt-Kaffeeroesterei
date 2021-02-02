@@ -1,0 +1,22 @@
+.movie  {
+    padding: $padding-mobile;
+    margin-bottom: 6rem;
+    width: 100%;
+  
+    @include respond(media-sm)  {
+      padding: $padding-small-device;
+    }
+  
+    @include respond(media-lg)  {
+      padding: $padding-large-device;
+    }
+  
+    @include respond(media-xl)  {
+      margin-bottom: 12.5rem;
+      padding: $padding-desktop;
+    }
+  
+    @include respond(media-xxl) {
+      padding: $padding-extralarge-device;
+    }
+  }

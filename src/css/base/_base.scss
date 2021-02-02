@@ -99,10 +99,12 @@ p {
   }
 }
 
-/*
-a {
+
+
+li, a {
   text-decoration: none;
-  color: $color__link;
+  list-style: none;
+  //color: $color__link;
 }
 
   a:link  {
@@ -115,12 +117,17 @@ a {
 
   a:hover   {
     color: $color__link--hover;
+    //bottom: -1px;
+    //height: 1px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
   }
 
   a:active   {
     color: $color__link--active;
   }
-*/
+
 
 .section {
   padding: $padding-mobile;
@@ -146,6 +153,7 @@ a {
 .umbruch  {
   display: block;
 }
+
 
 .visuallyhidden {
   position: absolute !important;

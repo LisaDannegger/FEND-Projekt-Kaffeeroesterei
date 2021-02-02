@@ -12,6 +12,8 @@
 
   <body>  
 
+    <header class="header header--img-home">
+
 <!--Desktop Navigation-->
     <div class="main-navigation">
       <div>
@@ -33,6 +35,9 @@
               <li class="main-navigation__item">
                   <a href="my-subpage/herkunft.html" class="underline">Herkunft</a>
               </li>
+              <li class="main-navigation__item">
+                <a href="my-subpage/herkunft.html" class="underline">Kontakt</a>
+            </li>
           </ul>
       </nav>
     </div>
@@ -64,20 +69,23 @@
           <nav class="mobile-navigation__items">
             <ul class="mobile-navigation__list">
                 <li class="mobile-navigation__item">
-                    <a href="my-subpage/cafe.html">das Café</a>
+                    <a href="my-subpage/cafe.html" class="underline">das Café</a>
                 </li>
                 <li class="mobile-navigation__item">
-                    <a href="my-subpage/herkunft.html">Herkunft</a>
+                    <a href="my-subpage/herkunft.html" class="underline">Herkunft</a>
                 </li>
                 <li class="mobile-navigation__item mobile-nav__item--cta">
-                    <a href="my-subpage/shop.html">Shop</a>
+                    <a href="my-subpage/shop.html" class="underline">Shop</a>
                 </li>
+                <li class="mobile-navigation__item mobile-nav__item--cta">
+                  <a href="my-subpage/shop.html" class="underline">Kontakt</a>
+              </li>
             </ul>
           </nav>
   </div>
 
 
-    <header class="header header--img-home">
+   
 
     <section class="section header__content">
       <div class="header__heading">
@@ -251,8 +259,13 @@
 
         </section>
 
-        <div class="main__kaffeesorten--button--flex">
-          <a href="my-subpage/shop.html" class="main__kaffeesorten--button">alle Produkte</a>
+        <!--
+          <div class="main__kaffeesorten--button--flex">
+          <a href="my-subpage/shop.html" alt="Link zu weiteren Produkten" class="main__kaffeesorten--button">alle Produkte</a>
+        </div>
+      -->
+        <div class="btn--dark-home main__kaffeesorten--button">
+          <a href="my-subpage/shop.html" alt="Zum Shop" class="btn--dark-style">alle Produkte</a>
         </div>
 
       </section>
@@ -265,10 +278,10 @@
           Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
           Konsonantien leben die Blindtexte. Und das alles in bester Bio
           Qualität.
-        </p>
-        <div class="main__herkunft--link">
-        <link a href="#">mehr</a>
-      </div>
+          <div class="main__herkunft--link">
+            <a href="my-subpage/herkunft.html" class="main__herkunft--link" title="Erfahre mehr über die Herkunft des Kaffees" alt="Erfahre mehr über die Herkunft des Kaffees">mehr</a>
+          </div>  
+      </p>
       </section>
 
 <!---------------------------------------------->
@@ -321,7 +334,7 @@
             </div>-->
 
             <div class="btn--dark btn--dark-product">
-              <a href="my-subpage/shop.html" class="btn--dark-style">zum Shop</a>
+              <a href="my-subpage/shop.html" alt="Button zum Shop" class="btn--dark-style">zum Shop</a>
             </div>
 
           </div>
@@ -351,7 +364,9 @@
     
       <div class="footer__flexbox">
         <div class="footer__logo--container">
-          <img src="Images/Logo.png" alt="Logo" class="footer__logo" />
+          <a href="index.html" class="visually-hidden">
+          <img src="Images/Logo.png" title="Café Rustica - Café & Rösterei in Kiel" alt="Café Rustica - Café & Rösterei in Kiel" class="footer__logo" />
+        </a>
         </div>
         
         <h3 class="footer__heading">
@@ -379,16 +394,16 @@
 
       <div class="footer__flexitem3 footer__flexitem--order">
           <p class="footer__content">
-            <span><a href="my-subpage/impressum.html" class="footer__link">Impressum</a></span>
-            <span><a href="my-subpage/datenschutz.html" class="footer__link">Datenschutz</a></span>
+            <span><li><a href="my-subpage/impressum.html" title="Link zur Unterseite Impressum" alt="Impressum" class="footer__link">Impressum</a></li></span>
+            <span><li><a href="my-subpage/datenschutz.html" title="Link zur Unterseite Datenschutz" alt="Datenschutz" class="footer__link">Datenschutz</a></li></span>
           </p>
       </div>
 
       <div class="footer__flexitem2">
           <ul class="footer__content">
-              <li><a href="my-subpage/cafe.html">Café</a></li>
-              <li><a href="my-subpage/shop.html">Shop</a></li>
-              <li><a href="my-subpage/herkunft.html">Herkunft</a></li>
+              <li><a href="my-subpage/cafe.html" title="Link zur Unterseite Das Cafe" alt="das Café" class="footer__link">Café</a></li>
+              <li><a href="my-subpage/shop.html" titel="Link zum Shop" alt="zum Shop" class="footer__link">Shop</a></li>
+              <li><a href="my-subpage/herkunft.html" title="Link zur Unterseite Herkunft" alt="Herkunft" class="footer-link">Herkunft</a></li>
           </ul>
       </div>
     

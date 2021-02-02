@@ -1,4 +1,3 @@
-
 .main-navigation {
   height: 5.5rem;
   width: 100%;
@@ -57,11 +56,13 @@
   font-weight: bold;
   margin-top: 1rem;
   width: 100%;
+  z-index: 1000 !important;
 }
 
 .main-navigation__brand img {
   height: 3.5rem;
   width: 3.5rem;
+  z-index: 1000 !important;
 }
 
 
@@ -89,7 +90,6 @@
   font-weight: 500;
   font-size: 1.8rem;
 }
-
 
 .underline  {
   display: inline;
@@ -135,11 +135,14 @@
     display: none;
   }
 
+  .mobile-navigation__items  {
+    display: none;
+  }
+
   .main-navigation-box {
     display: flex;
   }
 }
-
 
 .mobile-navigation {
   position: fixed;
@@ -152,6 +155,7 @@
   opacity: 0;
   //transition: opacity 1s;
   width: 0%;
+  //height: 100vh;
   height: 100vh;
   position: absolute; 
   top: 0;
@@ -163,7 +167,7 @@
   top: 1rem;
   right: 2rem;
   cursor: pointer;
-  z-index: 3000;
+  z-index: 102;
   opacity: 0;
 }
 
@@ -172,7 +176,7 @@
   top: 1rem;
   right: 2rem;
   cursor: pointer;
-  z-index: 3000;
+  z-index: 102;
 }
 
 .mobile-navigation input  {
@@ -183,17 +187,15 @@
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-content: center;
-width: 50%;
 height: 100vh;
-padding: 0;
 text-align: left;
-opacity: 0;
+//opacity: 0;
+display: none;
 overflow: hidden;
 }
 
 .mobile-navigation__list {
-  z-index: 3000;
+  z-index: 102;
   overflow: hidden;
 }
 
@@ -206,10 +208,17 @@ list-style: none;
 }
 
 .mobile-navigation__item a {
+  padding: 5px;
 font-size: 3.2rem;
 font-weight: 900;
 cursor: pointer;
+
+  &:active {
+    background-color: var(--color-kraftpapier);
+    border: 1px solid var(--color-white); 
+  }
 }
+
 
 .navi-toggle-button {
   position: absolute; 
@@ -220,10 +229,7 @@ cursor: pointer;
 
 //Verhaltensregeln
 
-#navi-toggle:checked ~ .mobile-navigation__items { //wenn Burger geklickt, zeige Navigation
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-}
+
 
 #navi-toggle:checked ~ label #background-black {    //wenn Burger geklickt, zeige schwarzen Hintergrund
   opacity: 1;
@@ -232,16 +238,23 @@ cursor: pointer;
   width: 100%;
 }
 
+#navi-toggle:checked ~ .mobile-navigation__items { //wenn Burger geklickt, zeige Navigation
+  //opacity: 1;
+  display: flex;
+  //transition: all 0.3s ease-in-out;
+}
+
 #navi-toggle:checked ~ .responsive-label #nav-open  {   //wenn Burger geklickt, verstecke Burger, öffne Kreuz
-  opacity: 0; 
+  //opacity: 0; 
+  display: none;
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
 
 #navi-toggle:checked ~ label #nav-closed  {  //wenn Burger geklickt, verstecke Burger
-  opacity: 0;
+  display: none;
+  //opacity: 0;
   transition: all 0.3s ease-in-out;
-  //z-index: -1;
 }
 
 #navi-toggle:checked ~ label #nav-open  {

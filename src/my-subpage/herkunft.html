@@ -11,11 +11,77 @@
   </head>
   <body>
 
-    <include src="navigation.html"></include>
+ 
+    <div class="main-navigation">
+      <div>
+          <div class="main__navigation-brand">
+              <a href="../index.html" class="main-navigation__brand">
+              <img src="../Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
+            </a>
+          </div>
+      </div>
+      
+      <nav class="main-navigation-box">
+          <ul class="main-navigation__items">
+              <li class="main-navigation__item">
+                  <a href="cafe.html" class="underline">das Café</a>
+              </li>
+              <li class="main-navigation__item">
+                  <a href="shop.html" class="underline">Shop</a>
+              </li>
+              <li class="main-navigation__item">
+                  <a href="herkunft.html" class="underline">Herkunft</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="herkunft.html" class="underline">Kontakt</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
 
-    <!----------------------------------------------------------------->  
+    <div class="mobile-navigation">
+
+      <input type="radio" name="radio" id="navi-toggle">
+      <input type="radio" name="radio" id="navi-toggle-close">
+      <input type="radio" name="radio" id="background-black">
+
+      <label for="navi-toggle">
+      <span id="nav-closed" class="responsive-label">
+        <img src="../Images/Burger Menu.svg" alt="toggle-button-menu" class="navi-toggle-button">
+      </span>
+      </label>
+      
+      <label for="navi-toggle-close">
+      <span id="nav-open" class="responsive-label">
+        <img src="../Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
+      </span> 
+      </label>
+
+      <label for="background-black">
+        <div id="background-black"></div>
+      </label>
+
+      <nav class="mobile-navigation__items">
+        <ul class="mobile-navigation__list">
+            <li class="mobile-navigation__item">
+                <a href="cafe.html" class="underline">das Café</a>
+            </li>
+            <li class="mobile-navigation__item">
+                <a href="herkunft.html" class="underline">Herkunft</a>
+            </li>
+            <li class="mobile-navigation__item mobile-nav__item--cta">
+                <a href="shop.html" class="underline">Shop</a>
+            </li>
+            <li class="mobile-navigation__item mobile-nav__item--cta">
+              <a href="shop.html" class="underline">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+ 
     
-    <header class="header header--img-herkunft"></header>
+  <header class="header header--img-herkunft"></header>
 
   <main>
     <section class="section main__container main__container--ursprung">
@@ -62,15 +128,21 @@
         </p>
       </div>
 
-      <div class="main__section--img-container">
+      <div class="main__section--img-container img--anbau">
+         
+        <picture class="main__section--img">
+          <source srcset="../Images/herkunft/FEND-coffee-plant-2x2.jpg"
+          media="(min-width: 48em)">
 
-        <div class="main__section--img">
           <img
-          src="../Images/herkunft/FEND-coffee-plantx2.jpg"
+          srcset="../Images/herkunft/FEND-coffee-plant-2x1.jpg"
           alt="Bild eines Zweiges einer Kaffeepflanze"
-          class="section--img"/>
-        </div>
-      </div>
+          class="main__section--img"/>
+        </picture>
+      
+    </div>
+  
+
     </section>
 
     <section class="section main__container main__container--kaffeebauer">
@@ -93,14 +165,22 @@
       </div>
 
       <div class="main__section--img-container">
-        <div class="main__section--img">
+         
+        <picture class="main__section--img img--kaffeebauer">
+          <source srcset="../Images/herkunft/FEND-Coffee-workerx2.jpg"
+          media="(min-width: 48rem)">
+  
           <img
-          src="../Images/herkunft/FEND-Coffee-workerx2.jpg"
+          srcset="../Images/herkunft/FEND-Coffee-workerx1.jpg"
           alt="Bild eines Zweiges einer Kaffeepflanze"
-          class="section--img"/>
-        </div>
-      </div>
+          class="main__section--img"/>
+        </picture>
+      
+    </div>
+
     </section>
+
+    
 
   </main>
 

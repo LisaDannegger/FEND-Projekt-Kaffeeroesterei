@@ -1,17 +1,3 @@
-.header--img-home  {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3)),
-      url(../Images/FEND-Coffee-latte-art-3_small.jpg);
-
-      @media (min-width: 48em),
-      (min-width: 1440px) {
-        .header--img-home {
-          background-image: linear-gradient(
-          rgba(0, 0, 0, 0.3)),
-            url(../Images/FEND-Coffee-latte-art-3_large.jpg);
-        }
-      }
-}
 
 .header__content  {
   width: 100%;
