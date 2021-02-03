@@ -11,90 +11,25 @@
   </head>
   <body> 
 
-    <header class="header">
-        <div class="main-navigation">
-          <div>
-              <div class="main__navigation-brand">
-                  <a href="../index.html" class="main-navigation__brand">
-                  <img src="../Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
-                </a>
-              </div>
-          </div>
-          
-          <nav class="main-navigation-box">
-              <ul class="main-navigation__items">
-                  <li class="main-navigation__item">
-                      <a href="cafe.html" class="underline">das Café</a>
-                  </li>
-                  <li class="main-navigation__item">
-                      <a href="shop.html" class="underline">Shop</a>
-                  </li>
-                  <li class="main-navigation__item">
-                      <a href="herkunft.html" class="underline">Herkunft</a>
-                  </li>
-                  <li class="main-navigation__item">
-                    <a href="kontakt.html" class="underline">Kontakt</a>
-                </li>
-              </ul>
-          </nav>
-        </div>
-  
-        <div class="mobile-navigation">
-  
-          <input type="radio" name="radio" id="navi-toggle">
-          <input type="radio" name="radio" id="navi-toggle-close">
-          <input type="radio" name="radio" id="background-black">
-  
-          <label for="navi-toggle">
-          <span id="nav-closed" class="responsive-label">
-            <img src="../Images/Burger Menu.svg" alt="toggle-button-menu" class="navi-toggle-button">
-          </span>
-          </label>
-          
-          <label for="navi-toggle-close">
-          <span id="nav-open" class="responsive-label">
-            <img src="../Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
-          </span> 
-          </label>
-  
-          <label for="background-black">
-            <div id="background-black"></div>
-          </label>
-  
-          <nav class="mobile-navigation__items">
-            <ul class="mobile-navigation__list">
-                <li class="mobile-navigation__item">
-                    <a href="cafe.html" class="underline">das Café</a>
-                </li>
-                <li class="mobile-navigation__item">
-                    <a href="herkunft.html" class="underline">Herkunft</a>
-                </li>
-                <li class="mobile-navigation__item mobile-nav__item--cta">
-                    <a href="shop.html" class="underline">Shop</a>
-                </li>
-                <li class="mobile-navigation__item mobile-nav__item--cta">
-                  <a href="kontakt.html" class="underline">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+    <header class="header__contact">
+      <include src="navigation.html"></include>
+    </header>
 
-      <main>
-        <section class="section main__container">
+    <main>
+        <section class="section main__container section__contact">
             <div class="main__textelemente">
-              <h2>Du hast Fragen?
+              <h2 class="contact-title">Du hast Fragen?
                 <span class="umbruch">Schreib uns gern!</span>
               </h2>
 
               <form action="#" method="post">
                 <ul>
                     <li>
-                        <label for="textfeld1" class="textfeld">Name*</label>
+                        <label for="textfield1" class="textfield">Name*</label>
                         <input 
                         placeholder="Name" 
-                        class="umbruch" 
-                        id="textfeld1" 
+                        class="umbruch text" 
+                        id="textfield1" 
                         type="text"
                         autocomplete="name" 
                         required>
@@ -104,7 +39,7 @@
                         <label for="textfeld2" class="email">Email*</label>
                         <input 
                         placeholder="Email" 
-                        class="umbruch" 
+                        class="umbruch email" 
                         id="textfeld2" 
                         type="email" 
                         autocomplete="email"
@@ -112,10 +47,10 @@
                     </li>
 
                     <li>
-                        <label for="textfeld3" class="phone">Telefonnummer</label>
+                        <label for="textfeld3" class="phone-number">Telefonnummer</label>
                         <input 
                         placeholder="Telefonnummer" 
-                        class="umbruch" 
+                        class="umbruch phone" 
                         id="textfeld3" 
                         type="tel"
                         autocomplete="tel">
@@ -123,7 +58,7 @@
                 </ul>
 
                 <select name="auswahl">
-                    <option selected>Dein Betreff:</option>
+                    <option selected>Dein Betreff</option>
                     <option>Fragen zur Lieferung</option>
                     <option>Fragen zum Produkt</option>
                     <option>Vertriebsfragen</option>
@@ -132,24 +67,32 @@
 
                 <label for="message">Deine Nachricht:
                 <textarea 
+                placeholder="Was hast du auf dem Herzen?" 
                 class="message umbruch" 
                 name="user_message" 
-                placeholder="Was hast du auf dem Herzen?" 
-                type="text">Was hast du auf dem Herzen?
+                type="text">
                 </textarea>
                 </label>
 
-                <label>
-                    <input type="checkbox" 
-                    name="datenschutz" 
-                    value="datenschutz" 
-                    id="check1" 
-                    required>
-                    Ich akzeptiere die Datenschutzerklärung
-                </label>
+                <div class="checkbox-container">
+                  <label class="checkbox-label" for="datenschutz">
+                    
+                    <span class="checkmark"></span>  
+                    
+                    <input type="checkbox"
+                      class="checkbox-box" 
+                      name="datenschutz" 
+                      value="datenschutz" 
+                      id="check1" 
+                      required>
 
-                <div>
-                <button type="submit">abschicken</button>
+                      Ich akzeptiere die Datenschutzerklärung
+    
+                  </label>
+                </div>
+
+                <div class="btn-contact">
+                <button class="btn--dark-style" type="submit">abschicken</button>
                 </div>
 
               </form>
@@ -163,6 +106,7 @@
     
 
     <script src="../js/index.js"></script>
+
   </body>
 
 </html>
