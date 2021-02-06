@@ -1,14 +1,40 @@
+/*
 .main-container-kontakt {
     margin-top: 8rem;
 }
+*/
+
 
 .header__contact {
     height: 5.5rem;
 }
 
 .section__contact   {
-    margin-top: 8rem;
+    margin-top: 13.3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(media-xl)  {
+        flex-direction: row; 
+        margin-top: 23rem;
+    }
 }
+
+.section__contact--flexitem {
+    width: 100%;
+    
+    @include respond(media-xl)  {
+        width: 50%;
+    }
+}
+
+.contact__flexitem-1    {
+    
+    @include respond(media-xl)  {
+        padding-top: 5rem;
+    }
+}
+
 
 //Default-Styles entfernen
 
@@ -17,13 +43,12 @@
 .contact-title  {
     margin-bottom: 3.5rem;
     margin-top: 0;
+
+    @include respond(media-xl)  {
+        //width: 50%;
+    }
 }
 
-option  {
-    background: var(--color-light-grey);
-    border-top: 1px solid var(--color-anthrazit);
-    padding: 3rem 1rem .3rem 1rem;
-}
 
 input   {
     font-size: 1.4rem;
@@ -31,24 +56,43 @@ input   {
     padding-left: 2rem;
     margin-top: .5rem;
     margin-bottom: 4rem;
+    height: 4rem;
     border: none;
     border-bottom: 3px solid var(--color-anthrazit);
+    outline: none;
+    cursor: pointer;
+
+    @include respond(media-xl)  {
+        margin-bottom: 8rem;
+        height: 5rem;
+        font-size: 1.8rem;
+    }
 }
 
 textarea    {
     font-size: inherit;
+    font-family: inherit; 
+    color: var(--color-anthrazit);
     border: none;
     border-bottom: 3px solid var(--color-anthrazit);
-
-    &::placeholder  {
-        color: var(--color-light-grey);
-    }
-}
-
-.message  {
+    outline: none;
+    resize: none;
+    overflow: auto;
+    padding: 5rem 1.8rem 0 1.8rem;
+    font-size: 1.4rem;
     width: 100%;
     height: 17rem;
-    padding-left: 2.5rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-light-grey);
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+        color: var(--color-white);
+    }
 }
 
 
@@ -56,46 +100,158 @@ textarea    {
 
 label  {
     font-size: 1.4rem;
+
+    @include respond(media-md)  {
+        font-size: 1.6rem;
+    }
+
+    @include respond(media-xl)  {
+        font-size: 1.8rem;
+    }
 }
 
 //Background imput-Felder
 
 .text    {
-    background-color: var(--color-light-grey);
-    height: 4rem;
+    &:hover,
+    &:focus {
+        background-color: var(--color-light-grey);
+    }
 
-    &::placeholder  {
+    &:hover::placeholder,
+    &:focus::placeholder  {
         color: var(--color-anthrazit);
+    }
+
+    &:focus:invalid   {
+        background:rgba(255, 0, 0, 0.3);
+    }
+
+    &:focus:invalid::placeholder    {
+        color: red;
+    }
+
+    @include respond(media-xl)  {
+        background-color: transparent;
+
+        &::placeholder  {
+            color: var(--color-light-grey);
+        }
     }
 }
 
 .email  {
-    height: 4rem;
 
-    &::placeholder  {
-        color: var(--color-light-grey);
+    &:hover,
+    &:focus    {
+        background-color: var(--color-light-grey);
     }
+
+    &:hover::placeholder,
+    &:focus::placeholder  {
+        color: var(--color-anthrazit);
+    }
+
+    &:focus:invalid   {
+        background:rgba(255, 0, 0, 0.3);
+    }
+
+    &:focus:invalid::placeholder    {
+        color: red;
+    }
+
+
 }
 
 .phone  {
-    background-color: rgba(255, 0, 0, 0.3);
-    height: 4rem;
+    &:hover,
+    &:focus    {
+        background-color: var(--color-light-grey);
+    }
 
-    &::placeholder  {
-        color: #ff0000;
+    &:hover::placeholder,
+    &:focus::placeholder  {
+        color: var(--color-anthrazit);
+    }
+
+    &:focus:invalid   {
+        background:rgba(255, 0, 0, 0.3);
+    }
+
+    &:focus:invalid::placeholder    {
+        color: red;
     }
 }
 
+::placeholder   {
+    color: var(--color-light-grey);
+}
+
+
+
 //Drop-Down-Menu
+
+.select-container   {
+    display: flex;
+    width: 100%;
+    
+}
+
 select  {
     width: 100%;
     border: none;
     padding: 1.5rem 2.5rem;
     background-color: var(--color-anthrazit);
-    color: white;
+    color: var(--color-white);
     border-radius: 5px;
     border: 2px solid var(--color-anthrazit);
     margin-bottom: 4rem;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    @include respond(media-xl)  {
+        margin-bottom: 8rem;
+        background-color: transparent;
+        color: var(--color-anthrazit);
+    }
+}
+
+select > option  {
+    background-color: var(--color-white);
+    color: var(--color-anthrazit);
+    width: 200px;
+    border: 2px solid var(--color-anthrazit);
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 3rem 1rem .3rem 1rem;
+
+    &:hover {
+        background-color: var(--color-light-grey);
+        color: var(--color-anthrazit); 
+    }
+}
+
+.select-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.select-wrapper::before {
+    content: "›";
+    padding: 1rem;
+    font-size: 3.5rem;
+    position: absolute; 
+    right: 2.5rem;
+    top: 0.5rem;
+    pointer-events: none;
+    transform: rotate(-90deg);
+    color: var(--color-white);
+
+    @include respond(media-xl)  {
+        color: var(--color-anthrazit);
+    }
 }
 
 //Button
@@ -103,6 +259,13 @@ select  {
     margin-top: 4rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 6rem;
+    cursor: pointer;
+
+    @include respond(media-xl)  {
+        margin-top: 8rem;
+        margin-bottom: 12.5rem;
+    }
 }
 
 //Checkbox
@@ -112,45 +275,75 @@ select  {
     user-select: none;
     margin-top: 4rem;
     font-size: 1.4rem;
+
+    @include respond(media-xl)  {
+        margin-top: 8rem;
+    }
 }
 
 .checkbox-box   {
     height: 1.5rem;
     width: 1.5rem;
-    background-color: black;
+    background-color: var(--color-anthrazit);
     margin-bottom: 0;
 }
 
 .checkbox-label {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 2rem;
 }
 
-.checkbox-container:hover .checkbox-label ~ .checkmark {
-    background-color: #ccc;
-  }
+.checkbox-text  {
+    padding: 0.5rem 2.5rem;
+}
 
-  .checkbox-container .checkbox-label:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-
-  .checkbox-checkmark:after {
-    content: "";
+input[type="checkbox"] {
     position: absolute;
+    left: -45px;
     display: none;
   }
 
-  .checkbox-container .checkbox-label:checked ~ .checkmark:after {
+input[type="checkbox"]  + label {
+    cursor: pointer;
+}
+  
+input[type="checkbox"] + label::before {
+    width: 15px;
+    height: 15px;
     display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 2.5px solid var(--color-anthrazit);
+  
+  }
+  
+input[type="checkbox"]:checked+label::before {
+    background-color: #c72f2f;
+  }
+  
+input[type="checkbox"]+label::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--color-anthrazit);
+    background-color: var(--color-white);
+    display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
   }
 
-  .checkbox-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-}
+input[type="checkbox"]:checked+label::before {
+    box-shadow: 0 0 0 3.5px var(--color-white) inset;
+    background-color: var(--color-anthrazit);
+  }
+
+
+  //Fieldset
+  fieldset  {
+      border:none;
+  }
+
+  legend    {
+      visibility: hidden;
+  }

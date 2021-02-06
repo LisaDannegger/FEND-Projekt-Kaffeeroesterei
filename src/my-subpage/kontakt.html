@@ -17,87 +17,106 @@
 
     <main>
         <section class="section main__container section__contact">
-            <div class="main__textelemente">
+            <div class="section__contact--flexitem">
               <h2 class="contact-title">Du hast Fragen?
                 <span class="umbruch">Schreib uns gern!</span>
               </h2>
+            </div>
 
+            <div class="section__contact--flexitem contact__flexitem-1">
               <form action="#" method="post">
-                <ul>
-                    <li>
-                        <label for="textfield1" class="textfield">Name*</label>
-                        <input 
-                        placeholder="Name" 
-                        class="umbruch text" 
-                        id="textfield1" 
-                        type="text"
-                        autocomplete="name" 
+                <fieldset>
+                  <legend>Kontaktdaten</legend>
+                  <ul>
+                      <li>
+                          <label for="textfield1" class="textfield">Name*</label>
+                          <input 
+                          placeholder="Name" 
+                          class="umbruch text" 
+                          id="textfield1" 
+                          type="text"
+                          autocomplete="name" 
+                          required>
+                      </li>
+                      
+                      <li>
+                          <label for="textfeld2" class="email">Email*</label>
+                          <input 
+                          placeholder="Email" 
+                          class="umbruch email" 
+                          id="textfeld2" 
+                          type="email" 
+                          autocomplete="email"
+                          required>
+                      </li>
+
+                      <li>
+                          <label for="textfeld3" class="phone-number">Telefonnummer</label>
+                          <input 
+                          placeholder="Telefonnummer" 
+                          class="umbruch phone" 
+                          id="textfeld3" 
+                          type="tel"
+                          autocomplete="tel">
+                      </li>
+                  </ul>
+                  </fieldset>
+
+                  <div class="select-container">
+                    <div class="select-wrapper">
+                      <label>
+                      <select name="select">
+                          <option value="0">Dein Betreff</option>
+                          <option value="1" selected>Fragen zur Lieferung</option>
+                          <option value="2">Fragen zum Produkt</option>
+                          <option value="3">Vertriebsfragen</option>
+                          <option value="4">einfach nur so!</option>
+                      </select>
+                    </label>
+                    </div>
+                  </div>
+
+                  <label for="message">Deine Nachricht:</label>
+                  <textarea
+                  id="message"
+                  name="mesage" 
+                  type="text"
+                  placeholder="Was hast du auf dem Herzen?">
+                  </textarea>
+                  
+
+                  <!--
+                  <div class="checkbox-container">  
+                      
+                      <input type="checkbox"
+                        class="checkbox-box" 
+                        name="datenschutz" 
+                        value="datenschutz" 
+                        id="check1" 
                         required>
-                    </li>
-                    
-                    <li>
-                        <label for="textfeld2" class="email">Email*</label>
-                        <input 
-                        placeholder="Email" 
-                        class="umbruch email" 
-                        id="textfeld2" 
-                        type="email" 
-                        autocomplete="email"
-                        required>
-                    </li>
 
-                    <li>
-                        <label for="textfeld3" class="phone-number">Telefonnummer</label>
-                        <input 
-                        placeholder="Telefonnummer" 
-                        class="umbruch phone" 
-                        id="textfeld3" 
-                        type="tel"
-                        autocomplete="tel">
-                    </li>
-                </ul>
-
-                <select name="auswahl">
-                    <option selected>Dein Betreff</option>
-                    <option>Fragen zur Lieferung</option>
-                    <option>Fragen zum Produkt</option>
-                    <option>Vertriebsfragen</option>
-                    <option>einfach nur so!</option>
-                </select><br>
-
-                <label for="message">Deine Nachricht:
-                <textarea 
-                placeholder="Was hast du auf dem Herzen?" 
-                class="message umbruch" 
-                name="user_message" 
-                type="text">
-                </textarea>
-                </label>
-
-                <div class="checkbox-container">
-                  <label class="checkbox-label" for="datenschutz">
-                    
-                    <span class="checkmark"></span>  
-                    
-                    <input type="checkbox"
-                      class="checkbox-box" 
-                      name="datenschutz" 
-                      value="datenschutz" 
-                      id="check1" 
-                      required>
-
-                      Ich akzeptiere die Datenschutzerklärung
-    
+                      <label class="checkbox-label" for="datenschutz"><span class="checkbox-text">Ich akzeptiere die Datenschutzbestimmungen</span></label>
+                  </div>
+                  -->
+                <div class="checkbox-container">  
+                  <input 
+                  id="check1" 
+                  type="checkbox"
+                  name="datenschutz"
+                  value="datenschutz"
+                  required />
+  
+                  <label for="check1">
+                   Ich akzeptiere die <a hre="#">Datenschutzbestimmungen</a>
                   </label>
                 </div>
 
-                <div class="btn-contact">
-                <button class="btn--dark-style" type="submit">abschicken</button>
-                </div>
+                  <div class="btn-contact">
+                  <button class="btn--dark-style" type="submit">abschicken</button>
+                  </div>
 
               </form>
             </div>
-
         </section>
       </main>
     
