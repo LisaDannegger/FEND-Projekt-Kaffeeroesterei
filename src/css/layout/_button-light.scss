@@ -1,0 +1,27 @@
+.btn--light-style {
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--color-white);
+    padding: 1.5rem 5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    box-shadow: .2rem .2rem .3rem rgba(0, 0, 0, 0.25);
+    background-position: right bottom;
+
+    &:hover {
+      border: .2rem solid var(--color-black);
+      background: linear-gradient(to left, transparent 50%, var(--color-black) 50%);
+      background-size: 200% 100%;
+      background-position: left bottom; 
+      transition: all 0.5s ease-out;
+      color: var(--color-white);
+    }
+
+    &:visited, 
+    &:active  {
+      background-color: var(--color-kraftpapier);
+
+      border: 1px solid var(--color-white);
+    }
+
+  }

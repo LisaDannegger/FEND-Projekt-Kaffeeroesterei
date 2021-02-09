@@ -135,20 +135,6 @@
     height: 1.4rem;
   }
   
-  
-  .main__kaffeesorten--button--flex  {
-  display: flex;
-  justify-content: center;
-  border: 1px solid var(--color-white);
-  
-  @include respond(media-sm)  {
-  }
-
-  @include respond(media-xl)  {
-  }
-    
-  }
-  
   .main__kaffeesorten--button {
     margin: 6rem 0;
  
@@ -156,29 +142,4 @@
     @include respond(media-xl)  {
       margin: 12.5rem;
     }
-
-    & a  {
-      border: 1px solid var(--color-white);
-    }
-   /*
-    &:hover {
-
-    }
-  
-    &:active  {
-      background-color: var(--color-kraftpapier);
-      border-width: 2px;
-      color: var(--color-white);
-      border-color: var(--color-white);
-      border: 1px solid var(--color-white); 
-    }
-  
-   
-    &:focus {
-      outline:  2px dashed var(--color-petrol);
-      outline-offset: 10px;
-      border-radius: 5px;
-    } 
-  */
-    
   }
