@@ -1,0 +1,12 @@
+.section__shop--kaffeesorten    {
+    margin-top: $margin-large-mobile;
+
+    @include respond(media-xl)  {
+        margin-top: $margin-large-desktop;
+    }
+    
+}
+
+.shop-svg-black {
+    filter: invert(1); //färbt SVG schwarz https://blog.union.io/code/2017/08/10/img-svg-fill/
+  }

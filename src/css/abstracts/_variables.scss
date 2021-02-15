@@ -47,12 +47,6 @@ $padding-large-device: 0 7.5rem;
 $padding-desktop : 0 10rem;
 $padding-extralarge-device: 0 12.5rem;
 
-//Link-Styles: link, hover, visited, active a
-$color__link: var(--color-white);
-$color__link--visited: var(--color-white) ;
-$color__link--hover: var(--color-kraftpapier);
-$color__link--active: var(--color-kraftpapier);
-
 //Line Height
 $line-height-headings: 110%;
 $line-height-body: 130%;
@@ -62,20 +56,13 @@ $line-height-body-text: 2.4rem;
 $icon-shop-width: 4.5rem;
 $icon-shop-height: 4.5rem;
 
+//Margins Subpages Helle Navi
+$margin-large-mobile: 4.5rem;
+$margin-large-desktop: 21.5rem;
+
+
 
 //Farbvariablen
-
-/* --color-white: #fff;
-  --color-light-grey: #E9E9E9;
-  --color-medium-grey: #737373;
-  --color-anthrazit: #1a1a1a;
-  --color-kraftpapier: #D7BE9D;
-  --color-petrol: #006D7E;
-  --color-rosa: #EDD1C9;
-  --color-orange: #D77C12;
-  --color-black: #000;
-  */
-
   :root {
     --color-white: #fff;
     --color-light-grey: #E9E9E9;

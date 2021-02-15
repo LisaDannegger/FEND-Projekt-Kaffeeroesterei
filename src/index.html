@@ -12,9 +12,12 @@
 
   <body>  
 
+    <a id="skip-link" href="#main">zum Hauptinhalt</a>
+
     <header class="header header--img-home">
+
       <!--Desktop Navigation-->
-      <div class="main-navigation">
+      <div class="main-navigation" id="main-nav">
         <div>
             <div class="main__navigation-brand">
                 <a href="index.html" class="main-navigation__brand">
@@ -83,7 +86,7 @@
 
       <section class="section header__content">
         <div class="header__heading">
-          <h1 class="header__heading--primary">
+          <h1 class="header__heading--primary" tabindex="0">
             <span class="header__heading--primary-main">Rustica</span>
             <span class="header__heading--primary-sub">Bio und Fair seit 1991</span>
           </h1>
@@ -97,7 +100,7 @@
 
     </header>
 
-    <main>
+    <main id="main">
       <section class="section main__roesterei">
         
         <div class="main__roesterei--textelemente">
@@ -186,34 +189,52 @@
                 </h4>
               </div>
               <div>
-                <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Icon" class="shop-svg" />
-                <img src="Images/Icon French Press_weiß.svg" alt="Icon" class="shop-svg"/>
-                <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Icon" class="shop-svg"/>
+                <object data="Images/Icon Kaffee Bohnen_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                  <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                  <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+                </object>
+
+                <object data="Images/Icon French Press_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                  <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                  <img src="Images/Icon French Press_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+                </object>
+             
+                <object data="Images/Icon Kaffee Schaufel_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                  <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                  <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+                </object>
               </div>
             </div>
         </section>
-            <!--
-              <div>
-                <svg class="kaffeesorten--svg">
-                  <use xlink:href="Images/Icon Kaffee Schaufel.svg"></use>
-                </svg>
-              </div>
-            -->
 
           <section class="main__kaffeesorten--flexitems">
               <div class="main__kaffeesorten--costarica">
                 <img src="Images/FEND_Coffee_Costa-Rica 2_x1.jpg" alt="Kaffesorte Costa Rica" class="main__kaffeesorten--costarica-img"/>
               </div>
 
-              <article class="main__kaffeesorten-beschreibung--item">
+              <div>
                 <h4 class="main__kaffeesorten-beschreibung">
-                  <span class="main__kaffeesorten-beschreibung--main">Äthiopien</span>
+                  <span class="main__kaffeesorten-beschreibung--main">Costa Rica</span>
                   <span class="main__kaffeesorten-beschreibung--sub">6,90€ - 26,90€</span>
                 </h4>
-                <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Icon" class="shop-svg" />
-                <img src="Images/Icon French Press_weiß.svg" alt="Icon" class="shop-svg"/>
-                <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Icon" class="shop-svg"/>
-              </article>
+              </div>
+              <div>
+                <object data="Images/Icon Kaffee Bohnen_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                  <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                  <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+                </object>
+
+                <object data="Images/Icon French Press_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                  <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                  <img src="Images/Icon French Press_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+                </object>
+             
+                <object data="Images/Icon Kaffee Schaufel_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                  <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                  <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+                </object>
+              </div>
+            </div>
 
           </section>
 
@@ -222,15 +243,29 @@
               <img src="Images/FEND_Coffee_Costa-Rica 2_x1.jpg" alt="Kaffesorte Costa Rica" class="main__kaffeesorten--costarica-img"/>
             </div>
 
-            <article class="main__kaffeesorten-beschreibung--item">
+            <div>
               <h4 class="main__kaffeesorten-beschreibung">
                 <span class="main__kaffeesorten-beschreibung--main">Costa Rica</span>
                 <span class="main__kaffeesorten-beschreibung--sub">6,90€ - 26,90€</span>
               </h4>
-              <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Icon" class="shop-svg" />
-                <img src="Images/Icon French Press_weiß.svg" alt="Icon" class="shop-svg"/>
-                <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Icon" class="shop-svg"/>
-            </article>
+            </div>
+            <div>
+              <object data="Images/Icon Kaffee Bohnen_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+              </object>
+
+              <object data="Images/Icon French Press_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                <img src="Images/Icon French Press_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+              </object>
+           
+              <object data="Images/Icon Kaffee Schaufel_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+                <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+                <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+              </object>
+            </div>
+          </div>
 
         </section>
 
@@ -239,15 +274,29 @@
             <img src="Images/FEND_Coffee_Costa-Rica 2_x2.jpg" alt="Kaffesorte Costa Rica" class="main__kaffeesorten--costarica-img"/>
           </div>
 
-          <article class="main__kaffeesorten-beschreibung--item">
+          <div>
             <h4 class="main__kaffeesorten-beschreibung">
-              <span class="main__kaffeesorten-beschreibung--main">Äthiopien</span>
+              <span class="main__kaffeesorten-beschreibung--main">Costa Rica</span>
               <span class="main__kaffeesorten-beschreibung--sub">6,90€ - 26,90€</span>
             </h4>
-            <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Icon" class="shop-svg" />
-                <img src="Images/Icon French Press_weiß.svg" alt="Icon" class="shop-svg"/>
-                <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Icon" class="shop-svg"/>
-          </article>
+          </div>
+          <div>
+            <object data="Images/Icon Kaffee Bohnen_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+              <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+              <img src="Images/Icon Kaffee Bohnen_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+            </object>
+
+            <object data="Images/Icon French Press_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+              <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+              <img src="Images/Icon French Press_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+            </object>
+         
+            <object data="Images/Icon Kaffee Schaufel_weiß.svg" type="image/svg+xml" alt="Kaffeebohnen-Icon" class="shop-svg">
+              <!-- Fallback-Lösung, wenn SVG nicht geladen werden kann -->
+              <img src="Images/Icon Kaffee Schaufel_weiß.svg" alt="Alternatives Kaffeebohnen-Icon">
+            </object>
+          </div>
+        </div>
 
       </section>
 

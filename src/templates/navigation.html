@@ -9,7 +9,7 @@
       </div>
       
       <nav class="main-navigation-box">
-          <ul class="main-navigation__items">
+          <ul class="main-navigation__items" aria-label="Navigation">
               <li class="main-navigation__item">
                   <a href="cafe.html" class="navitem_black underline">das Café</a>
               </li>
@@ -30,14 +30,14 @@
       <input type="radio" name="radio" id="background-black">
 
       <label for="navi-toggle">
-      <span id="nav-closed" class="responsive-label">
+      <span id="nav-closed" class="responsive-label" tabindex="0">
         <img src="../Images/Burger Menu_black.svg" alt="toggle-button-menu" class="navi-toggle-button">
       </span>
       </label>
       
       <label for="navi-toggle-close">
-      <span id="nav-open" class="responsive-label">
-        <img src="../Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
+      <span id="nav-open" class="responsive-label" tabindex="0">
+        <img src="../Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button" tabindex="0">
       </span> 
       </label>
 
@@ -45,7 +45,7 @@
         <div id="background-black"></div>
       </label>
 
-      <nav class="mobile-navigation__items">
+      <nav class="mobile-navigation__items" aria-label="mobileNavigation">
         <ul class="mobile-navigation__list">
             <li class="mobile-navigation__item">
                 <a href="cafe.html" class="underline">das Café</a>

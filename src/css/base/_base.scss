@@ -40,6 +40,9 @@ body {
     background-color: var(--color-white);
 }
 
+
+//Images 
+
 img {
   margin: 0;
   padding: 0; 
@@ -47,6 +50,8 @@ img {
   height: inherit; 
 }
 
+
+//Heading 
 
 h1  {
   @include section-title-h1-m ();
@@ -71,6 +76,9 @@ h3  {
     @include section-title-h3-d();
   }
 }
+
+
+//Text
 
 p {
   line-height: $line-height-body;
@@ -100,34 +108,7 @@ p {
 }
 
 
-
-li, a {
-  text-decoration: none;
-  list-style: none;
-  //color: $color__link;
-}
-
-  a:link  {
-    color: $color__link;
-  }
-
-  a:visited   {
-    color: $color__link--visited;
-  }
-
-  a:hover   {
-    color: $color__link--hover;
-    //bottom: -1px;
-    //height: 1px;
-    transition-property: left right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-  }
-
-  a:active   {
-    color: $color__link--active;
-  }
-
+//Section-Container
 
 .section {
   padding: $padding-mobile;
@@ -150,6 +131,8 @@ li, a {
   }
 }
 
+
+//Spans
 .umbruch  {
   display: block;
 }
@@ -165,3 +148,83 @@ li, a {
   width: 1px !important;
   overflow: hidden;
 }
+
+
+//Links
+
+li  {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  color: var(--color-white);
+
+  &:hover   {
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:active   {
+    border-bottom: 2px solid var(--color-white);
+  }
+}
+
+.underline  {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: ""; //content ist leer
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -1px;
+    background: var(--color-white);
+    height: 1px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
+  right: 0;
+}
+}
+
+//Navigation
+
+.navitem_black  {
+  color: var(--color-black);
+}
+
+.navitem_white  {
+  color: var(--color-white);
+}
+
+//Skip-Link
+
+#skip-link  {
+  position: absolute;
+  left: 0; 
+  top: 0;
+  transform: translate(-100%);
+  transition: 0.2s transform;
+  z-index: 5000;  
+}
+
+#skip-link:focus  {
+  transform: translateY(0);
+}
+
+
+

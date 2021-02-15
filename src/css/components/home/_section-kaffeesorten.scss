@@ -120,8 +120,12 @@
   
   .main__kaffeesorten-beschreibung--main {
     display: block;
-    @include body-text-d ();
     margin-top: 1rem;
+    @include body-text-m ();
+
+    @include respond(media-xl)  {
+      @include body-text-d ();
+    }
   }
   
   .main__kaffeesorten-beschreibung--sub {
@@ -133,6 +137,10 @@
   .shop-svg {
     width: 1.2rem;
     height: 1.4rem;
+    }
+
+  .shop-svg path  {
+    fill: var(--color-black);
   }
   
   .main__kaffeesorten--button {

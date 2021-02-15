@@ -2,6 +2,7 @@
     padding: $padding-mobile;
     margin-bottom: 6rem;
     width: 100%;
+    outline: none;
   
     @include respond(media-sm)  {
       padding: $padding-small-device;

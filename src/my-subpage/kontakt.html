@@ -24,7 +24,7 @@
             </div>
 
             <div class="section__contact--flexitem contact__flexitem-1">
-              <form action="#" id="contact-form" method="get"> <!--method bei JS unerheblich?-->
+              <form action="#" id="contact-form" method="get"> <!--method bei JS unerheblich? // mailto:lisa.dannegger@hotmail.de"-->
                 <fieldset>
                   <legend>Kontaktdaten</legend>
                   <ul>
@@ -119,7 +119,10 @@
                 </div>
 
                   <div class="btn-contact">
-                  <button class="btn--dark-style" type="submit" id="submit-button">abschicken</button>
+                  <button onclick="location.href='mailto:lisa.dannegger@hotmail.de';" 
+                  class="btn--dark-style" 
+                  type="submit" 
+                  id="submit-button">abschicken</button> <!--statt Button eher Input type submit??-->
                   </div>
 
               </form>
