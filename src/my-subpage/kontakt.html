@@ -24,53 +24,59 @@
             </div>
 
             <div class="section__contact--flexitem contact__flexitem-1">
-              <form action="#" method="post">
+              <form action="#" id="contact-form" method="get"> <!--method bei JS unerheblich?-->
                 <fieldset>
                   <legend>Kontaktdaten</legend>
                   <ul>
                       <li>
-                          <label for="textfield1" class="textfield">Name*</label>
-                          <input 
-                          placeholder="Name" 
-                          class="umbruch text" 
-                          id="textfield1" 
-                          type="text"
-                          autocomplete="name" 
-                          required>
+                          <label for="input-username" class="textfield" id="username">Name*
+                            <input 
+                            placeholder="Name" 
+                            class="umbruch text" 
+                            id="input-username" 
+                            type="text"
+                            autocomplete="name"
+                            aria-required="true"
+                            onclick="validation()">
+                        </label>
                       </li>
                       
                       <li>
-                          <label for="textfeld2" class="email">Email*</label>
-                          <input 
-                          placeholder="Email" 
-                          class="umbruch email" 
-                          id="textfeld2" 
-                          type="email" 
-                          autocomplete="email"
-                          required>
+                          <label for="input-usermail" class="email" id="usermail">Email*
+                            <input 
+                            placeholder="Email" 
+                            class="umbruch email" 
+                            id="input-usermail" 
+                            type="email" 
+                            autocomplete="email"
+                            aria-required="true"
+                            onclick="validation()">
+                        </label>
                       </li>
 
                       <li>
-                          <label for="textfeld3" class="phone-number">Telefonnummer</label>
-                          <input 
-                          placeholder="Telefonnummer" 
-                          class="umbruch phone" 
-                          id="textfeld3" 
-                          type="tel"
-                          autocomplete="tel">
+                          <label for="inputer-userphone" class="phone-number" id="userphone">Telefonnummer
+                            <input 
+                            placeholder="Telefonnummer" 
+                            class="umbruch phone" 
+                            id="input-userphone" 
+                            type="tel"
+                            autocomplete="tel"
+                            onclick="validation()">
+                          </label>
                       </li>
                   </ul>
                   </fieldset>
 
                   <div class="select-container">
                     <div class="select-wrapper">
-                      <label>
-                      <select name="select">
-                          <option value="0">Dein Betreff</option>
-                          <option value="1" selected>Fragen zur Lieferung</option>
-                          <option value="2">Fragen zum Produkt</option>
-                          <option value="3">Vertriebsfragen</option>
-                          <option value="4">einfach nur so!</option>
+                      <label for="dropdown" aria-required="true">
+                      <select name="select" id="dropdown">
+                          <option value="0" tabindex="0" aria-checked="true">Dein Betreff</option>
+                          <option value="1" aria-checked="true" selected>Fragen zur Lieferung</option>
+                          <option value="2" aria-checked="true">Fragen zum Produkt</option>
+                          <option value="3" aria-checked="true">Vertriebsfragen</option>
+                          <option value="4" aria-checked="true">einfach nur so!</option>
                       </select>
                     </label>
                     </div>
@@ -104,15 +110,16 @@
                   type="checkbox"
                   name="datenschutz"
                   value="datenschutz"
-                  required />
+                  aria-required="true" 
+                  />
   
-                  <label for="check1">
-                   Ich akzeptiere die <a hre="#">Datenschutzbestimmungen</a>
+                  <label for="check1" tabindex="0">
+                   Ich akzeptiere die Datenschutzbestimmungen
                   </label>
                 </div>
 
                   <div class="btn-contact">
-                  <button class="btn--dark-style" type="submit">abschicken</button>
+                  <button class="btn--dark-style" type="submit" id="submit-button">abschicken</button>
                   </div>
 
               </form>

@@ -13,90 +13,87 @@
   <body>  
 
     <header class="header header--img-home">
+      <!--Desktop Navigation-->
+      <div class="main-navigation">
+        <div>
+            <div class="main__navigation-brand">
+                <a href="index.html" class="main-navigation__brand">
+                <img src="Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
+              </a>
+            </div>
+        </div>
+        
+        <nav class="main-navigation-box">
+            <ul class="main-navigation__items">
+                <li class="main-navigation__item">
+                    <a href="my-subpage/cafe.html" class="navitem_white underline">das Café</a>
+                </li>
+                <li class="main-navigation__item">
+                    <a href="my-subpage/shop.html" class="navitem_white underline">Shop</a>
+                </li>
+                <li class="main-navigation__item">
+                    <a href="my-subpage/herkunft.html" class="navitem_white underline">Herkunft</a>
+                </li>
+            </ul>
+        </nav>
+      </div>
 
-<!--Desktop Navigation-->
-    <div class="main-navigation">
-      <div>
-          <div class="main__navigation-brand">
-              <a href="index.html" class="main-navigation__brand">
-              <img src="Images/Logo.png" alt="Rustica - Café & Rösterei in Kiel">
-            </a>
-          </div>
+      <!----Mobile Navigation---->
+
+      <div class="mobile-navigation">
+
+            <input type="radio" name="radio" id="navi-toggle">
+            <input type="radio" name="radio" id="navi-toggle-close">
+            <input type="radio" name="radio" id="background-black">
+
+            <label for="navi-toggle">
+            <span id="nav-closed" class="responsive-label">
+              <img src="Images/Burger Menu.svg" alt="toggle-button-menu" class="navi-toggle-button">
+            </span>
+            </label>
+            
+            <label for="navi-toggle-close">
+            <span id="nav-open" class="responsive-label">
+              <img src="Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
+            </span> 
+            </label>
+
+            <label for="background-black">
+              <div id="background-black"></div>
+            </label>
+
+            <nav class="mobile-navigation__items">
+              <ul class="mobile-navigation__list">
+                  <li class="mobile-navigation__item">
+                      <a href="my-subpage/cafe.html" class="underline">das Café</a>
+                  </li>
+                  <li class="mobile-navigation__item">
+                      <a href="my-subpage/herkunft.html" class="underline">Herkunft</a>
+                  </li>
+                  <li class="mobile-navigation__item mobile-nav__item--cta">
+                      <a href="my-subpage/shop.html" class="underline">Shop</a>
+                  </li>
+              </ul>
+            </nav>
       </div>
       
-      <nav class="main-navigation-box">
-          <ul class="main-navigation__items">
-              <li class="main-navigation__item">
-                  <a href="my-subpage/cafe.html" class="underline">das Café</a>
-              </li>
-              <li class="main-navigation__item">
-                  <a href="my-subpage/shop.html" class="underline">Shop</a>
-              </li>
-              <li class="main-navigation__item">
-                  <a href="my-subpage/herkunft.html" class="underline">Herkunft</a>
-              </li>
-              <li class="main-navigation__item">
-                <a href="my-subpage/kontakt.html" class="underline">Kontakt</a>
-            </li>
-          </ul>
-      </nav>
-    </div>
 
- <!-------------------------------------------->
+    <!------------------------------------------------------->  
 
-    <div class="mobile-navigation">
 
-          <input type="radio" name="radio" id="navi-toggle">
-          <input type="radio" name="radio" id="navi-toggle-close">
-          <input type="radio" name="radio" id="background-black">
-
-          <label for="navi-toggle">
-          <span id="nav-closed" class="responsive-label">
-            <img src="Images/Burger Menu.svg" alt="toggle-button-menu" class="navi-toggle-button">
-          </span>
-          </label>
-          
-          <label for="navi-toggle-close">
-          <span id="nav-open" class="responsive-label">
-            <img src="Images/Burger-Menu-close.svg" alt="toggle-button-close" class="navi-toggle-button">
-          </span> 
-          </label>
-
-          <label for="background-black">
-            <div id="background-black"></div>
-          </label>
-
-          <nav class="mobile-navigation__items">
-            <ul class="mobile-navigation__list">
-                <li class="mobile-navigation__item">
-                    <a href="my-subpage/cafe.html" class="underline">das Café</a>
-                </li>
-                <li class="mobile-navigation__item">
-                    <a href="my-subpage/herkunft.html" class="underline">Herkunft</a>
-                </li>
-                <li class="mobile-navigation__item mobile-nav__item--cta">
-                    <a href="my-subpage/shop.html" class="underline">Shop</a>
-                </li>
-                <li class="mobile-navigation__item mobile-nav__item--cta">
-                  <a href="my-subpage/kontakt.html" class="underline">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-    </div>
-
-    <section class="section header__content">
-      <div class="header__heading">
-        <h1 class="header__heading--primary">
-          <span class="header__heading--primary-main">Rustica</span>
-          <span class="header__heading--primary-sub">Bio und Fair seit 1991</span>
-        </h1>
+      <section class="section header__content">
+        <div class="header__heading">
+          <h1 class="header__heading--primary">
+            <span class="header__heading--primary-main">Rustica</span>
+            <span class="header__heading--primary-sub">Bio und Fair seit 1991</span>
+          </h1>
+        </div>
+      </section>
+        <div class="btn--dark-home">
+          <a href="my-subpage/shop.html" class="btn--dark-style">zum Shop</a>
+        </div>
       </div>
-    </section>
-      <div class="btn--dark-home">
-        <a href="my-subpage/shop.html" class="btn--dark-style">zum Shop</a>
-      </div>
-    </div>
-    </section>
+      </section>
 
     </header>
 
@@ -262,7 +259,7 @@
         </div>
       -->
         <div class="btn--dark-home main__kaffeesorten--button">
-          <a href="my-subpage/shop.html" alt="Zum Shop" class="btn--dark-style">alle Produkte</a>
+          <a href="my-subpage/shop.html" alt="Zum Shop" class="btn--light-style">alle Produkte</a>
         </div>
 
       </section>
@@ -384,25 +381,26 @@
         <div class="footer__flexitem2">
           <p class="footer__content">
             <span class="umbruch">Mo - Fr 8 - 18 Uhr</span>
-            <span class="umbruch">Sa 11-18 Uhr</span>
+            <span>Sa 11-18 Uhr</span>
           </p>
         </div>
       </div>
 
-      <div class="footer__flexitem3 footer__flexitem--order">
-          <p class="footer__content">
+      <nav class="footer__flexitem3 footer__flexitem--order" aria-labelledby="footer-menu">
+          <ul class="footer__content">
             <span><li><a href="my-subpage/impressum.html" title="Link zur Unterseite Impressum" alt="Impressum" class="footer__link">Impressum</a></li></span>
             <span><li><a href="my-subpage/datenschutz.html" title="Link zur Unterseite Datenschutz" alt="Datenschutz" class="footer__link">Datenschutz</a></li></span>
-          </p>
-      </div>
+            <span><li><a href="my-subpage/kontakt.html" title="Link zur Unterseite Kontakt" alt="Kontakt" class="footer__link">Kontakt</a></li></span>
+          </ul>
+        </nav>
 
-      <div class="footer__flexitem2">
+      <nav class="footer__flexitem2" aria-labelledby="footer-menu">
           <ul class="footer__content">
               <li><a href="my-subpage/cafe.html" title="Link zur Unterseite Das Cafe" alt="das Café" class="footer__link">Café</a></li>
               <li><a href="my-subpage/shop.html" titel="Link zum Shop" alt="zum Shop" class="footer__link">Shop</a></li>
-              <li><a href="my-subpage/herkunft.html" title="Link zur Unterseite Herkunft" alt="Herkunft" class="footer-link">Herkunft</a></li>
+              <li><a href="my-subpage/herkunft.html" title="Link zur Unterseite Herkunft" alt="Herkunft" class="footer__link">Herkunft</a></li>
           </ul>
-      </div>
+      </nav>
     
 
     </footer>
