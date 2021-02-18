@@ -10,6 +10,25 @@
   }
 }
 
+.light  {
+  color: var(--color-white);
+}
+
+.light-logo {
+  filter: invert(1);
+}
+
+.dark {
+  color: var(--color-black);
+}
+
+
+
+
+.dark-logo  {
+  //black sollte das SVG Standardmäßig haben
+}
+
 
 .header--img-home  {
   background-image: linear-gradient(
@@ -26,6 +45,8 @@
         }
       }
 }
+
+
 
 
 .header--img-cafe {

@@ -171,9 +171,14 @@ a {
   }
 
   &:active   {
-    border-bottom: 2px solid var(--color-white);
+    
   }
 }
+
+.current-page {
+  border-bottom: 2px solid var(--color-white);
+}
+
 
 .underline  {
   display: inline;
