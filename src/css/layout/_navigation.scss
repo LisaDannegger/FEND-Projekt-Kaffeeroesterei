@@ -9,11 +9,11 @@
   align-items: center;
   margin-top: 1.8rem;
 
-  @include respond(media-lg)  {
+  @include respond(media-lg) {
     padding: 0.5rem 5rem;
   }
 
-  @include respond(media-xl)  {
+  @include respond(media-xl) {
     padding: 0.5rem 10rem;
   }
 
@@ -22,19 +22,19 @@
   }
 }
 
-
-.nav-toggle-button {    //Button ist nicht verlinkt im HTML - das Problem? 
+.nav-toggle-button {
+  //Button ist nicht verlinkt im HTML - das Problem?
   width: 3rem;
   background: transparent; //liegt unter dem Burger-Menu
   border: none;
-  position: absolute; 
+  position: absolute;
   right: 2.5rem;
   cursor: pointer;
   padding-bottom: 0;
   vertical-align: middle;
 }
 
-.header__sitebar--toggle-button  {
+.header__sitebar--toggle-button {
   width: 2.35rem;
   margin-top: 2rem;
 }
@@ -55,7 +55,6 @@
   text-decoration: none;
   font-weight: bold;
   margin-top: 1rem;
-  width: 100%;
   z-index: 1000 !important;
 }
 
@@ -65,13 +64,12 @@
   z-index: 1000 !important;
 }
 
-
 .main-navigation-box {
   display: none;
 }
 
 .main-navigation__items {
-  margin: 0; 
+  margin: 0;
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -99,28 +97,17 @@
 //--------------------------------------------------
 
 @include respond(media-md) {
-
   //.header__sitebar--toggle-button {
   //  display: none;
   //}
 
-  .mobile-navigation  {
-    display: none;
-  }
-
-  .mobile-navigation__items  {
+  .mobile-navigation {
     display: none;
   }
 
   .main-navigation-box {
     display: flex;
   }
-}
-
-.mobile-navigation {
-  position: fixed;
-  z-index: 101;
-  width: 100%;
 }
 
 #background-black {
@@ -130,183 +117,142 @@
   width: 0%;
   //height: 100vh;
   height: 100vh;
-  position: absolute; 
+  position: absolute;
   top: 0;
   right: -100%;
 }
 
 #nav-open {
-  position: absolute; 
+  position: fixed;
   top: 1rem;
   right: 2rem;
   cursor: pointer;
   z-index: 102;
-  opacity: 0;
 }
 
 #nav-closed {
-  position: absolute; 
+  position: absolute;
   top: 1rem;
   right: 2rem;
   cursor: pointer;
   z-index: 102;
 }
 
-.mobile-navigation input  {
+.mobile-navigation input {
   display: none;
 }
 
-.mobile-navigation__items { // <nav>
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 100vh;
-text-align: left;
-//opacity: 0;
-display: none;
-overflow: hidden;
+.mobile-navigation {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  right: -100%;
+}
+
+.mobile-navigation__items {
+  // <nav>
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  text-align: left;
+  //opacity: 0;
+  overflow: hidden;
 }
 
 .mobile-navigation__list {
   z-index: 102;
   overflow: hidden;
+  align-self: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-anthrazit);
 }
 
 .mobile-navigation__item {
-margin: 2.5rem 0;
-align-self: flex-start;
-margin-left: 6rem;
-font-size: 1.8rem;
-list-style: none;
+  margin: 2.5rem 0;
+  align-self: flex-start;
+  margin-left: 6rem;
+  font-size: 1.8rem;
+  list-style: none;
 }
 
 .mobile-navigation__item a {
   padding: 5px;
-font-size: 3.2rem;
-font-weight: 900;
-cursor: pointer;
+  font-size: 3.2rem;
+  font-weight: 900;
+  cursor: pointer;
 
   &:active {
     background-color: var(--color-kraftpapier);
-    border: 1px solid var(--color-white); 
+    border: 1px solid var(--color-white);
   }
 }
 
-
 .navi-toggle-button {
-  position: absolute; 
+  position: absolute;
   right: 1rem;
   top: 2rem;
 }
 
-
-//Verhaltensregeln
-
-
-
-#navi-toggle:checked ~ label #background-black {    //wenn Burger geklickt, zeige schwarzen Hintergrund
-  opacity: 1;
-  transition: all 0.1s ease-in-out;
-  right: 0%;
-  width: 100%;
-}
-
-#navi-toggle:checked ~ .mobile-navigation__items { //wenn Burger geklickt, zeige Navigation
-  //opacity: 1;
-  display: flex;
-  //transition: all 0.3s ease-in-out;
-}
-
-#navi-toggle:checked ~ .responsive-label #nav-open  {   //wenn Burger geklickt, verstecke Burger, öffne Kreuz
-  //opacity: 0; 
-  display: none;
-  z-index: -1;
-  transition: all 0.3s ease-in-out;
-}
-
-#navi-toggle:checked ~ label #nav-closed  {  //wenn Burger geklickt, verstecke Burger
-  display: none;
-  //opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-#navi-toggle:checked ~ label #nav-open  {
-  opacity: 1;
-}
-
-
-
-
-
-
-//wenn kein schwarzer HG, dann erscheinen alle Nav-Items normal und bleiben stehen. 
-//Mit HG: 1 sek angezeigt, dann weg
-
-
-
-
 .button {
-background: white;
-color: var(--color-black);
-font: inherit;
-border: 1.5px solid #0e4f1f;
-padding: 0.5rem;
-border-radius: 8px;
-font-weight: bold;
-cursor: pointer;
+  background: white;
+  color: var(--color-black);
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .button:hover,
 .button:active {
-background: var(--color-white);
-color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-white);
 }
 
 .button:focus {
-outline: none;
+  outline: none;
 }
 
 .button[disabled] {
-cursor: not-allowed;
-border: #a1a1a1;
-background: #ccc;
-color: #a1a1a1;
-} 
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
+}
 
 .open {
-display: block !important;
+  display: block !important;
 }
 
+.header__logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: fixed;
+  top: 2rem;
+  left: 2.5rem;
 
+  @include respond(media-sm) {
+    left: 5rem;
+  }
 
-.header__logo   {
-    width: 3.5rem;
-    height: 3.5rem;
-    position: fixed;
-    top: 2rem;
-    left: 2.5rem;
-   
+  @include respond(media-md) {
+    left: 7rem;
+  }
 
-    @include respond(media-sm)  {
-        left: 5rem;
-    }
+  @include respond(media-lg) {
+    left: 8rem;
+  }
 
-    @include respond(media-md)  {
-        left: 7rem;
-    }
-
-    @include respond(media-lg)  {
-        left: 8rem;
-    }
-
-    @include respond(media-xl)  {
-        left: 10rem;
-    }
+  @include respond(media-xl) {
+    left: 10rem;
+  }
 }
 
-
-
-//für Navi scrollen JS  
+//für Navi scrollen JS
 .festkleben {
   background-color: var(--color-white);
   height: 6.5rem;
@@ -324,3 +270,50 @@ display: block !important;
   // align-items: center;
   // margin-top: 1.8rem;
 }
+
+.show {
+  background-color: var(--color-anthrazit);
+  width: 0%;
+  //height: 100vh;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transition: all 0.1s ease-in-out;
+  right: 0%;
+}
+
+//Verhaltensregeln
+
+// #navi-toggle:checked ~ label #background-black {
+//   //wenn Burger geklickt, zeige schwarzen Hintergrund
+//   opacity: 1;
+//   transition: all 0.1s ease-in-out;
+//   right: 0%;
+//   width: 100%;
+// }
+
+// #navi-toggle:checked ~ .mobile-navigation__items {
+//   //wenn Burger geklickt, zeige Navigation
+//   //opacity: 1;
+//   display: flex;
+//   //transition: all 0.3s ease-in-out;
+// }
+
+// #navi-toggle:checked ~ .responsive-label #nav-open {
+//   //wenn Burger geklickt, verstecke Burger, öffne Kreuz
+//   //opacity: 0;
+//   display: none;
+//   z-index: -1;
+//   transition: all 0.3s ease-in-out;
+// }
+
+// #navi-toggle:checked ~ label #nav-closed {
+//   //wenn Burger geklickt, verstecke Burger
+//   display: none;
+//   //opacity: 0;
+//   transition: all 0.3s ease-in-out;
+// }
+
+// #navi-toggle:checked ~ label #nav-open {
+//   opacity: 1;
+// }

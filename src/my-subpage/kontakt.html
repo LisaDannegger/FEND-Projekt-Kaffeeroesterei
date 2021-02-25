@@ -5,93 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kaffeerösterei Rustica Kiel</title>
     <link href="../css/main.scss" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body> 
-
+  <body>
     <header class="header__contact">
-      <include src="navigation.html" locals='{"path": "/my-subpage", "themeClass": "dark"}'></include>
+      <include
+        src="navigation.html"
+        locals='{"path": "/my-subpage", "themeClass": "dark"}'
+      ></include>
     </header>
 
     <main>
-        <section class="section main__container section__contact">
-            <div class="section__contact--flexitem">
-              <h2 class="contact-title">Du hast Fragen?
-                <span class="umbruch">Schreib uns gern!</span>
-              </h2>
+      <section class="section main__container section__contact">
+        <div class="section__contact--flexitem">
+          <h2 class="contact-title">
+            Du hast Fragen?
+            <span class="umbruch">Schreib uns gern!</span>
+          </h2>
+        </div>
+
+        <div class="section__contact--flexitem contact__flexitem-1">
+          <form novalidate action="#" id="contact-form" method="get">
+            <!--method bei JS unerheblich? // mailto:lisa.dannegger@hotmail.de"-->
+            <fieldset>
+              <legend>Kontaktdaten</legend>
+              <ul>
+                <li>
+                  <label for="input-username" class="textfield" id="username"
+                    >Name*
+                    <input
+                      placeholder="Name"
+                      class="umbruch text"
+                      id="userName"
+                      name="userName"
+                      type="text"
+                      autocomplete="name"
+                      aria-required="true"
+                    />
+                  </label>
+                </li>
+
+                <li>
+                  <label for="input-usermail" class="email" id="usermail"
+                    >Email*
+                    <input
+                      placeholder="Email"
+                      class="umbruch email"
+                      id="userEmail"
+                      type="email"
+                      autocomplete="email"
+                      aria-required="true"
+                    />
+                  </label>
+                </li>
+
+                <li>
+                  <label
+                    for="inputer-userphone"
+                    class="phone-number"
+                    id="userphone"
+                    >Telefonnummer
+                    <input
+                      placeholder="Telefonnummer"
+                      class="umbruch phone"
+                      id="input-userphone"
+                      type="tel"
+                      autocomplete="tel"
+                    />
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <div class="select-container">
+              <div class="select-wrapper">
+                <label for="dropdown" aria-required="true">
+                  <select name="select" id="dropdown">
+                    <option value="0" tabindex="0" aria-checked="true">
+                      Dein Betreff
+                    </option>
+                    <option value="1" aria-checked="true" selected>
+                      Fragen zur Lieferung
+                    </option>
+                    <option value="2" aria-checked="true">
+                      Fragen zum Produkt
+                    </option>
+                    <option value="3" aria-checked="true">
+                      Vertriebsfragen
+                    </option>
+                    <option value="4" aria-checked="true">
+                      einfach nur so!
+                    </option>
+                  </select>
+                </label>
+              </div>
             </div>
 
-            <div class="section__contact--flexitem contact__flexitem-1">
-              <form action="#" id="contact-form" method="get"> <!--method bei JS unerheblich? // mailto:lisa.dannegger@hotmail.de"-->
-                <fieldset>
-                  <legend>Kontaktdaten</legend>
-                  <ul>
-                      <li>
-                          <label for="input-username" class="textfield" id="username">Name*
-                            <input 
-                            placeholder="Name" 
-                            class="umbruch text" 
-                            id="input-username" 
-                            type="text"
-                            autocomplete="name"
-                            aria-required="true"
-                            onclick="validation()">
-                        </label>
-                      </li>
-                      
-                      <li>
-                          <label for="input-usermail" class="email" id="usermail">Email*
-                            <input 
-                            placeholder="Email" 
-                            class="umbruch email" 
-                            id="input-usermail" 
-                            type="email" 
-                            autocomplete="email"
-                            aria-required="true"
-                            onclick="validation()">
-                        </label>
-                      </li>
+            <label for="message">Deine Nachricht:</label>
+            <textarea
+              id="message"
+              name="mesage"
+              type="text"
+              placeholder="Was hast du auf dem Herzen?"
+            >
+            </textarea>
 
-                      <li>
-                          <label for="inputer-userphone" class="phone-number" id="userphone">Telefonnummer
-                            <input 
-                            placeholder="Telefonnummer" 
-                            class="umbruch phone" 
-                            id="input-userphone" 
-                            type="tel"
-                            autocomplete="tel"
-                            onclick="validation()">
-                          </label>
-                      </li>
-                  </ul>
-                  </fieldset>
-
-                  <div class="select-container">
-                    <div class="select-wrapper">
-                      <label for="dropdown" aria-required="true">
-                      <select name="select" id="dropdown">
-                          <option value="0" tabindex="0" aria-checked="true">Dein Betreff</option>
-                          <option value="1" aria-checked="true" selected>Fragen zur Lieferung</option>
-                          <option value="2" aria-checked="true">Fragen zum Produkt</option>
-                          <option value="3" aria-checked="true">Vertriebsfragen</option>
-                          <option value="4" aria-checked="true">einfach nur so!</option>
-                      </select>
-                    </label>
-                    </div>
-                  </div>
-
-                  <label for="message">Deine Nachricht:</label>
-                  <textarea
-                  id="message"
-                  name="mesage" 
-                  type="text"
-                  placeholder="Was hast du auf dem Herzen?">
-                  </textarea>
-                  
-
-                  <!--
+            <!--
                   <div class="checkbox-container">  
                       
                       <input type="checkbox"
@@ -104,38 +127,33 @@
                       <label class="checkbox-label" for="datenschutz"><span class="checkbox-text">Ich akzeptiere die Datenschutzbestimmungen</span></label>
                   </div>
                   -->
-                <div class="checkbox-container">  
-                  <input 
-                  id="check1" 
-                  type="checkbox"
-                  name="datenschutz"
-                  value="datenschutz"
-                  aria-required="true" 
-                  />
-  
-                  <label for="check1" tabindex="0">
-                   Ich akzeptiere die Datenschutzbestimmungen
-                  </label>
-                </div>
+            <div class="checkbox-container">
+              <input
+                id="check1"
+                type="checkbox"
+                name="datenschutz"
+                value="datenschutz"
+                aria-required="true"
+              />
 
-                  <div class="btn-contact">
-                  <button onclick="location.href='mailto:lisa.dannegger@hotmail.de';" 
-                  class="btn--dark-style" 
-                  type="submit" 
-                  id="submit-button">abschicken</button> <!--statt Button eher Input type submit??-->
-                  </div>
-
-              </form>
+              <label for="check1" tabindex="0">
+                Ich akzeptiere die Datenschutzbestimmungen
+              </label>
             </div>
-        </section>
-      </main>
-    
-    
+
+            <div class="btn-contact">
+              <button class="btn--dark-style" type="submit" id="submit-button">
+                abschicken
+              </button>
+              <!--statt Button eher Input type submit??-->
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <include src="footer.html"></include>
-    
 
     <script src="../js/index.js"></script>
-
   </body>
-
 </html>

@@ -1,12 +1,113 @@
-.section__shop--kaffeesorten    {
-    margin-top: $margin-large-mobile;
+.section__shop--kaffeesorten {
+  margin-top: $margin-large-mobile;
 
-    @include respond(media-xl)  {
-        margin-top: $margin-large-desktop;
-    }
-    
+  @include respond(media-xl) {
+    margin-top: $margin-large-desktop;
+  }
 }
 
 .shop-svg-black {
-    filter: invert(1); //färbt SVG schwarz https://blog.union.io/code/2017/08/10/img-svg-fill/
+  filter: invert(
+    1
+  ); //färbt SVG schwarz https://blog.union.io/code/2017/08/10/img-svg-fill/
+}
+
+//Erics Code
+
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: blue;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
   }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+//Shop-Element Styles
+
+//   .products {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       flex-wrap: wrap;
+//       width: 100%;
+//   }
+
+.main__kaffeesorten--flexbox-shop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include respond(media-sm) {
+    justify-content: space-between;
+  }
+
+  @include respond(media-md) {
+    justify-content: space-around;
+  }
+
+  @include respond(media-lg) {
+  }
+
+  @include respond(media-xl) {
+    //1200
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.main__kaffeesorten--flexitems-shop {
+  width: 50%;
+  margin-top: 4rem;
+
+  @include respond(media-sm) {
+    padding: $padding-mobile;
+  }
+
+  @include respond(media-md) {
+  }
+
+  @include respond(media-lg) {
+    padding: 0px 0px;
+  }
+
+  @include respond(media-xl) {
+    width: 25%;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.shop-div {
+  width: 100%;
+  height: 35rem;
+  background-color: var(--color-light-grey);
+}
+
+.main__kaffeesorten--costarica-shop {
+  text-align: center;
+  width: 50%;
+  background-color: black;
+  width: 50px;
+  height: 35rem;
+}
+
+.main__kaffeesorten--costarica-img-shop {
+  width: 15.5rem;
+  height: 100%;
+  background-color: var(--color-light-grey);
+}

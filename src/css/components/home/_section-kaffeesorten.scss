@@ -120,7 +120,7 @@
   
   .main__kaffeesorten-beschreibung--main {
     display: block;
-    margin-top: 1rem;
+    margin: 1rem 0 .3rem 0;
     @include body-text-m ();
 
     @include respond(media-xl)  {
@@ -131,6 +131,7 @@
   .main__kaffeesorten-beschreibung--sub {
     display: block;
     color: var(--color-medium-grey);
+    margin: 0 0 .3rem 0;
     @include body-text-m ();
   }
   

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kaffeerösterei Rustica Kiel - Rösterei und Cafe</title>
+    <title>Shop Detailansicht der Kaffeerösterei Rustica Kiel</title>
     <link href="../css/main.scss" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -12,14 +12,22 @@
     />
   </head>
   <body>
-    <include
-      src="navigation.html"
-      locals='{"path": "/my-subpage", "themeClass": "dark"}'
-    ></include>
+    <header class="header__contact">
+      <include
+        src="navigation.html"
+        locals='{"path": "/my-subpage", "themeClass": "dark", "currentPageShop": "current-page-dark" }'
+      ></include>
+    </header>
 
-    <include src="map.html"></include>
+    <main>
+      <section class="section">
+        <h2 class="main__kaffeesorten--titel">Warenkorb</h2>
+      </section>
 
-    <!--------------------------------------------------------------------------------->
+      <section class="section main__kaffeesorten--flexbox-shop">
+        <div id="loading"></div>
+      </section>
+    </main>
 
     <include src="footer.html"></include>
 

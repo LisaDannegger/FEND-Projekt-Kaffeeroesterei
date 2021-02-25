@@ -67,6 +67,7 @@ input   {
         height: 5rem;
         font-size: 1.8rem;
     }
+
 }
 
 textarea    {
@@ -132,7 +133,6 @@ label  {
     }
 
     @include respond(media-xl)  {
-        background-color: transparent;
 
         &::placeholder  {
             color: var(--color-light-grey);
