@@ -4,356 +4,348 @@
 }
 */
 
-
 .header__contact {
-    height: 5.5rem;
+  height: 5.5rem;
 }
 
-.section__contact   {
-    margin-top: 13.3rem;
-    display: flex;
-    flex-direction: column;
+.section__contact {
+  margin-top: 13.3rem;
+  display: flex;
+  flex-direction: column;
 
-    @include respond(media-xl)  {
-        flex-direction: row; 
-        margin-top: 23rem;
-    }
+  @include respond(media-xl) {
+    flex-direction: row;
+    margin-top: 23rem;
+  }
 }
 
 .section__contact--flexitem {
-    width: 100%;
-    
-    @include respond(media-xl)  {
-        width: 50%;
-    }
+  width: 100%;
+
+  @include respond(media-xl) {
+    width: 50%;
+  }
 }
 
-.contact__flexitem-1    {
-    
-    @include respond(media-xl)  {
-        padding-top: 5rem;
-    }
+.contact__flexitem-1 {
+  @include respond(media-xl) {
+    padding-top: 5rem;
+  }
 }
-
 
 //Default-Styles entfernen
 
 //
 
-.contact-title  {
-    margin-bottom: 3.5rem;
-    margin-top: 0;
+.contact-title {
+  margin-bottom: 3.5rem;
+  margin-top: 0;
 
-    @include respond(media-xl)  {
-        //width: 50%;
-    }
+  @include respond(media-xl) {
+    //width: 50%;
+  }
 }
 
+input {
+  font-size: 1.4rem;
+  width: 100%;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+  height: 4rem;
+  border: none;
+  border-bottom: 3px solid var(--color-anthrazit);
+  outline: none;
+  cursor: pointer;
 
-input   {
-    font-size: 1.4rem;
-    width: 100%;
-    padding-left: 2rem;
-    margin-top: .5rem;
-    margin-bottom: 4rem;
-    height: 4rem;
-    border: none;
-    border-bottom: 3px solid var(--color-anthrazit);
-    outline: none;
-    cursor: pointer;
+  //   &:valid {
+  //     background-color: green;
+  //     color: green;
+  //   }
 
-    @include respond(media-xl)  {
-        margin-bottom: 8rem;
-        height: 5rem;
-        font-size: 1.8rem;
-    }
-
+  @include respond(media-xl) {
+    margin-bottom: 8rem;
+    height: 5rem;
+    font-size: 1.8rem;
+  }
 }
 
-textarea    {
-    font-size: inherit;
-    font-family: inherit; 
-    color: var(--color-anthrazit);
-    border: none;
-    border-bottom: 3px solid var(--color-anthrazit);
-    outline: none;
-    resize: none;
-    overflow: auto;
-    padding: 5rem 1.8rem 0 1.8rem;
-    font-size: 1.4rem;
-    width: 100%;
-    height: 17rem;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        background-color: var(--color-light-grey);
-    }
-
-    &:hover::placeholder,
-    &:focus::placeholder {
-        color: var(--color-white);
-    }
+.invalid {
+  background: rgba(255, 0, 0, 0.3);
+  color: red;
 }
 
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--color-anthrazit);
+  border: none;
+  border-bottom: 3px solid var(--color-anthrazit);
+  outline: none;
+  resize: none;
+  overflow: auto;
+  padding: 5rem 1.8rem 0 1.8rem;
+  font-size: 1.4rem;
+  width: 100%;
+  height: 17rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-light-grey);
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: var(--color-white);
+  }
+}
 
 //Label-Styles
 
-label  {
-    font-size: 1.4rem;
+label {
+  font-size: 1.4rem;
 
-    @include respond(media-md)  {
-        font-size: 1.6rem;
-    }
+  @include respond(media-md) {
+    font-size: 1.6rem;
+  }
 
-    @include respond(media-xl)  {
-        font-size: 1.8rem;
-    }
+  @include respond(media-xl) {
+    font-size: 1.8rem;
+  }
 }
 
 //Background imput-Felder
 
-.text    {
-    &:hover,
-    &:focus {
-        background-color: var(--color-light-grey);
-    }
+.text {
+  &:hover,
+  &:focus {
+    background-color: var(--color-light-grey);
+  }
 
-    &:hover::placeholder,
-    &:focus::placeholder  {
-        color: var(--color-anthrazit);
-    }
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: var(--color-anthrazit);
+  }
 
-    &:focus:invalid   {
-        background:rgba(255, 0, 0, 0.3);
-    }
+  &:focus:invalid {
+    background: rgba(255, 0, 0, 0.3);
+  }
 
-    &:focus:invalid::placeholder    {
-        color: red;
-    }
+  &:focus:invalid::placeholder {
+    color: red;
+  }
 
-    @include respond(media-xl)  {
-
-        &::placeholder  {
-            color: var(--color-light-grey);
-        }
+  @include respond(media-xl) {
+    &::placeholder {
+      color: var(--color-light-grey);
     }
+  }
 }
 
-.email  {
+.email {
+  &:hover,
+  &:focus {
+    background-color: var(--color-light-grey);
+  }
 
-    &:hover,
-    &:focus    {
-        background-color: var(--color-light-grey);
-    }
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: var(--color-anthrazit);
+  }
 
-    &:hover::placeholder,
-    &:focus::placeholder  {
-        color: var(--color-anthrazit);
-    }
+  &:focus:invalid {
+    background: rgba(255, 0, 0, 0.3);
+  }
 
-    &:focus:invalid   {
-        background:rgba(255, 0, 0, 0.3);
-    }
-
-    &:focus:invalid::placeholder    {
-        color: red;
-    }
-
-
+  &:focus:invalid::placeholder {
+    color: red;
+  }
 }
 
-.phone  {
-    &:hover,
-    &:focus    {
-        background-color: var(--color-light-grey);
-    }
+.phone {
+  &:hover,
+  &:focus {
+    background-color: var(--color-light-grey);
+  }
 
-    &:hover::placeholder,
-    &:focus::placeholder  {
-        color: var(--color-anthrazit);
-    }
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: var(--color-anthrazit);
+  }
 
-    &:focus:invalid   {
-        background:rgba(255, 0, 0, 0.3);
-    }
+  &:focus:invalid {
+    background: rgba(255, 0, 0, 0.3);
+  }
 
-    &:focus:invalid::placeholder    {
-        color: red;
-    }
+  &:focus:invalid::placeholder {
+    color: red;
+  }
 }
 
-::placeholder   {
-    color: var(--color-light-grey);
+::placeholder {
+  color: var(--color-light-grey);
 }
-
-
 
 //Drop-Down-Menu
 
-.select-container   {
-    display: flex;
-    width: 100%;
-    
+.select-container {
+  display: flex;
+  width: 100%;
 }
 
-select  {
-    width: 100%;
-    border: none;
-    padding: 1.5rem 2.5rem;
-    background-color: var(--color-anthrazit);
-    color: var(--color-white);
-    border-radius: 5px;
-    border: 2px solid var(--color-anthrazit);
-    margin-bottom: 4rem;
-    appearance: none;
-    outline: none;
-    cursor: pointer;
+select {
+  width: 100%;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--color-anthrazit);
+  color: var(--color-white);
+  border-radius: 5px;
+  border: 2px solid var(--color-anthrazit);
+  margin-bottom: 4rem;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
 
-    @include respond(media-xl)  {
-        margin-bottom: 8rem;
-        background-color: transparent;
-        color: var(--color-anthrazit);
-    }
-}
-
-select > option  {
-    background-color: var(--color-white);
+  @include respond(media-xl) {
+    margin-bottom: 8rem;
+    background-color: transparent;
     color: var(--color-anthrazit);
-    width: 200px;
-    border: 2px solid var(--color-anthrazit);
-    border-radius: 5px;
-    font-weight: 400;
-    padding: 3rem 1rem .3rem 1rem;
+  }
+}
 
-    &:hover {
-        background-color: var(--color-light-grey);
-        color: var(--color-anthrazit); 
-    }
+select > option {
+  background-color: var(--color-white);
+  color: var(--color-anthrazit);
+  width: 200px;
+  border: 2px solid var(--color-anthrazit);
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 3rem 1rem 0.3rem 1rem;
+
+  &:hover {
+    background-color: var(--color-light-grey);
+    color: var(--color-anthrazit);
+  }
 }
 
 .select-wrapper {
-    width: 100%;
-    position: relative;
-    z-index: 10;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .select-wrapper::before {
-    content: "›";
-    //padding: 1rem;
-    font-size: 3.5rem;
-    position: absolute; 
-    right: 2.5rem;
-    top: 0.5rem;
-    pointer-events: none;
-    transform: rotate(-90deg);
-    color: var(--color-white);
+  content: "›";
+  //padding: 1rem;
+  font-size: 3.5rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 0.5rem;
+  pointer-events: none;
+  transform: rotate(-90deg);
+  color: var(--color-white);
 
-    @include respond(media-xl)  {
-        color: var(--color-anthrazit);
-    }
-
-    
+  @include respond(media-xl) {
+    color: var(--color-anthrazit);
+  }
 }
 
 //was ist mit dem Wrapper-After-State??
 
-
 //Button
-.btn-contact    {
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 6rem;
-    margin-left: 8rem;
-    cursor: pointer;
-    width: 50%;
-    padding-left: 0;
-    padding-bottom: 1rem;
-    align-items: center;
+.btn-contact {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+  margin-left: 8rem;
+  cursor: pointer;
+  width: 50%;
+  padding-left: 0;
+  padding-bottom: 1rem;
+  align-items: center;
 
-    @include respond(media-xl)  {
-        margin-top: 8rem;
-        margin-bottom: 12.5rem;
-    }
+  @include respond(media-xl) {
+    margin-top: 8rem;
+    margin-bottom: 12.5rem;
+  }
 }
 
 //Checkbox
 
 .checkbox-container {
-    cursor: pointer;
-    user-select: none;
-    margin-top: 4rem;
-    font-size: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 4rem;
+  font-size: 1.4rem;
 
-    @include respond(media-xl)  {
-        margin-top: 8rem;
-    }
+  @include respond(media-xl) {
+    margin-top: 8rem;
+  }
 }
 
-.checkbox-box   {
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: var(--color-anthrazit);
-    margin-bottom: 0;
+.checkbox-box {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--color-anthrazit);
+  margin-bottom: 0;
 }
 
-.checkbox-label {
-}
+// .checkbox-label {
+// }
 
-.checkbox-text  {
-    padding: 0.5rem 2.5rem;
+.checkbox-text {
+  padding: 0.5rem 2.5rem;
 }
 
 input[type="checkbox"] {
-    position: absolute;
-    left: -45px;
-    display: none;
-  }
-
-input[type="checkbox"]  + label {
-    cursor: pointer;
+  position: absolute;
+  left: -45px;
+  display: none;
 }
-  
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
 input[type="checkbox"] + label::before {
-    width: 15px;
-    height: 15px;
-    display: block;
-    content: "";
-    float: left;
-    margin-right: 5px;
-    border-radius: 5px;
-    border: 2.5px solid var(--color-anthrazit);
-  
-  }
-  
-input[type="checkbox"]:checked+label::before {
-    background-color: #c72f2f;
-  }
-  
-input[type="checkbox"]+label::before {
-    width: 15px;
-    height: 15px;
-    border-radius: 5px;
-    border: 2px solid var(--color-anthrazit);
-    background-color: var(--color-white);
-    display: block;
-    content: "";
-    float: left;
-    margin-right: 5px;
-  }
+  width: 15px;
+  height: 15px;
+  display: block;
+  content: "";
+  float: left;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 2.5px solid var(--color-anthrazit);
+}
 
-input[type="checkbox"]:checked+label::before {
-    box-shadow: 0 0 0 3.5px var(--color-white) inset;
-    background-color: var(--color-anthrazit);
-  }
+input[type="checkbox"]:checked + label::before {
+  background-color: #c72f2f;
+}
 
+input[type="checkbox"] + label::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: 2px solid var(--color-anthrazit);
+  background-color: var(--color-white);
+  display: block;
+  content: "";
+  float: left;
+  margin-right: 5px;
+}
 
-  //Fieldset
-  fieldset  {
-      border:none;
-  }
+input[type="checkbox"]:checked + label::before {
+  box-shadow: 0 0 0 3.5px var(--color-white) inset;
+  background-color: var(--color-anthrazit);
+}
 
-  legend    {
-      visibility: hidden;
-  }
+//Fieldset
+fieldset {
+  border: none;
+}
+
+legend {
+  visibility: hidden;
+}

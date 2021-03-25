@@ -1,16 +1,38 @@
-.header  {
+.header {
   width: 100vw;
   height: 75vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  @include respond(media-xl)  {
+  @include respond(media-xl) {
     height: 65vh;
   }
 }
 
-.light  {
+.header--img-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
+    url(../Images/FEND-Coffee-latte-art-3_small.jpg);
+
+  @media (min-width: 48em), (min-width: 1440px) {
+    .header--img-home {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
+        url(../Images/FEND-Coffee-latte-art-3_large.jpg);
+    }
+  }
+}
+
+.header--img-cafe {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
+    url(../Images/FEND-Coffee-shopx2.jpg);
+}
+
+.header--img-herkunft {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
+    url(../Images/herkunft/FEND-Coffee-beans-hand-2.jpg);
+}
+
+.light {
   color: var(--color-white);
 }
 
@@ -18,54 +40,10 @@
   filter: invert(1);
 }
 
+// .dark-logo {
+//   background-color: black;
+// }
+
 .dark {
   color: var(--color-black);
 }
-
-
-
-
-.dark-logo  {
-  //black sollte das SVG Standardmäßig haben
-}
-
-
-.header--img-home  {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3)),
-      url(../Images/FEND-Coffee-latte-art-3_small.jpg);
-
-      @media (min-width: 48em),
-      (min-width: 1440px) {
-
-        .header--img-home {
-          background-image: linear-gradient(
-          rgba(0, 0, 0, 0.3)),
-            url(../Images/FEND-Coffee-latte-art-3_large.jpg);
-        }
-      }
-}
-
-
-
-
-.header--img-cafe {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3)),
-      url(../Images/FEND-Coffee-shopx2.jpg);
-}
-
-.header--img-herkunft {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3)),
-      url(../Images/herkunft/FEND-Coffee-beans-hand-2.jpg);
-      
-
-}
-  
-  
-  
-
-
-
-  
